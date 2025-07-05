@@ -1,2 +1,2 @@
 # Courses-Searching
-A repository for my Thesis coding restoration
+An intelligent chatbot with the combination of semantic searching and graph database.
