@@ -1,0 +1,132 @@
+[
+  {
+    "query_id": 41,
+    "natural_language_query": "Find all Beginner level courses with duration under 5 hours and rating above 4.0.",
+    "subqueries": [
+      "Find all Beginner level courses.",
+      "Filter those courses to duration < 5 hours and rating > 4.0."
+    ],
+    "cypher_query": "MATCH (c:Course)-[:HAS_LEVEL]->(l:Level {name: 'Beginner'}) WHERE toInteger(c.duration) < 5 AND toFloat(c.rating) > 4.0 RETURN c.name",
+    "subquery_cyphers": [
+      "MATCH (c:Course)-[:HAS_LEVEL]->(l:Level {name: 'Beginner'}) RETURN c",
+      "MATCH (c:Course) WHERE toInteger(c.duration) < 5 AND toFloat(c.rating) > 4.0 RETURN c"
+    ]
+  },
+  {
+    "query_id": 42,
+    "natural_language_query": "Find all courses about Python at Intermediate level with rating above 4.2 and duration between 1 and 15 hours.",
+    "subqueries": [
+      "Locate all Python courses at Intermediate level",
+      "Filter those courses by rating > 4.2 and duration between 1 and 15 hours"
+    ],
+    "cypher_query": "MATCH (c:Course)-[:TEACHES]->(s:Skill {name: 'Python'})-[:HAS_LEVEL]->(l:Level {name: 'Intermediate'}) WHERE toFloat(c.rating) > 4.2 AND toInteger(c.duration) >= 1 AND toInteger(c.duration) <= 15 RETURN c.name",
+    "subquery_cyphers": [
+      "MATCH (c:Course)-[:TEACHES]->(s:Skill {name: 'Python'})-[:HAS_LEVEL]->(l:Level {name: 'Intermediate'}) RETURN collect(c.url) AS course_urls",
+      "UNWIND $course_urls AS url MATCH (c:Course {url: url}) WHERE toFloat(c.rating) > 4.2 AND toInteger(c.duration) >= 1 AND toInteger(c.duration) <= 15 RETURN c.name AS course_name"
+    ]
+  },
+  {
+    "query_id": 43,
+    "natural_language_query": "Find all courses with rating above 4.8 and duration longer than the average duration of all courses.",
+    "subqueries": [
+      "Compute the average duration of all courses.",
+      "Find all courses with duration > that average and rating > 4.8."
+    ],
+    "cypher_query": "MATCH (c:Course)-[:TEACHES]->() WITH avg(toInteger(c.duration)) AS avgDur MATCH (c:Course) WHERE toInteger(c.duration) > avgDur AND toFloat(c.rating) > 4.8 RETURN c.name",
+    "subquery_cyphers": [
+      "MATCH (c:Course) RETURN avg(toInteger(c.duration)) AS avg_duration",
+      "MATCH (c:Course) WHERE toInteger(c.duration) > $avg_duration AND toFloat(c.rating) > 4.8 RETURN c"
+    ]
+  },
+  {
+    "query_id": 44,
+    "natural_language_query": "Find all Beginner level courses teaching Python with rating above 4.0.",
+    "subqueries": [
+      "Locate all Beginner level courses teaching Python",
+      "Filter those courses by rating > 4.0"
+    ],
+    "cypher_query": "MATCH (c:Course)-[:TEACHES]->(s:Skill {name: 'Python'})-[:HAS_LEVEL]->(l:Level {name: 'Beginner'}) WHERE toFloat(c.rating) > 4.0 RETURN DISTINCT c.name",
+    "subquery_cyphers": [
+      "MATCH (c:Course)-[:TEACHES]->(s:Skill {name: 'Python'})-[:HAS_LEVEL]->(l:Level {name: 'Beginner'}) RETURN collect(c.url) AS course_urls",
+      "UNWIND $course_urls AS url MATCH (c:Course {url: url}) WHERE toFloat(c.rating) > 4.0 RETURN DISTINCT c.name AS course_name"
+    ]
+  },
+  {
+    "query_id": 45,
+    "natural_language_query": "Find all Advanced level courses offered by Coursera with duration under 20 hours.",
+    "subqueries": [
+      "Locate all Advanced level courses offered by Coursera",
+      "Filter those courses by duration < 20 hours"
+    ],
+    "cypher_query": "MATCH (c:Course)-[:OFFERED_BY]->(o:Organization {name: 'Coursera'})-[:HAS_LEVEL]->(l:Level {name: 'Advanced'}) WHERE toInteger(c.duration) < 20 RETURN DISTINCT c.name",
+    "subquery_cyphers": [
+      "MATCH (c:Course)-[:OFFERED_BY]->(o:Organization {name: 'Coursera'})-[:HAS_LEVEL]->(l:Level {name: 'Advanced'}) RETURN collect(c.url) AS course_urls",
+      "UNWIND $course_urls AS url MATCH (c:Course {url: url}) WHERE toInteger(c.duration) < 20 RETURN DISTINCT c.name AS course_name"
+    ]
+  },
+  {
+    "query_id": 46,
+    "natural_language_query": "Find all courses taught by Montse Gorchs Molist with rating at least 4.5.",
+    "subqueries": [
+      "Locate all courses taught by Montse Gorchs Molist",
+      "Filter those courses by rating >= 4.5"
+    ],
+    "cypher_query": "MATCH (c:Course)-[:TAUGHT_BY]->(i:Instructor {name: 'Montse Gorchs Molist'}) WHERE toFloat(c.rating) >= 4.5 RETURN DISTINCT c.name",
+    "subquery_cyphers": [
+      "MATCH (c:Course)-[:TAUGHT_BY]->(i:Instructor {name: 'Montse Gorchs Molist'}) RETURN collect(c.url) AS course_urls",
+      "UNWIND $course_urls AS url MATCH (c:Course {url: url}) WHERE toFloat(c.rating) >= 4.5 RETURN DISTINCT c.name AS course_name"
+    ]
+  },
+  {
+    "query_id": 47,
+    "natural_language_query": "Find all middle level courses required by the Data Science career.",
+    "subqueries": [
+      "Locate the Data Science skill",
+      "Locate all Intermediate level courses teaching that skill"
+    ],
+    "cypher_query": "MATCH (c:Course)-[:TEACHES]->(s:Skill {name: 'Data Science'})\nMATCH (c)-[:HAS_LEVEL]->(l:Level {name: 'Intermediate'})\nRETURN DISTINCT c.name",
+    "subquery_cyphers": [
+      "MATCH (s:Skill {name: 'Data Science'}) RETURN s.name AS skill_name",
+      "MATCH (c:Course)-[:TEACHES]->(:Skill {name: $skill_name})\nMATCH (c)-[:HAS_LEVEL]->(:Level {name: 'Intermediate'})\nRETURN DISTINCT c.name AS course_name"
+    ]
+  },
+  {
+    "query_id": 48,
+    "natural_language_query": "Find all courses teaching both Python and SQL.",
+    "subqueries": [
+      "Find all courses teaching Python",
+      "From those, filter to courses also teaching SQL"
+    ],
+    "cypher_query": "MATCH (c:Course)-[:TEACHES]->(:Skill {name: 'Python'}), (c)-[:TEACHES]->(:Skill {name: 'SQL'}) RETURN DISTINCT c.name",
+    "subquery_cyphers": [
+      "MATCH (c:Course)-[:TEACHES]->(:Skill {name: 'Python'}) RETURN collect(c.url) AS python_courses",
+      "UNWIND $python_courses AS url MATCH (c:Course {url: url})-[:TEACHES]->(:Skill {name: 'SQL'}) RETURN DISTINCT c.name AS course_name"
+    ]
+  },
+  {
+    "query_id": 49,
+    "natural_language_query": "Find all courses with duration between 5 and 15 hours and rating above 4.3.",
+    "subqueries": [
+      "Locate all courses with duration between 5 and 15 hours",
+      "Filter those courses by rating > 4.3"
+    ],
+    "cypher_query": "MATCH (c:Course) WHERE toInteger(c.duration) >= 5 AND toInteger(c.duration) <= 15 AND toFloat(c.rating) > 4.3 RETURN DISTINCT c.name",
+    "subquery_cyphers": [
+      "MATCH (c:Course) WHERE toInteger(c.duration) >= 5 AND toInteger(c.duration) <= 15 RETURN collect(c.url) AS duration_courses",
+      "UNWIND $duration_courses AS url MATCH (c:Course {url: url}) WHERE toFloat(c.rating) > 4.3 RETURN DISTINCT c.name AS course_name"
+    ]
+  },
+  {
+    "query_id": 50,
+    "natural_language_query": "Find all courses with 'Data' in the title and rating above 4.2.",
+    "subqueries": [
+      "Find all courses whose name contains 'Data'",
+      "Filter those courses by rating > 4.2"
+    ],
+    "cypher_query": "MATCH (c:Course) WHERE c.name CONTAINS 'Data' AND toFloat(c.rating) > 4.2 RETURN DISTINCT c.name",
+    "subquery_cyphers": [
+      "MATCH (c:Course) WHERE c.name CONTAINS 'Data' RETURN collect(c.url) AS data_courses",
+      "UNWIND $data_courses AS url MATCH (c:Course {url: url}) WHERE toFloat(c.rating) > 4.2 RETURN DISTINCT c.name AS course_name"
+    ]
+  }
+]

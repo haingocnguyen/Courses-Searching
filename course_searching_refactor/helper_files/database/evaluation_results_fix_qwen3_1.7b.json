@@ -1,0 +1,14 @@
+{
+  "cases": [],
+  "metrics": {
+    "model_name": "qwen3:1.7b",
+    "total_cases": 0,
+    "exact_match_count": 0,
+    "error_count": 0,
+    "accuracy": 0.0,
+    "average_precision": 0.0,
+    "average_recall": 0.0,
+    "average_f1": 0.0,
+    "average_time_s": 0.0
+  }
+}

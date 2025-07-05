@@ -1,0 +1,415 @@
+{
+  "cases": [
+    {
+      "query_id": 1,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 72.75737857818604
+    },
+    {
+      "query_id": 2,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 9.91582202911377
+    },
+    {
+      "query_id": 3,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 10.732110738754272
+    },
+    {
+      "query_id": 4,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 10.531290769577026
+    },
+    {
+      "query_id": 5,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 10.910555601119995
+    },
+    {
+      "query_id": 6,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 12.054433345794678
+    },
+    {
+      "query_id": 7,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 11.214120864868164
+    },
+    {
+      "query_id": 8,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 10.931926488876343
+    },
+    {
+      "query_id": 9,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 11.165463924407959
+    },
+    {
+      "query_id": 10,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 10.765085697174072
+    },
+    {
+      "query_id": 11,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 13.048283576965332
+    },
+    {
+      "query_id": 12,
+      "status": "partial_match",
+      "precision": 0.0,
+      "recall": 0.0,
+      "exact_match": false,
+      "time_s": 13.464874267578125
+    },
+    {
+      "query_id": 13,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 12.682871103286743
+    },
+    {
+      "query_id": 14,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 13.696980476379395
+    },
+    {
+      "query_id": 15,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 13.51553463935852
+    },
+    {
+      "query_id": 16,
+      "status": "partial_match",
+      "precision": 0.0,
+      "recall": 0.0,
+      "exact_match": false,
+      "time_s": 15.093076705932617
+    },
+    {
+      "query_id": 17,
+      "status": "execution_failed",
+      "precision": 0.0,
+      "recall": 0.0,
+      "exact_match": false,
+      "time_s": 17.252086400985718
+    },
+    {
+      "query_id": 18,
+      "status": "partial_match",
+      "precision": 0.0,
+      "recall": 0.0,
+      "exact_match": false,
+      "time_s": 17.898547649383545
+    },
+    {
+      "query_id": 19,
+      "status": "partial_match",
+      "precision": 0.0,
+      "recall": 0.0,
+      "exact_match": false,
+      "time_s": 18.18005895614624
+    },
+    {
+      "query_id": 20,
+      "status": "partial_match",
+      "precision": 0.6830985915492958,
+      "recall": 0.9797979797979798,
+      "exact_match": false,
+      "time_s": 15.983816146850586
+    },
+    {
+      "query_id": 21,
+      "status": "execution_failed",
+      "precision": 0.0,
+      "recall": 0.0,
+      "exact_match": false,
+      "time_s": 17.264150142669678
+    },
+    {
+      "query_id": 22,
+      "status": "match",
+      "precision": 0.0,
+      "recall": 0.0,
+      "exact_match": true,
+      "time_s": 20.428934335708618
+    },
+    {
+      "query_id": 23,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 11.314902067184448
+    },
+    {
+      "query_id": 24,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 15.414557218551636
+    },
+    {
+      "query_id": 25,
+      "status": "partial_match",
+      "precision": 0.6,
+      "recall": 0.6,
+      "exact_match": false,
+      "time_s": 16.548015832901
+    },
+    {
+      "query_id": 26,
+      "status": "partial_match",
+      "precision": 1.0,
+      "recall": 0.0230047779154132,
+      "exact_match": false,
+      "time_s": 18.250197410583496
+    },
+    {
+      "query_id": 27,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 11.793585777282715
+    },
+    {
+      "query_id": 28,
+      "status": "match",
+      "precision": 0.0,
+      "recall": 0.0,
+      "exact_match": true,
+      "time_s": 15.08900785446167
+    },
+    {
+      "query_id": 29,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 13.978489398956299
+    },
+    {
+      "query_id": 30,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 11.77746057510376
+    },
+    {
+      "query_id": 31,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 15.082212924957275
+    },
+    {
+      "query_id": 32,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 14.627902507781982
+    },
+    {
+      "query_id": 33,
+      "status": "partial_match",
+      "precision": 1.0,
+      "recall": 0.3898305084745763,
+      "exact_match": false,
+      "time_s": 18.25214409828186
+    },
+    {
+      "query_id": 34,
+      "status": "expected_execution_failed",
+      "precision": 0.0,
+      "recall": 0.0,
+      "exact_match": false,
+      "time_s": 16.505780935287476
+    },
+    {
+      "query_id": 35,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 13.924683332443237
+    },
+    {
+      "query_id": 36,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 12.73861050605774
+    },
+    {
+      "query_id": 37,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 13.303641080856323
+    },
+    {
+      "query_id": 38,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 15.484654664993286
+    },
+    {
+      "query_id": 39,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 14.48647928237915
+    },
+    {
+      "query_id": 40,
+      "status": "match",
+      "precision": 1.0,
+      "recall": 1.0,
+      "exact_match": true,
+      "time_s": 14.35727572441101
+    },
+    {
+      "query_id": 41,
+      "status": "execution_failed",
+      "precision": 0.0,
+      "recall": 0.0,
+      "exact_match": false,
+      "time_s": 22.707709074020386
+    },
+    {
+      "query_id": 42,
+      "status": "execution_failed",
+      "precision": 0.0,
+      "recall": 0.0,
+      "exact_match": false,
+      "time_s": 23.10892152786255
+    },
+    {
+      "query_id": 43,
+      "status": "execution_failed",
+      "precision": 0.0,
+      "recall": 0.0,
+      "exact_match": false,
+      "time_s": 14.744611978530884
+    },
+    {
+      "query_id": 44,
+      "status": "match",
+      "precision": 0.0,
+      "recall": 0.0,
+      "exact_match": true,
+      "time_s": 18.538649797439575
+    },
+    {
+      "query_id": 45,
+      "status": "match",
+      "precision": 0.0,
+      "recall": 0.0,
+      "exact_match": true,
+      "time_s": 17.16563868522644
+    },
+    {
+      "query_id": 46,
+      "status": "partial_match",
+      "precision": 0.0,
+      "recall": 0.0,
+      "exact_match": false,
+      "time_s": 18.339590787887573
+    },
+    {
+      "query_id": 47,
+      "status": "partial_match",
+      "precision": 0.0,
+      "recall": 0.0,
+      "exact_match": false,
+      "time_s": 14.99861192703247
+    },
+    {
+      "query_id": 48,
+      "status": "match",
+      "precision": 0.0,
+      "recall": 0.0,
+      "exact_match": true,
+      "time_s": 15.215022325515747
+    },
+    {
+      "query_id": 49,
+      "status": "execution_failed",
+      "precision": 0.0,
+      "recall": 0.0,
+      "exact_match": false,
+      "time_s": 13.780436038970947
+    },
+    {
+      "query_id": 50,
+      "status": "partial_match",
+      "precision": 0.0,
+      "recall": 0.0,
+      "exact_match": false,
+      "time_s": 16.86770248413086
+    }
+  ],
+  "metrics": {
+    "model_name": "llama3.2:3b",
+    "total_cases": 50,
+    "exact_match_count": 32,
+    "error_count": 7,
+    "accuracy": 0.64,
+    "average_precision": 0.6056619718309859,
+    "average_recall": 0.5798526653237593,
+    "average_f1": 0.5924763771695201,
+    "average_time_s": 15.640004701392595
+  }
+}
