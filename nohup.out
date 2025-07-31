@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "/mnt/d/Thesis/Courses-Searching/src/query_classification/query_classification.py", line 2, in <module>
-    import numpy as np
-ModuleNotFoundError: No module named 'numpy'
