@@ -1,0 +1,260 @@
+{
+  "cases": [
+    {
+      "query_id": 1,
+      "status": "match",
+      "time_s": 68.32520532608032
+    },
+    {
+      "query_id": 2,
+      "status": "match",
+      "time_s": 7.982262849807739
+    },
+    {
+      "query_id": 3,
+      "status": "match",
+      "time_s": 8.370380163192749
+    },
+    {
+      "query_id": 4,
+      "status": "match",
+      "time_s": 8.092676401138306
+    },
+    {
+      "query_id": 5,
+      "status": "match",
+      "time_s": 8.116717338562012
+    },
+    {
+      "query_id": 6,
+      "status": "match",
+      "time_s": 8.59303069114685
+    },
+    {
+      "query_id": 7,
+      "status": "match",
+      "time_s": 8.45504355430603
+    },
+    {
+      "query_id": 8,
+      "status": "match",
+      "time_s": 8.052640914916992
+    },
+    {
+      "query_id": 9,
+      "status": "match",
+      "time_s": 7.711572170257568
+    },
+    {
+      "query_id": 10,
+      "status": "match",
+      "time_s": 8.004976272583008
+    },
+    {
+      "query_id": 11,
+      "status": "mismatch",
+      "time_s": 10.81358027458191
+    },
+    {
+      "query_id": 12,
+      "status": "mismatch",
+      "time_s": 9.478044033050537
+    },
+    {
+      "query_id": 13,
+      "status": "mismatch",
+      "time_s": 10.03442907333374
+    },
+    {
+      "query_id": 14,
+      "status": "mismatch",
+      "time_s": 10.946923971176147
+    },
+    {
+      "query_id": 15,
+      "status": "mismatch",
+      "time_s": 9.441967010498047
+    },
+    {
+      "query_id": 16,
+      "status": "mismatch",
+      "time_s": 15.673091650009155
+    },
+    {
+      "query_id": 17,
+      "status": "mismatch",
+      "time_s": 14.879021167755127
+    },
+    {
+      "query_id": 18,
+      "status": "generation_failed"
+    },
+    {
+      "query_id": 19,
+      "status": "mismatch",
+      "time_s": 13.296341896057129
+    },
+    {
+      "query_id": 20,
+      "status": "mismatch",
+      "time_s": 12.013424396514893
+    },
+    {
+      "query_id": 21,
+      "status": "execution_failed"
+    },
+    {
+      "query_id": 22,
+      "status": "match",
+      "time_s": 13.84075379371643
+    },
+    {
+      "query_id": 23,
+      "status": "match",
+      "time_s": 10.665364265441895
+    },
+    {
+      "query_id": 24,
+      "status": "execution_failed"
+    },
+    {
+      "query_id": 25,
+      "status": "mismatch",
+      "time_s": 14.331958293914795
+    },
+    {
+      "query_id": 26,
+      "status": "mismatch",
+      "time_s": 10.316069602966309
+    },
+    {
+      "query_id": 27,
+      "status": "match",
+      "time_s": 8.348005056381226
+    },
+    {
+      "query_id": 28,
+      "status": "match",
+      "time_s": 9.39254903793335
+    },
+    {
+      "query_id": 29,
+      "status": "execution_failed"
+    },
+    {
+      "query_id": 30,
+      "status": "match",
+      "time_s": 9.432559967041016
+    },
+    {
+      "query_id": 31,
+      "status": "match",
+      "time_s": 12.409055948257446
+    },
+    {
+      "query_id": 32,
+      "status": "match",
+      "time_s": 11.248022317886353
+    },
+    {
+      "query_id": 33,
+      "status": "match",
+      "time_s": 11.020924806594849
+    },
+    {
+      "query_id": 34,
+      "status": "expected_execution_failed"
+    },
+    {
+      "query_id": 35,
+      "status": "mismatch",
+      "time_s": 12.122498035430908
+    },
+    {
+      "query_id": 36,
+      "status": "mismatch",
+      "time_s": 11.160909414291382
+    },
+    {
+      "query_id": 37,
+      "status": "mismatch",
+      "time_s": 10.084099531173706
+    },
+    {
+      "query_id": 38,
+      "status": "mismatch",
+      "time_s": 10.517556428909302
+    },
+    {
+      "query_id": 39,
+      "status": "mismatch",
+      "time_s": 9.604896783828735
+    },
+    {
+      "query_id": 40,
+      "status": "mismatch",
+      "time_s": 12.952221393585205
+    },
+    {
+      "query_id": 41,
+      "status": "mismatch",
+      "time_s": 16.165337562561035
+    },
+    {
+      "query_id": 42,
+      "status": "match",
+      "time_s": 16.4681556224823
+    },
+    {
+      "query_id": 43,
+      "status": "execution_failed"
+    },
+    {
+      "query_id": 44,
+      "status": "match",
+      "time_s": 13.801819562911987
+    },
+    {
+      "query_id": 45,
+      "status": "match",
+      "time_s": 14.716836214065552
+    },
+    {
+      "query_id": 46,
+      "status": "mismatch",
+      "time_s": 13.493071556091309
+    },
+    {
+      "query_id": 47,
+      "status": "mismatch",
+      "time_s": 12.781453609466553
+    },
+    {
+      "query_id": 48,
+      "status": "mismatch",
+      "time_s": 12.85277771949768
+    },
+    {
+      "query_id": 49,
+      "status": "execution_failed"
+    },
+    {
+      "query_id": 50,
+      "status": "mismatch",
+      "time_s": 11.555917978286743
+    }
+  ],
+  "metrics": {
+    "model_name": "qwen2.5:3b",
+    "total_cases": 50,
+    "generation_success": 49,
+    "execution_success": 44,
+    "result_match": 21,
+    "error_count": 7,
+    "accuracy": 0.42,
+    "precision": 1.0,
+    "recall": 0.42,
+    "f1_score": 0.5915492957746479,
+    "average_time_s": 12.501491712969402
+  }
+}

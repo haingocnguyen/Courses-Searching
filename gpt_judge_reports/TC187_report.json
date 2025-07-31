@@ -1,0 +1,65 @@
+{
+  "test_id": "TC187",
+  "query": "What's the weirdest question you've ever gotten?",
+  "timestamp": "2025-07-22 20:07:55",
+  "type": "general_chat",
+  "expected_intent": "general_chat",
+  "expected_outcomes": {
+    "should_find_results": false,
+    "expected_keywords": [
+      "weirdest",
+      "question",
+      "find",
+      "courses"
+    ],
+    "minimum_results": 0
+  },
+  "intent_analysis": {
+    "detected_intent": "general_chat",
+    "confidence": "high",
+    "processing_time": "2.5464s",
+    "reason": "The query is a casual, conversational question about the system's experiences, similar to examples like 'tell me about your system capability' or 'what is your specific scope of work' under GENERAL_CHAT. It does not involve specific educational requests or course-related action words.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 9,
+    "overall_intent_quality": 9,
+    "reasoning": "The predicted intent 'general_chat' is a perfect match for the user query as it falls under a general conversation category. The confidence level is appropriately high as the query is straightforward and unambiguous.",
+    "is_correct": true
+  },
+  "system_response": {
+    "content": "Hello! I'm here to help you find courses. You can ask me about specific courses, instructors, or organizations offering courses."
+  },
+  "response_evaluation": {
+    "relevance": 1,
+    "helpfulness": 2,
+    "clarity": 8,
+    "completeness": 2,
+    "professional_tone": 9,
+    "hallucination": 10,
+    "overall_score": 4.3,
+    "reasoning": "The response lacks relevance as it completely ignores the user's query about weird questions. It is clear and professionally toned, but it fails to be helpful or complete in addressing the user's goal. The response hallucinates by introducing a different topic (courses) not related to the user's query.",
+    "strengths": [
+      "Clarity of response",
+      "Professional tone"
+    ],
+    "weaknesses": [
+      "Lack of relevance",
+      "Lack of helpfulness",
+      "Incompleteness"
+    ],
+    "suggestions": [
+      "Ensure responses directly address user queries",
+      "Provide relevant information even if the system doesn't have exact matches"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['weirdest', 'question']"
+    ]
+  }
+}

@@ -67,8 +67,186 @@ def add_progress_css():
         margin-top: 5px;
         font-style: italic;
     }
+    
+    .description-text {
+        line-height: 1.6;
+        font-size: 14px;
+        color: #333;
+    }
+    
+    .description-text h3 {
+        color: #1f77b4;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .description-text h4 {
+        color: #ff7f0e;
+        margin-top: 15px;
+        margin-bottom: 8px;
+    }
+    
+    .description-text ul {
+        margin-left: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .description-text li {
+        margin-bottom: 5px;
+    }
     </style>
     """, unsafe_allow_html=True)
+
+def format_description_with_llm(description: str, llm=None) -> str:
+    """Format description using LLM to make it more readable"""
+    if not description or len(description) < 100:
+        return description
+    
+    # If LLM is available, use it for intelligent formatting
+    if llm:
+        try:
+            formatting_prompt = f"""
+            Please format the following course description to make it more readable and well-structured in streamlit web based. 
+            Apply proper formatting with:
+            - Clear paragraph breaks
+            - Bold text for important terms and section headers
+            - Bullet points for lists
+            - Proper spacing
+            - Keep all original content, just improve formatting
+            
+            Description to format:
+            {description}
+            
+            Return only the formatted description in markdown format:
+            """
+            
+            formatted = llm.invoke([{"role": "user", "content": formatting_prompt}])
+            return clean_answer(formatted)
+        except Exception as e:
+            # Fall back to rule-based formatting if LLM fails
+            pass
+    
+    # Rule-based formatting as fallback
+    return format_description_rules_based(description)
+
+def format_description_rules_based(description: str) -> str:
+    """Rule-based description formatting"""
+    if not description:
+        return description
+    
+    # Clean up the text first
+    text = description.strip()
+    
+    # Split into sentences for better processing
+    sentences = re.split(r'(?<=[.!?])\s+', text)
+    formatted_sentences = []
+    
+    current_paragraph = []
+    
+    for sentence in sentences:
+        sentence = sentence.strip()
+        if not sentence:
+            continue
+            
+        # Detect section headers (sentences that end with colon or are very short)
+        if (sentence.endswith(':') or 
+            (len(sentence.split()) <= 6 and not sentence.endswith('.')) or
+            sentence.startswith('Module') or
+            sentence.startswith('What you') or
+            sentence.startswith('By the end') or
+            sentence.startswith('This course')):
+            
+            # Add current paragraph if exists
+            if current_paragraph:
+                formatted_sentences.append(' '.join(current_paragraph))
+                current_paragraph = []
+            
+            # Add header
+            if sentence.endswith(':'):
+                formatted_sentences.append(f"\n**{sentence}**\n")
+            else:
+                formatted_sentences.append(f"\n**{sentence}**\n")
+        else:
+            current_paragraph.append(sentence)
+            
+            # Create paragraph breaks for long content
+            if len(current_paragraph) >= 3:  # Every 3 sentences, start new paragraph
+                formatted_sentences.append(' '.join(current_paragraph))
+                current_paragraph = []
+    
+    # Add remaining sentences
+    if current_paragraph:
+        formatted_sentences.append(' '.join(current_paragraph))
+    
+    # Join with proper spacing
+    formatted_text = '\n\n'.join(formatted_sentences)
+    
+    # Additional formatting rules
+    formatted_text = re.sub(r'\bModules?:\s*', '\n**Modules:**\n\n', formatted_text)
+    formatted_text = re.sub(r'\bWhat you[\'\']?ll learn:\s*', '\n**What You\'ll Learn:**\n\n', formatted_text)
+    formatted_text = re.sub(r'\bCourse Overview:\s*', '\n**Course Overview:**\n\n', formatted_text)
+    
+    # Format module descriptions as bullet points
+    lines = formatted_text.split('\n')
+    formatted_lines = []
+    in_modules_section = False
+    
+    for line in lines:
+        line = line.strip()
+        if not line:
+            formatted_lines.append('')
+            continue
+            
+        if 'Modules:' in line or 'What You\'ll Learn:' in line:
+            in_modules_section = True
+            formatted_lines.append(line)
+        elif line.startswith('**') and line.endswith('**'):
+            in_modules_section = False
+            formatted_lines.append(line)
+        elif in_modules_section and len(line) > 50 and ':' in line:
+            # Module descriptions - format as bullet points
+            parts = line.split(':', 1)
+            if len(parts) == 2:
+                module_name = parts[0].strip()
+                module_desc = parts[1].strip()
+                formatted_lines.append(f"• **{module_name}:** {module_desc}")
+            else:
+                formatted_lines.append(f"• {line}")
+        else:
+            formatted_lines.append(line)
+    
+    formatted_text = '\n'.join(formatted_lines)
+    
+    # Clean up extra whitespace
+    formatted_text = re.sub(r'\n{3,}', '\n\n', formatted_text)
+    formatted_text = formatted_text.strip()
+    
+    return formatted_text
+
+def format_short_description(description: str) -> str:
+    """Format shorter descriptions with basic improvements"""
+    if not description or len(description) < 50:
+        return description
+    
+    # Split into sentences and add basic formatting
+    sentences = re.split(r'(?<=[.!?])\s+', description.strip())
+    
+    # Group sentences into paragraphs (2-3 sentences each)
+    paragraphs = []
+    current_para = []
+    
+    for sentence in sentences:
+        sentence = sentence.strip()
+        if sentence:
+            current_para.append(sentence)
+            if len(current_para) >= 2:  # 2 sentences per paragraph for shorter descriptions
+                paragraphs.append(' '.join(current_para))
+                current_para = []
+    
+    if current_para:
+        paragraphs.append(' '.join(current_para))
+    
+    return '\n\n'.join(paragraphs)
 
 class ProgressTracker:
     """Progress tracking component with animated UI"""
@@ -227,8 +405,8 @@ def manage_chat_history():
         # Keep only recent messages
         st.session_state.messages = st.session_state.messages[-MAX_CHAT_MESSAGES:]
 
-def render_result_card(result, result_type):
-    """Render different types of results based on type with improved layout"""
+def render_result_card(result, result_type, llm=None):
+    """Render different types of results based on type with improved layout and auto-formatting"""
     if result_type == "course":
         col1, col2 = st.columns([3, 1])
         with col1:
@@ -248,7 +426,10 @@ def render_result_card(result, result_type):
                 
         if result.get('description'):
             st.write("**Description**")
-            st.write(result['description'])
+            
+            # Auto-format the description
+            formatted_desc = format_description_with_llm(result['description'], llm)
+            st.markdown(f'<div class="description-text">{formatted_desc}</div>', unsafe_allow_html=True)
 
     elif result_type == "instructor":
         st.markdown(f"**👨‍🏫 {result.get('instructor_name', 'Unknown Instructor')}**")
@@ -260,7 +441,8 @@ def render_result_card(result, result_type):
         
         if result.get('instructor_description'):
             st.write("**Description**")
-            st.write(result['instructor_description'])
+            formatted_desc = format_short_description(result['instructor_description'])
+            st.markdown(f'<div class="description-text">{formatted_desc}</div>', unsafe_allow_html=True)
                 
     elif result_type == "organization":
         st.markdown(f"**🏫 {result.get('organization_name', result.get('organization', 'Unknown'))}**")
@@ -268,7 +450,8 @@ def render_result_card(result, result_type):
         
         if result.get('organization_description'):
             st.write("**Description**")
-            st.write(result['organization_description'])
+            formatted_desc = format_short_description(result['organization_description'])
+            st.markdown(f'<div class="description-text">{formatted_desc}</div>', unsafe_allow_html=True)
                 
     elif result_type == "provider":
         st.markdown(f"**🌐 {result.get('provider_name', 'Unknown Provider')}**")
@@ -284,13 +467,15 @@ def render_result_card(result, result_type):
         
         if result.get('review_comment'):
             st.write("**Review Comment**")
-            st.write(result['review_comment'])
+            formatted_comment = format_short_description(result['review_comment'])
+            st.markdown(f'<div class="description-text">{formatted_comment}</div>', unsafe_allow_html=True)
                 
     elif result_type == "subject":
         st.markdown(f"**📚 {result.get('subject_name', 'Unknown Subject')}**")
         if result.get('subject_description'):
             st.write("**Description**")
-            st.write(result['subject_description'])
+            formatted_desc = format_short_description(result['subject_description'])
+            st.markdown(f'<div class="description-text">{formatted_desc}</div>', unsafe_allow_html=True)
                 
     elif result_type == "statistical":
         st.markdown("**📊 Statistics**")
@@ -325,7 +510,7 @@ def render_result_card(result, result_type):
             for key, value in other_fields.items():
                 st.write(f"**{key.replace('_', ' ').title()}:** {value}")
 
-def display_chat():
+def display_chat(llm=None):
     """Display chat history with results for each message - no duplicates"""
     for i, message in enumerate(st.session_state.messages):
         role = message["role"]
@@ -355,27 +540,27 @@ def display_chat():
                             st.markdown("---")  # Separator
                             st.markdown(f"### 📊 Results ({len(results)})")
                             
-                            # Display results in expandable format
+                            # Display results in expandable format with enhanced formatting
                             for j, r in enumerate(results[:MAX_RESULTS_DISPLAY]):
                                 if result_type == "course":
                                     name = r.get('name', f'Course {j+1}')
                                     with st.expander(f"📖 {name}", expanded=(j==0)):
-                                        render_result_card(r, result_type)
+                                        render_result_card(r, result_type, llm)
                                 elif result_type == "instructor":
                                     name = r.get('instructor_name', r.get('i.name', f'Instructor {j+1}'))
                                     with st.expander(f"👨‍🏫 {name}", expanded=(j==0)):
-                                        render_result_card(r, result_type)
+                                        render_result_card(r, result_type, llm)
                                 elif result_type == "organization":
                                     name = r.get('organization_name', r.get('o.name', f'Organization {j+1}'))
                                     with st.expander(f"🏫 {name}", expanded=(j==0)):
-                                        render_result_card(r, result_type)
+                                        render_result_card(r, result_type, llm)
                                 elif result_type == "provider":
                                     name = r.get('provider_name', r.get('p.name', f'Provider {j+1}'))
                                     with st.expander(f"🌐 {name}", expanded=(j==0)):
-                                        render_result_card(r, result_type)
+                                        render_result_card(r, result_type, llm)
                                 else:
                                     with st.expander(f"📋 Result {j+1}", expanded=(j==0)):
-                                        render_result_card(r, result_type)
+                                        render_result_card(r, result_type, llm)
                             
                             # Show "View more" if there are more results
                             if len(results) > MAX_RESULTS_DISPLAY:

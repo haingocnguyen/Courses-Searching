@@ -1,0 +1,63 @@
+{
+  "test_id": "TC192",
+  "query": "Quick — solve world peace in 3 sentences!",
+  "timestamp": "2025-07-22 20:08:46",
+  "type": "nonsense",
+  "expected_intent": "general_chat",
+  "expected_outcomes": {
+    "should_find_results": false,
+    "expected_keywords": [
+      "world peace",
+      "find",
+      "courses"
+    ],
+    "minimum_results": 0
+  },
+  "intent_analysis": {
+    "detected_intent": "general_chat",
+    "confidence": "high",
+    "processing_time": "3.4670s",
+    "reason": "The query contains a whimsical, fantasy-themed request ('solve world peace') that aligns with GENERAL_CHAT examples like 'become a dragon trainer' or 'magical powers course'. It lacks specific educational topics or action words typical of COURSE_SEARCH, and instead reflects casual, imaginative conversation.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 10,
+    "overall_intent_quality": 10,
+    "reasoning": "The predicted intent 'general_chat' is semantically correct for the user query as it falls under a general conversational category. The confidence score being high is appropriate since the query is straightforward and unambiguous, aligning well with the predicted intent. Overall, the system performed excellently in accurately identifying the intent with high confidence.",
+    "is_correct": true
+  },
+  "system_response": {
+    "content": "Hello! I'm here to help you find courses. You can ask me about specific courses, instructors, or organizations offering courses."
+  },
+  "response_evaluation": {
+    "relevance": 0,
+    "helpfulness": 2,
+    "clarity": 8,
+    "completeness": 2,
+    "professional_tone": 8,
+    "hallucination": 10,
+    "overall_score": 4.67,
+    "reasoning": "The response completely missed the mark in addressing the user's query about solving world peace in 3 sentences, making it irrelevant. However, it maintained a clear and professional tone. The response lacked helpfulness as it did not provide any guidance or next steps for the user. It was incomplete in not offering any information related to the user's query. The response hallucinated by introducing the context of finding courses, which was not present in the user query.",
+    "strengths": [
+      "Clarity in communication",
+      "Professional tone"
+    ],
+    "weaknesses": [
+      "Relevance to user query",
+      "Helpfulness and completeness"
+    ],
+    "suggestions": [
+      "Ensure responses directly address user queries",
+      "Provide actionable information or guidance for users"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['world peace']"
+    ]
+  }
+}

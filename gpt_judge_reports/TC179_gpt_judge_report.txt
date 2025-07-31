@@ -1,0 +1,62 @@
+
+========================================
+ GPT-3.5 TURBO LLM-AS-A-JUDGE EVALUATION
+========================================
+Test ID: TC179
+Query: "Can you make small talk with other chatbots?"
+Type: general_chat
+Timestamp: 2025-07-22 20:06:31
+Overall Score: 7.23/10
+
+1. INTENT CLASSIFICATION EVALUATION (GPT-3.5 Judge):
+   Detected: general_chat (confidence: high)
+   Expected: general_chat
+   
+   GPT-3.5 Turbo Scores:
+   - Intent Accuracy: 10/10
+   - Confidence Appropriateness: 10/10  
+   - Overall Intent Quality: 10/10
+   - Is Correct: True
+   
+   GPT Reasoning: The predicted intent 'general_chat' is a perfect match for the user query 'Can you make small talk with other chatbots?' as it clearly indicates a general chat-related intent. The confidence score being high is appropriate since the query is straightforward and unambiguous.
+
+2. RESPONSE QUALITY EVALUATION (GPT-3.5 Judge):
+   Results Found: 0
+   
+   GPT-3.5 Turbo Scores:
+   - Relevance: 4/10
+   - Helpfulness: 3/10
+   - Clarity: 7/10
+   - Completeness: 2/10
+   - Professional Tone: 8/10
+   - Hallucination Control: 10/10
+   
+   Overall Response Score: 5.7/10
+   
+   GPT Identified Strengths: Professional tone, Clarity
+   GPT Identified Weaknesses: Relevance, Completeness
+   GPT Suggestions: Include a brief acknowledgment of the user's query about small talk with chatbots, Provide a link or resource for users interested in engaging in small talk with chatbots
+
+3. OUTCOME VALIDATION:
+   Results Count Check: pass
+   Keyword Check: partial
+   Overall Validation: partial
+   Validation Score: 6/10
+   
+   Details: Missing keywords: ['small talk', 'chatbots']
+
+4. SYSTEM RESPONSE:
+Hello! I'm here to help you find courses. You can ask me about specific courses, instructors, or organizations offering courses.
+
+5. SYSTEM ARCHITECTURE:
+   Main System: Qwen3:4b (Local LLM) for intent classification & response generation
+   Judge System: GPT-3.5 Turbo (OpenAI API) for objective evaluation
+   Embedding: all-MiniLM-L6-v2 (Local)
+   Database: Neo4j (Local)
+
+6. PERFORMANCE METRICS:
+   Intent Processing: 2.2897s
+   KB Processing: N/A
+   Response Generation: N/A
+
+========================================

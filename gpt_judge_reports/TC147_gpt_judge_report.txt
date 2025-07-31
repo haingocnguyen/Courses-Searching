@@ -1,0 +1,78 @@
+
+========================================
+ GPT-3.5 TURBO LLM-AS-A-JUDGE EVALUATION
+========================================
+Test ID: TC147
+Query: "I'm looking for a Communication skills course with high ratings, quizzes, hands-on projects, community discussion, and practical assignments — do you have any?"
+Type: mixed_hop
+Timestamp: 2025-07-22 19:42:14
+Overall Score: 7.83/10
+
+1. INTENT CLASSIFICATION EVALUATION (GPT-3.5 Judge):
+   Detected: course_search (confidence: high)
+   Expected: course_search
+   
+   GPT-3.5 Turbo Scores:
+   - Intent Accuracy: 10/10
+   - Confidence Appropriateness: 9/10  
+   - Overall Intent Quality: 9/10
+   - Is Correct: True
+   
+   GPT Reasoning: The predicted intent 'course_search' is a perfect match for the user query as it accurately captures the user's intent to search for a course. The confidence level is appropriately high given the specificity and clarity of the query. The system correctly identified the user's intent with high confidence, but there is always room for slight uncertainty in complex queries, hence a slightly lower confidence score. Overall, the system performed excellently in accurately classifying the intent with a high confidence level.
+
+2. RESPONSE QUALITY EVALUATION (GPT-3.5 Judge):
+   Results Found: 10
+   
+   GPT-3.5 Turbo Scores:
+   - Relevance: 7/10
+   - Helpfulness: 8/10
+   - Clarity: 9/10
+   - Completeness: 8/10
+   - Professional Tone: 9/10
+   - Hallucination Control: 10/10
+   
+   Overall Response Score: 8.5/10
+   
+   GPT Identified Strengths: Clear and detailed overview of available courses, Provides practical selection insights for users
+   GPT Identified Weaknesses: Lack of specific ratings for some courses, Limited diversity in providers and institutions
+   GPT Suggestions: Include specific ratings for all courses listed, Consider expanding the dataset to include courses from multiple providers for more diversity
+
+3. OUTCOME VALIDATION:
+   Results Count Check: pass
+   Keyword Check: partial
+   Overall Validation: partial
+   Validation Score: 6/10
+   
+   Details: Missing keywords: ['high ratings']
+
+4. SYSTEM RESPONSE:
+**🌱 Course Landscape Overview**  
+The course landscape for communication skills is vibrant and high-quality, with a strong emphasis on practical learning and real-world application. Out of 10 courses identified, the average rating is **4.6/5.0**, with top-rated courses like *Verbal Communications and Presentation Skills* (4.5/5.0) and *Unleashing the Impact of your Social Enterprise* (4.6/5.0) standing out. While the top-rated courses are not strictly communication-focused, they often incorporate communication skills as a key component. The average duration of 11.5 weeks suggests a balanced approach to skill development, combining theory, practice, and community engagement.  
+
+**📊 Quality Distribution and Learning Value**  
+The high average rating (4.6/5.0) indicates that most courses meet or exceed expectations, with a range of 4.4–4.9. However, the top-rated courses (e.g., *What is Climate Change?* at 4.9/5.0) are in unrelated fields, which may suggest that communication skills are a secondary focus in some courses. This could mean that learners seeking **explicit communication training** might need to look beyond the top-rated list. The **mixed level distribution** (though no distinct levels are available) implies that courses are designed for a broad audience, making them accessible to beginners and intermediate learners alike.  
+
+**🎯 Skill Focus and Learning Progression**  
+The top skills covered include **verbal communication, presentation skills, and social enterprise**, with courses like *Training and Learning Online* (4.7/5.0) and *What is Palliative Care?* (4.8/5.0) integrating communication into their broader themes. This suggests that while some courses are explicitly about communication, others use it as a tool for other disciplines. Learners aiming for **practical assignments** and **hands-on projects** will find courses like *Verbal Communications and Presentation Skills* (4.5/5.0) and *Unleashing the Impact of your Social Enterprise* (4.6/5.0) particularly useful, as they emphasize real-world application.  
+
+**🔍 Course Approaches and Specializations**  
+The courses vary in their **approaches to communication**: some focus on formal presentation skills, while others integrate communication into social impact or healthcare contexts. For example, *Training and Learning Online* (4.7/5.0) emphasizes interactive learning, while *What is Climate Change?* (4.9/5.0) uses communication to explain complex scientific concepts. This diversity allows learners to choose courses that align with their **specific goals**—whether it’s public speaking, team collaboration, or persuasive communication.  
+
+**📌 Provider and Institutional Insights**  
+The dataset shows **zero unique providers** and **zero unique institutions**, indicating that all courses are from a single provider. This could mean consistent quality across courses but limited diversity in teaching styles or content. Learners should consider this when evaluating whether the provider’s approach aligns with their learning preferences.  
+
+**💡 Practical Selection Insights**  
+To find a communication skills course that meets your needs, prioritize courses explicitly labeled as "communication" or "presentation skills," even if they are not the top-rated. For example, *Verbal Communications and Presentation Skills* (4.5/5.0) offers structured lessons on public speaking, while *Unleashing the Impact of your Social Enterprise* (4.6/5.0) uses communication to build persuasive narratives. Look for courses with **quizzes, community discussions, and practical assignments** to ensure hands-on learning. Since all courses are from the same provider, focus on the **skill focus** and **duration** to choose the best fit for your goals. 🌟
+
+5. SYSTEM ARCHITECTURE:
+   Main System: Qwen3:4b (Local LLM) for intent classification & response generation
+   Judge System: GPT-3.5 Turbo (OpenAI API) for objective evaluation
+   Embedding: all-MiniLM-L6-v2 (Local)
+   Database: Neo4j (Local)
+
+6. PERFORMANCE METRICS:
+   Intent Processing: 4.4437s
+   KB Processing: 14.8770s
+   Response Generation: 15.8902s
+
+========================================

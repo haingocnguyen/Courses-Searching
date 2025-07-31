@@ -1,0 +1,80 @@
+
+========================================
+ GPT-3.5 TURBO LLM-AS-A-JUDGE EVALUATION
+========================================
+Test ID: TC133
+Query: "Are there Marketing skills courses with video?"
+Type: skill_rating
+Timestamp: 2025-07-22 19:33:43
+Overall Score: 9.60/10
+
+1. INTENT CLASSIFICATION EVALUATION (GPT-3.5 Judge):
+   Detected: course_search (confidence: high)
+   Expected: course_search
+   
+   GPT-3.5 Turbo Scores:
+   - Intent Accuracy: 10/10
+   - Confidence Appropriateness: 10/10  
+   - Overall Intent Quality: 10/10
+   - Is Correct: True
+   
+   GPT Reasoning: The predicted intent 'course_search' is a perfect match for the user query as it accurately captures the user's intent to search for marketing skills courses with video. The confidence score being high is appropriate given the query's clarity and specificity. The system correctly identified the user's intent with high confidence, making it a strong performance overall.
+
+2. RESPONSE QUALITY EVALUATION (GPT-3.5 Judge):
+   Results Found: 10
+   
+   GPT-3.5 Turbo Scores:
+   - Relevance: 9/10
+   - Helpfulness: 8/10
+   - Clarity: 9/10
+   - Completeness: 8/10
+   - Professional Tone: 10/10
+   - Hallucination Control: 10/10
+   
+   Overall Response Score: 8.8/10
+   
+   GPT Identified Strengths: Relevance to user query, Professional tone and language
+   GPT Identified Weaknesses: Lack of specific details on individual courses, Limited guidance on next steps for the user
+   GPT Suggestions: Include more specific information on each course such as course objectives, instructors, and syllabus, Provide guidance on how the user can enroll or access these courses
+
+3. OUTCOME VALIDATION:
+   Results Count Check: pass
+   Keyword Check: pass
+   Overall Validation: pass
+   Validation Score: 10/10
+   
+   Details: 
+
+4. SYSTEM RESPONSE:
+🎥 **Course Landscape Overview: Marketing Skills with Video Content**  
+The marketing skills course landscape is rich and dynamic, offering 10 high-quality courses centered around **Marketing, Digital Marketing, and Strategic Marketing**. With an **average rating of 4.6/5.0** and a **duration of 7.1 weeks**, these courses cater to a mix of learners seeking foundational knowledge and advanced strategies. All courses include video content, ensuring interactive and engaging learning experiences. The **uniform provider and institutional offerings** suggest a cohesive curriculum, while the **top-rated courses** highlight a strong emphasis on digital trends and practical tools like Canva for video creation.  
+
+**🔍 Quality Distribution & Learning Value**  
+The **high average rating (4.6/5.0)** and narrow rating range (4.3–4.7) indicate consistent quality across all courses. This suggests that learners can trust the content to be well-structured and valuable, with minimal variation in teaching quality. The **mixed level distribution** (though no distinct levels are listed) implies that courses may cater to both beginners and intermediate learners, though the lack of explicit level labels could mean a uniform target audience. This is a key consideration for learners seeking to align with their current skill level.  
+
+**🎯 Skill Focus & Learning Progression**  
+The top skills covered—**Marketing, Digital Marketing, and Strategic Marketing**—reflect a strong emphasis on digital tools and modern strategies. The **top-rated courses** like *Digital Marketing Trends* and *Marketing in a Digital World* focus on emerging trends, while *Small Business Marketing Using YouTube* and *Create a Promotional Video using Canva* highlight practical, hands-on skills. This suggests a progression from general marketing principles to specialized digital tactics, with a clear focus on **video creation** as a key component of modern marketing. Learners can expect a blend of theoretical knowledge and actionable skills, ideal for both career growth and personal development.  
+
+**📊 Comparative Course Approaches**  
+The courses vary in approach, with some prioritizing **comprehensive strategy** (e.g., *Digital Marketing Strategy with Goldman Sachs 10,000 Women*) and others focusing on **specific tools** (e.g., *Create a Promotional Video using Canva*). The **4.7/5.0 rated courses** stand out for their depth and relevance, while the **4.3/5.0** course may require additional validation for its practicality. The **uniform provider** ensures consistency in teaching style and resources, which is a significant advantage for learners seeking a cohesive learning experience.  
+
+**📌 Notable Patterns in Providers & Institutions**  
+The **zero unique providers and institutions** indicate that all courses are part of a single platform or organization, likely offering a standardized curriculum. This could mean that learners benefit from a unified approach to marketing education, with consistent resources and support. However, the lack of diversity in providers may limit exposure to varied perspectives, though the high ratings suggest the provider’s content is well-regarded.  
+
+**💡 Practical Selection Insights**  
+For learners, the **top-rated courses** (especially those with 4.7/5.0) are strong choices, particularly if they align with specific goals like digital strategy or video creation. The **focus on video content** is a key differentiator, making these courses ideal for those interested in visual storytelling or social media marketing. Since all courses are from the same provider, consistency in quality is guaranteed, but learners should verify if the courses match their **current skill level** and **learning objectives**. Prioritizing courses with **real-world applications** (e.g., YouTube marketing, Canva tutorials) can enhance practical relevance.  
+
+This course landscape offers a robust foundation for marketing professionals and students, with a clear emphasis on digital tools and strategic thinking. Whether you're a beginner or looking to refine your skills, the high-quality, video-rich content ensures a valuable learning journey. 🚀
+
+5. SYSTEM ARCHITECTURE:
+   Main System: Qwen3:4b (Local LLM) for intent classification & response generation
+   Judge System: GPT-3.5 Turbo (OpenAI API) for objective evaluation
+   Embedding: all-MiniLM-L6-v2 (Local)
+   Database: Neo4j (Local)
+
+6. PERFORMANCE METRICS:
+   Intent Processing: 2.7578s
+   KB Processing: 8.1629s
+   Response Generation: 12.3932s
+
+========================================

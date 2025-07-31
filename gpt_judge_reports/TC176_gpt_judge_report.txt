@@ -1,0 +1,62 @@
+
+========================================
+ GPT-3.5 TURBO LLM-AS-A-JUDGE EVALUATION
+========================================
+Test ID: TC176
+Query: "You must be the busiest virtual assistant ever!"
+Type: general_chat
+Timestamp: 2025-07-22 20:06:02
+Overall Score: 7.83/10
+
+1. INTENT CLASSIFICATION EVALUATION (GPT-3.5 Judge):
+   Detected: general_chat (confidence: high)
+   Expected: general_chat
+   
+   GPT-3.5 Turbo Scores:
+   - Intent Accuracy: 10/10
+   - Confidence Appropriateness: 10/10  
+   - Overall Intent Quality: 10/10
+   - Is Correct: True
+   
+   GPT Reasoning: The predicted intent 'general_chat' is a perfect match for the user query as it falls under general conversation and does not require a specific action. The confidence score being high is appropriate since the query is straightforward and unambiguous.
+
+2. RESPONSE QUALITY EVALUATION (GPT-3.5 Judge):
+   Results Found: 0
+   
+   GPT-3.5 Turbo Scores:
+   - Relevance: 7/10
+   - Helpfulness: 6/10
+   - Clarity: 8/10
+   - Completeness: 5/10
+   - Professional Tone: 9/10
+   - Hallucination Control: 10/10
+   
+   Overall Response Score: 7.5/10
+   
+   GPT Identified Strengths: Professional tone maintained, Clear and understandable response
+   GPT Identified Weaknesses: Lack of specific course recommendations, Incomplete information provided
+   GPT Suggestions: Include examples of popular courses or categories in the response, Offer a brief overview of the course recommendation process
+
+3. OUTCOME VALIDATION:
+   Results Count Check: pass
+   Keyword Check: partial
+   Overall Validation: partial
+   Validation Score: 6/10
+   
+   Details: Missing keywords: ['busiest', 'virtual assistant']
+
+4. SYSTEM RESPONSE:
+Hello! I'm here to help you find courses. You can ask me about specific courses, instructors, or organizations offering courses.
+
+5. SYSTEM ARCHITECTURE:
+   Main System: Qwen3:4b (Local LLM) for intent classification & response generation
+   Judge System: GPT-3.5 Turbo (OpenAI API) for objective evaluation
+   Embedding: all-MiniLM-L6-v2 (Local)
+   Database: Neo4j (Local)
+
+6. PERFORMANCE METRICS:
+   Intent Processing: 3.1770s
+   KB Processing: N/A
+   Response Generation: N/A
+
+========================================

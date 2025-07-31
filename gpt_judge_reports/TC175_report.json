@@ -1,0 +1,64 @@
+{
+  "test_id": "TC175",
+  "query": "What's it like living inside a server?",
+  "timestamp": "2025-07-22 20:05:53",
+  "type": "general_chat",
+  "expected_intent": "general_chat",
+  "expected_outcomes": {
+    "should_find_results": false,
+    "expected_keywords": [
+      "server",
+      "living",
+      "find",
+      "courses"
+    ],
+    "minimum_results": 0
+  },
+  "intent_analysis": {
+    "detected_intent": "general_chat",
+    "confidence": "high",
+    "processing_time": "3.0913s",
+    "reason": "The query is a hypothetical or imaginative question about a metaphorical scenario (living inside a server), which aligns with GENERAL_CHAT examples like 'tell me a funny joke' or 'what is this system designed for'. It lacks specific educational requests or action words tied to course search.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 10,
+    "overall_intent_quality": 10,
+    "reasoning": "The predicted intent 'general_chat' is a perfect match for the user query as it falls under a general chat category. The confidence score is appropriately high as the query is straightforward and unambiguous.",
+    "is_correct": true
+  },
+  "system_response": {
+    "content": "Hello! I'm here to help you find courses. You can ask me about specific courses, instructors, or organizations offering courses."
+  },
+  "response_evaluation": {
+    "relevance": 0,
+    "helpfulness": 1,
+    "clarity": 8,
+    "completeness": 2,
+    "professional_tone": 9,
+    "hallucination": 10,
+    "overall_score": 4.0,
+    "reasoning": "The response completely missed the relevance to the user query about living inside a server. While the tone was professional and the response was clear, it lacked helpfulness and completeness. The response did not provide any information related to the user's query, resulting in a low relevance score. However, it did not contain false information.",
+    "strengths": [
+      "Professional tone",
+      "Clarity"
+    ],
+    "weaknesses": [
+      "Relevance",
+      "Helpfulness"
+    ],
+    "suggestions": [
+      "Improve relevance by addressing user queries directly",
+      "Include helpful information even if the query is not directly related to course recommendations"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['server', 'living']"
+    ]
+  }
+}

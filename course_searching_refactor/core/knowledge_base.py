@@ -148,7 +148,8 @@ class KnowledgeBaseQA:
         OPTIONAL MATCH (c)-[:TEACHES]->(s:Skill)
         OPTIONAL MATCH (c)-[:HAS_LEVEL]->(l:Level)
         OPTIONAL MATCH (c)-[:TAUGHT_BY]->(i:Instructor)
-        RETURN 
+        RETURN x
+        
             c.name AS name,
             c.description AS description,
             c.rating AS rating,
@@ -323,14 +324,23 @@ class KnowledgeBaseQA:
                     return processed_results[:10]
                 
                 else:
-                    # Course queries - use existing embedding logic
                     logger.info(f"🎯 Processing course query results")
                     query_emb = self.embedding_model.get_embedding(user_query)
                     
+                    seen_urls = {}
                     valid_results = []
+                    
                     for rec in raw_results:
                         url = rec.get("url")
-                        if url and url in self.course_embeddings_data:
+                        if not url:
+                            continue
+                        
+                        if url in seen_urls:
+                            continue
+                        
+                        seen_urls[url] = True
+                        
+                        if url in self.course_embeddings_data:
                             course_emb = self.course_embeddings_data[url]["embedding"]
                             sim = cosine_similarity(query_emb, course_emb)
                             rec["similarity"] = float(sim)
@@ -341,7 +351,7 @@ class KnowledgeBaseQA:
                             valid_results.append(rec)
                     
                     valid_results.sort(key=lambda x: (-x["similarity"], x.get("url", "")))
-                    logger.info(f"Ranked {len(valid_results)} course results")
+                    logger.info(f"Ranked {len(valid_results)} unique course results")
                     
                     if len(valid_results) >= 1:
                         return valid_results[:10]

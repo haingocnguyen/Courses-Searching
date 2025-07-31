@@ -1,0 +1,63 @@
+{
+  "test_id": "TC188",
+  "query": "Is there something you wish people would stop asking you?",
+  "timestamp": "2025-07-22 20:08:01",
+  "type": "general_chat",
+  "expected_intent": "general_chat",
+  "expected_outcomes": {
+    "should_find_results": false,
+    "expected_keywords": [
+      "stop asking",
+      "find",
+      "courses"
+    ],
+    "minimum_results": 0
+  },
+  "intent_analysis": {
+    "detected_intent": "general_chat",
+    "confidence": "high",
+    "processing_time": "2.4292s",
+    "reason": "The query is a system-related question about user interactions, similar to examples like 'what is your name' or 'explain your role and responsibilities' under GENERAL_CHAT. It does not request specific courses or training programs.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 10,
+    "overall_intent_quality": 10,
+    "reasoning": "The predicted intent 'general_chat' is a perfect match for the user query as it falls under a general conversational category. The confidence score being high is appropriate since the query is straightforward and unambiguous.",
+    "is_correct": true
+  },
+  "system_response": {
+    "content": "Hello! I'm here to help you find courses. You can ask me about specific courses, instructors, or organizations offering courses."
+  },
+  "response_evaluation": {
+    "relevance": 0,
+    "helpfulness": 2,
+    "clarity": 8,
+    "completeness": 2,
+    "professional_tone": 9,
+    "hallucination": 0,
+    "overall_score": 3.5,
+    "reasoning": "The response completely missed addressing the user's query about what people should stop asking. It provided generic information about finding courses, which was not relevant to the user's question. However, the response was clear, well-structured, and maintained a professional tone. It lacked completeness and helpfulness as it did not offer any actionable information or guidance related to the user's query.",
+    "strengths": [
+      "Professional tone",
+      "Clarity"
+    ],
+    "weaknesses": [
+      "Relevance",
+      "Completeness"
+    ],
+    "suggestions": [
+      "Improve relevance by directly addressing the user's query",
+      "Include helpful information or guidance related to the user's goal"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['stop asking']"
+    ]
+  }
+}

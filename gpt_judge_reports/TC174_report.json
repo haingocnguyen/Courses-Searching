@@ -1,0 +1,64 @@
+{
+  "test_id": "TC174",
+  "query": "If I type in gibberish, will you still reply?",
+  "timestamp": "2025-07-22 20:05:45",
+  "type": "general_chat",
+  "expected_intent": "general_chat",
+  "expected_outcomes": {
+    "should_find_results": false,
+    "expected_keywords": [
+      "gibberish",
+      "reply",
+      "find",
+      "courses"
+    ],
+    "minimum_results": 0
+  },
+  "intent_analysis": {
+    "detected_intent": "general_chat",
+    "confidence": "high",
+    "processing_time": "2.8733s",
+    "reason": "The query asks about the system's behavior when receiving non-sensical input, which aligns with system capability questions in GENERAL_CHAT examples like 'tell me about your system capability' and 'what is your specific scope of work'.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 10,
+    "overall_intent_quality": 10,
+    "reasoning": "The predicted intent 'general_chat' is semantically correct for the user query as it falls under a general chat category. The confidence score is appropriately high as the query is straightforward and unambiguous, leading to a clear intent prediction. Overall, the system performed excellently in accurately identifying the intent with high confidence.",
+    "is_correct": true
+  },
+  "system_response": {
+    "content": "Hello! I'm here to help you find courses. You can ask me about specific courses, instructors, or organizations offering courses."
+  },
+  "response_evaluation": {
+    "relevance": 7,
+    "helpfulness": 6,
+    "clarity": 8,
+    "completeness": 5,
+    "professional_tone": 9,
+    "hallucination": 10,
+    "overall_score": 7.5,
+    "reasoning": "The response is mostly relevant as it acknowledges the user's query about typing gibberish. It provides a general introduction to the system's capabilities, which is somewhat helpful but lacks direct guidance on the specific query. The response is clear and well-structured, maintaining a professional tone throughout. However, it falls short in completeness by not addressing the gibberish aspect directly. There are no hallucinations as the response sticks to factual information.",
+    "strengths": [
+      "Professional tone",
+      "Clarity in communication"
+    ],
+    "weaknesses": [
+      "Lack of direct response to user query",
+      "Incomplete guidance"
+    ],
+    "suggestions": [
+      "Include a direct acknowledgment of the gibberish query for better relevance",
+      "Provide specific guidance or examples to assist users better"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['gibberish', 'reply']"
+    ]
+  }
+}

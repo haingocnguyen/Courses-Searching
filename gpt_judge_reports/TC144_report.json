@@ -1,0 +1,101 @@
+{
+  "test_id": "TC144",
+  "query": "I want Research skills courses with interactive content, high ratings, and short length.",
+  "timestamp": "2025-07-22 19:40:22",
+  "type": "skill_rating_duration",
+  "expected_intent": "course_search",
+  "expected_outcomes": {
+    "should_find_results": true,
+    "expected_keywords": [
+      "Research",
+      "interactive content",
+      "high ratings",
+      "short length"
+    ],
+    "minimum_results": 1
+  },
+  "intent_analysis": {
+    "detected_intent": "course_search",
+    "confidence": "high",
+    "processing_time": "3.0412s",
+    "reason": "The query specifies a clear educational request for 'Research skills courses' with detailed criteria (interactive content, high ratings, short length), aligning with COURSE_SEARCH examples like 'show me machine learning courses with high ratings' or 'recommend beginner courses in artificial intelligence'.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 9,
+    "overall_intent_quality": 9,
+    "reasoning": "The predicted intent 'course_search' is semantically correct for the user query as it clearly indicates the user's intention to search for courses. The confidence level is appropriately high given the specificity and clarity of the query. The system correctly identified the user's intent with high confidence, which is commendable. However, a slightly lower confidence score could be more appropriate to account for any potential variations in user intent. Overall, the system performed excellently in accurately predicting the intent with a high confidence level.",
+    "is_correct": true
+  },
+  "processing_details": {
+    "results_found": 10,
+    "processing_time": "12.8792s",
+    "sample_results": [
+      {
+        "name": "Academic Information Seeking",
+        "url": "https://www.coursera.org/learn/academicinfoseek",
+        "rating": "4.7",
+        "skills": []
+      },
+      {
+        "name": "Training and Learning Online",
+        "url": "https://www.coursera.org/learn/training-and-learning-online",
+        "rating": "4.7",
+        "skills": [
+          "Online Research",
+          "Critical Thinking",
+          "study skills",
+          "online communications",
+          "online collaboration"
+        ]
+      },
+      {
+        "name": "Understand Best Practices with Canvas",
+        "url": "https://www.coursera.org/projects/understand-best-practice-canvas",
+        "rating": "4.8",
+        "skills": [
+          "Instructional and Curriculum Design",
+          "Curriculum Development",
+          "Education and Training",
+          "Teaching",
+          "Course Development"
+        ]
+      }
+    ]
+  },
+  "system_response": {
+    "generation_time": "11.6405s",
+    "content": "🧠 **Course Landscape Overview**  \nThe research skills course landscape for this topic is highly concentrated, with 10 courses offering a mix of interactive content, high ratings, and structured learning paths. The average rating of **4.7/5.0** (with top courses at 4.9/5.0) signals a strong emphasis on quality, while the **10-week average duration** suggests a balanced approach to depth and brevity. All courses are from a single provider and institution, indicating a cohesive curriculum focused on **critical thinking**, **instructional design**, and **curriculum development**—skills critical for both academic and professional research environments.  \n\n**🔍 Quality Distribution & Learning Value**  \nThe **4.6–4.9 rating range** reflects a consistent standard of excellence, with the top-rated courses (e.g., *Whole Class with PhET for STEM Education*) standing out for their practical, interactive elements. This high-quality distribution ensures learners can trust the material, though the **10-week duration** may feel slightly long for \"short\" courses. However, the structured progression across topics like **academic information seeking** and **online learning** makes it a worthwhile investment for those seeking depth without overwhelming complexity.  \n\n**📚 Skill Focus & Learning Progression**  \nThe courses prioritize **critical thinking** and **curriculum design**, aligning with the need for research skills that go beyond data analysis. The top-rated courses, suchity *Understand Best Practices with Canvas* and *Training and Learning Online*, demonstrate how interactive tools (e.g., PhET simulations, LMS platforms) can be integrated into research workflows. This suggests a progression from foundational skills (e.g., information seeking) to applied strategies (e.g., instructional design), making the courses suitable for learners at varying stages of expertise.  \n\n**🎯 Course Approaches & Specializations**  \nWhile all courses are from the same provider, the **top-rated courses** showcase distinct specializations:  \n- **STEM-focused** (PhET integration)  \n- **LMS best practices** (Canvas)  \n- **Technology-driven teaching**  \nThis diversity in approaches allows learners to tailor their focus, though the lack of provider or institutional variety means no alternative perspectives are available. The **interactive content** (e.g., simulations, case studies) ensures engagement, but the uniformity in provider offerings may limit exposure to different pedagogical styles.  \n\n**📌 Practical Selection Insights**  \nFor learners, the **top-rated courses** (e.g., *Get Interactive: Practical Teaching with Technology*) are ideal for high-value learning, while the **4.7-rated** courses (e.g., *Academic Information Seeking*) offer reliable, structured content. The **10-week duration** is a key consideration, as it balances depth with flexibility. Since all courses are from a single provider, prioritize those with the most relevant skill overlaps (e.g., curriculum development or STEM tools) to maximize utility. The **mixed level** (though no variations exist) suggests the courses are suitable for intermediate learners seeking to refine research methodologies.  \n\n**💡 Final Thoughts**  \nThis course landscape offers a high-quality, interactive pathway for developing research skills, with a strong emphasis on practical application. While the lack of provider diversity is a limitation, the consistent ratings and skill focus make it a reliable choice for learners aiming to enhance critical thinking and instructional design capabilities."
+  },
+  "response_evaluation": {
+    "relevance": 9,
+    "helpfulness": 8,
+    "clarity": 9,
+    "completeness": 8,
+    "professional_tone": 10,
+    "hallucination": 10,
+    "overall_score": 8.8,
+    "reasoning": "The response is highly relevant to the user's query, providing detailed information on research skills courses with interactive content, high ratings, and short length. It offers valuable insights into the course landscape, quality distribution, skill focus, and practical selection considerations. The response is clear, well-structured, and maintains a professional tone throughout. It contains no false information and accurately reflects the actual results found. However, the completeness could be improved by providing more specific details on each course.",
+    "strengths": [
+      "Relevance to user query",
+      "Professional tone and language"
+    ],
+    "weaknesses": [
+      "Lack of specific details on individual courses",
+      "Could enhance completeness by offering more actionable steps"
+    ],
+    "suggestions": [
+      "Include more specific information on each course such as course descriptions or learning outcomes",
+      "Provide recommendations on which course might be best suited for different user needs"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['short length']"
+    ]
+  }
+}

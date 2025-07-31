@@ -1,0 +1,62 @@
+
+========================================
+ GPT-3.5 TURBO LLM-AS-A-JUDGE EVALUATION
+========================================
+Test ID: TC174
+Query: "If I type in gibberish, will you still reply?"
+Type: general_chat
+Timestamp: 2025-07-22 20:05:45
+Overall Score: 7.83/10
+
+1. INTENT CLASSIFICATION EVALUATION (GPT-3.5 Judge):
+   Detected: general_chat (confidence: high)
+   Expected: general_chat
+   
+   GPT-3.5 Turbo Scores:
+   - Intent Accuracy: 10/10
+   - Confidence Appropriateness: 10/10  
+   - Overall Intent Quality: 10/10
+   - Is Correct: True
+   
+   GPT Reasoning: The predicted intent 'general_chat' is semantically correct for the user query as it falls under a general chat category. The confidence score is appropriately high as the query is straightforward and unambiguous, leading to a clear intent prediction. Overall, the system performed excellently in accurately identifying the intent with high confidence.
+
+2. RESPONSE QUALITY EVALUATION (GPT-3.5 Judge):
+   Results Found: 0
+   
+   GPT-3.5 Turbo Scores:
+   - Relevance: 7/10
+   - Helpfulness: 6/10
+   - Clarity: 8/10
+   - Completeness: 5/10
+   - Professional Tone: 9/10
+   - Hallucination Control: 10/10
+   
+   Overall Response Score: 7.5/10
+   
+   GPT Identified Strengths: Professional tone, Clarity in communication
+   GPT Identified Weaknesses: Lack of direct response to user query, Incomplete guidance
+   GPT Suggestions: Include a direct acknowledgment of the gibberish query for better relevance, Provide specific guidance or examples to assist users better
+
+3. OUTCOME VALIDATION:
+   Results Count Check: pass
+   Keyword Check: partial
+   Overall Validation: partial
+   Validation Score: 6/10
+   
+   Details: Missing keywords: ['gibberish', 'reply']
+
+4. SYSTEM RESPONSE:
+Hello! I'm here to help you find courses. You can ask me about specific courses, instructors, or organizations offering courses.
+
+5. SYSTEM ARCHITECTURE:
+   Main System: Qwen3:4b (Local LLM) for intent classification & response generation
+   Judge System: GPT-3.5 Turbo (OpenAI API) for objective evaluation
+   Embedding: all-MiniLM-L6-v2 (Local)
+   Database: Neo4j (Local)
+
+6. PERFORMANCE METRICS:
+   Intent Processing: 2.8733s
+   KB Processing: N/A
+   Response Generation: N/A
+
+========================================

@@ -1,0 +1,64 @@
+{
+  "test_id": "TC182",
+  "query": "What do you do when you're not answering questions?",
+  "timestamp": "2025-07-22 20:07:13",
+  "type": "general_chat",
+  "expected_intent": "general_chat",
+  "expected_outcomes": {
+    "should_find_results": false,
+    "expected_keywords": [
+      "not answering",
+      "questions",
+      "find",
+      "courses"
+    ],
+    "minimum_results": 0
+  },
+  "intent_analysis": {
+    "detected_intent": "general_chat",
+    "confidence": "high",
+    "processing_time": "3.3643s",
+    "reason": "The query asks about the system's role and capabilities, which aligns with examples like 'tell me about your system capability' and 'what is your specific scope of work' in the GENERAL_CHAT category. It does not involve specific course searches or educational topics.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 9,
+    "overall_intent_quality": 9,
+    "reasoning": "The predicted intent 'general_chat' is semantically correct for the user query as it falls under general conversation. The confidence level is appropriately high as the query is clear and unambiguous. The overall intent quality is high due to the accurate intent prediction and suitable confidence level.",
+    "is_correct": true
+  },
+  "system_response": {
+    "content": "Hello! I'm here to help you find courses. You can ask me about specific courses, instructors, or organizations offering courses."
+  },
+  "response_evaluation": {
+    "relevance": 2,
+    "helpfulness": 3,
+    "clarity": 8,
+    "completeness": 2,
+    "professional_tone": 9,
+    "hallucination": 10,
+    "overall_score": 5.7,
+    "reasoning": "The response is not very relevant to the user query as it fails to address what one does when not answering questions. It lacks helpfulness as it does not provide any actionable information or guidance. However, the response is clear and well-structured, maintaining a professional tone throughout. It is incomplete as it does not offer any information related to the user's query. The major issue is the hallucination score, as the system claims to help find courses but provides no results, leading to unsupported information.",
+    "strengths": [
+      "Professional tone",
+      "Clarity"
+    ],
+    "weaknesses": [
+      "Relevance",
+      "Completeness"
+    ],
+    "suggestions": [
+      "Ensure responses directly address user queries",
+      "Provide actionable information or guidance"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['not answering', 'questions']"
+    ]
+  }
+}

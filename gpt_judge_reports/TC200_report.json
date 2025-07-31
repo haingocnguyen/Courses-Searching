@@ -1,0 +1,64 @@
+{
+  "test_id": "TC200",
+  "query": "I want information on the holiday to Mars.",
+  "timestamp": "2025-07-22 20:09:55",
+  "type": "nonsense",
+  "expected_intent": "general_chat",
+  "expected_outcomes": {
+    "should_find_results": false,
+    "expected_keywords": [
+      "holiday",
+      "Mars",
+      "find",
+      "courses"
+    ],
+    "minimum_results": 0
+  },
+  "intent_analysis": {
+    "detected_intent": "general_chat",
+    "confidence": "high",
+    "processing_time": "3.3928s",
+    "reason": "The query is a vague, casual inquiry about a fictional concept (holiday to Mars) without specific educational or course-related details. It aligns with GENERAL_CHAT examples like 'tell me a funny joke please' or 'I am feeling tired today', which are non-educational, casual, or abstract.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 10,
+    "overall_intent_quality": 10,
+    "reasoning": "The predicted intent 'general_chat' is semantically correct for the user query as it indicates a general conversation topic. The query is straightforward and unambiguous, aligning perfectly with the predicted intent. The high confidence score is appropriate given the clear nature of the query, leaving no room for ambiguity or misinterpretation.",
+    "is_correct": true
+  },
+  "system_response": {
+    "content": "Hello! I'm here to help you find courses. You can ask me about specific courses, instructors, or organizations offering courses."
+  },
+  "response_evaluation": {
+    "relevance": 0,
+    "helpfulness": 1,
+    "clarity": 8,
+    "completeness": 2,
+    "professional_tone": 9,
+    "hallucination": 10,
+    "overall_score": 4.0,
+    "reasoning": "The response is not relevant to the user's query about Mars holidays, making it unhelpful. However, it is clear, well-structured, and maintains a professional tone. The response lacks completeness as it fails to provide any information related to Mars holidays. It hallucinates by introducing a course-related context where none was requested.",
+    "strengths": [
+      "Clarity in communication",
+      "Professional tone"
+    ],
+    "weaknesses": [
+      "Lack of relevance",
+      "Lack of completeness"
+    ],
+    "suggestions": [
+      "Improve relevance by addressing user queries directly",
+      "Provide more helpful information related to user queries"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['holiday', 'Mars']"
+    ]
+  }
+}

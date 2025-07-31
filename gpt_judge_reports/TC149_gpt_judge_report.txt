@@ -1,0 +1,78 @@
+
+========================================
+ GPT-3.5 TURBO LLM-AS-A-JUDGE EVALUATION
+========================================
+Test ID: TC149
+Query: "Can you recommend a Leadership skills course with great reviews, video content, hands-on projects, peer work, and community support?"
+Type: mixed_hop
+Timestamp: 2025-07-22 19:43:23
+Overall Score: 7.00/10
+
+1. INTENT CLASSIFICATION EVALUATION (GPT-3.5 Judge):
+   Detected: course_search (confidence: high)
+   Expected: course_search
+   
+   GPT-3.5 Turbo Scores:
+   - Intent Accuracy: 10/10
+   - Confidence Appropriateness: 9/10  
+   - Overall Intent Quality: 9/10
+   - Is Correct: True
+   
+   GPT Reasoning: The predicted intent 'course_search' is a perfect match for the user query as it clearly indicates the user's intent to search for a course. The high confidence score is appropriate given the specificity and clarity of the query. The system correctly identified the user's intent with a high level of confidence, making the overall intent quality very good.
+
+2. RESPONSE QUALITY EVALUATION (GPT-3.5 Judge):
+   Results Found: 10
+   
+   GPT-3.5 Turbo Scores:
+   - Relevance: 4/10
+   - Helpfulness: 7/10
+   - Clarity: 8/10
+   - Completeness: 6/10
+   - Professional Tone: 9/10
+   - Hallucination Control: 0/10
+   
+   Overall Response Score: 6.0/10
+   
+   GPT Identified Strengths: Clear and well-structured overview of leadership courses, Professional tone maintained throughout
+   GPT Identified Weaknesses: Lacks specific recommendations matching all user criteria, Incomplete in directly addressing the user's query
+   GPT Suggestions: Provide direct recommendations that align with the user's requested criteria, Include more detailed information on courses with video content, hands-on projects, and community support
+
+3. OUTCOME VALIDATION:
+   Results Count Check: pass
+   Keyword Check: partial
+   Overall Validation: partial
+   Validation Score: 6/10
+   
+   Details: Missing keywords: ['great reviews']
+
+4. SYSTEM RESPONSE:
+**🚀 Course Landscape Overview: Leadership Skills**  
+The leadership skills course landscape is robust, offering a curated selection of 10 courses with an **average rating of 4.7/5.0**, reflecting high-quality content and learner satisfaction. These courses span a 20-week duration, balancing theoretical knowledge with practical application. The **mixed-level design** ensures accessibility for learners at various stages, though all courses are tailored to a single provider, suggesting a cohesive curriculum. This landscape emphasizes **practical skills** like strategic thinking, team management, and organizational behavior, while also highlighting niche topics like Korean politics, which may appeal to specific interests.  
+
+**🔍 Quality Distribution & Learner Impact**  
+The **top-rated course, "Leading from Within" (5.0/5.0)**, stands out as a benchmark for excellence, showcasing a perfect blend of video content, peer collaboration, and real-world projects. The **next three courses** (4.8/5.0 and 4.7/5.0) also deliver strong value, with "Visionary leadership" and "Principles of Management" focusing on identity, motivation, and operational strategies. The **high average rating** indicates that most courses meet or exceed expectations, though the **4.6-5.0 range** suggests minor variations in depth or engagement. Learners can expect a **consistent quality** across courses, with a focus on actionable insights and community-driven learning.  
+
+**🎯 Skill Focus & Learning Progression**  
+The top courses emphasize **holistic leadership development**, covering both **soft skills** (e.g., motivation, identity) and **hard skills** (e.g., management, organizational behavior). "Understanding Korean Politics" adds a unique angle, highlighting how cultural context shapes leadership. The **20-week duration** allows for gradual progression, with hands-on projects and peer work fostering practical application. Learners can expect a **balanced mix** of theory, case studies, and interactive elements, ensuring they build a comprehensive skill set.  
+
+**📊 Comparative Approaches & Specializations**  
+While all courses are from the same provider, the **skill focus** varies: "Leading from Within" prioritizes self-awareness, while "Organizational Behavior" delves into team dynamics. The **4.8/5.0 course on visionary leadership** stands out for its emphasis on long-term strategy, making it ideal for aspiring leaders. The **4.7/5.0 Principles of Management** course offers a structured approach, suitable for those seeking foundational knowledge. The **uniform provider** ensures consistency in teaching style and resources, though the **niche topics** (e.g., Korean politics) may limit broader applicability.  
+
+**🌟 Notable Patterns & Provider Insights**  
+The **single provider** suggests a unified curriculum, which is advantageous for learners seeking a cohesive learning experience. The **lack of level diversity** indicates that all courses are designed for intermediate learners, assuming prior knowledge of leadership concepts. This could be a consideration for beginners, though the **20-week duration** allows for gradual mastery. The **strong emphasis on community support**—likely through discussion forums or peer projects—enhances engagement, making these courses ideal for collaborative learning.  
+
+**💡 Practical Selection Insights**  
+For learners, the **top-rated "Leading from Within"** is a must-try, offering a 5.0 rating and a focus on personal leadership. If seeking a **practical, project-based approach**, "Organizational Behavior" or "Principles of Management" provide structured frameworks. The **4.8/5.0 visionary leadership course** is excellent for those interested in strategic thinking. Always check for **hands-on components** (e.g., simulations, case studies) and **community features** (e.g., forums, mentorship). The **single provider** ensures consistency, but the **niche topics** may require flexibility in skill goals. Prioritize courses with **high-rated peer interaction** and **real-world applications** to maximize learning outcomes. 🌟
+
+5. SYSTEM ARCHITECTURE:
+   Main System: Qwen3:4b (Local LLM) for intent classification & response generation
+   Judge System: GPT-3.5 Turbo (OpenAI API) for objective evaluation
+   Embedding: all-MiniLM-L6-v2 (Local)
+   Database: Neo4j (Local)
+
+6. PERFORMANCE METRICS:
+   Intent Processing: 3.7946s
+   KB Processing: 19.3859s
+   Response Generation: 12.6929s
+
+========================================

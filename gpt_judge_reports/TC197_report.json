@@ -1,0 +1,65 @@
+{
+  "test_id": "TC197",
+  "query": "Could you fight another chatbot for me — like a rap battle or something?",
+  "timestamp": "2025-07-22 20:09:34",
+  "type": "nonsense",
+  "expected_intent": "general_chat",
+  "expected_outcomes": {
+    "should_find_results": false,
+    "expected_keywords": [
+      "chatbot",
+      "fight",
+      "find",
+      "courses"
+    ],
+    "minimum_results": 0
+  },
+  "intent_analysis": {
+    "detected_intent": "general_chat",
+    "confidence": "high",
+    "processing_time": "3.5274s",
+    "reason": "The query involves a playful, imaginative scenario (rap battle between chatbots) and does not request specific educational content, courses, or training. It aligns with GENERAL_CHAT examples like 'tell me a funny joke please' or 'become a dragon trainer' which focus on casual, fantasy-based interactions.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 10,
+    "overall_intent_quality": 10,
+    "reasoning": "The predicted intent 'general_chat' is a perfect match for the user query as it accurately captures the general conversational nature of the request. The query is unambiguous and clearly falls under the 'general_chat' category. The high confidence score is appropriate given the straightforward nature of the query. Overall, the intent classification system performed excellently in this case.",
+    "is_correct": true
+  },
+  "system_response": {
+    "content": "Hello! I'm here to help you find courses. You can ask me about specific courses, instructors, or organizations offering courses."
+  },
+  "response_evaluation": {
+    "relevance": 0,
+    "helpfulness": 1,
+    "clarity": 8,
+    "completeness": 2,
+    "professional_tone": 9,
+    "hallucination": 10,
+    "overall_score": 4.0,
+    "reasoning": "The response completely missed the mark in addressing the user's query about a rap battle with another chatbot. While the response was clear, professional, and free of hallucinations, it lacked relevance and completeness. It did not provide any helpful information or guidance related to the user's request.",
+    "strengths": [
+      "Professional tone",
+      "Clarity"
+    ],
+    "weaknesses": [
+      "Relevance",
+      "Completeness",
+      "Helpfulness"
+    ],
+    "suggestions": [
+      "Improve relevance by acknowledging the user's query even if it cannot be fulfilled",
+      "Provide some guidance or redirection for off-topic queries to keep users engaged"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['chatbot', 'fight']"
+    ]
+  }
+}

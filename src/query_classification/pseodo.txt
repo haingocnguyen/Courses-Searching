@@ -1,0 +1,136 @@
+FUNCTION render_course_card(course)
+    BEGIN container with border
+        SPLIT layout into two columns: col1 (3 units), col2 (1 unit)
+
+        IN col1:
+            # Extract basic fields
+            name    ← course["name"] or course["c.name"] or "Unnamed Course"
+            url     ← course["url"] or course["c.url"] or "#"
+            rating  ← course["rating"] or course["c.rating"] or 0
+
+            # Fetch detailed info
+            details ← session_state.advisor.get_course_details(url)
+            level   ← details["level"] if details else "N/A"
+
+            # Show popover with full details
+            BEGIN popover titled "{name}"
+                IF details exist:
+                    DISPLAY markdown "**Description:** {details.description}"
+                    DISPLAY divider
+                    CREATE three sub-columns
+                    TRY
+                        rating_num     ← float(rating)
+                        rating_display ← format rating_num to one decimal + "/5.0"
+                    CATCH
+                        rating_display ← "No rating"
+                    DISPLAY metric in sub-col[0]: ("Rating", rating_display)
+                    DISPLAY metric in sub-col[1]: ("Level", details.level)
+                    DISPLAY metric in sub-col[2]: ("Skills", count(details.skills))
+                    IF details.skills not empty:
+                        DISPLAY markdown "**Related Skills:**"
+                        DISPLAY list of skills
+
+            # Main card content
+            DISPLAY markdown "### [name](url)"
+            DISPLAY caption "**Level:** {level} | **Rating:** {rating or 'No rating'}"
+            skills ← course["skills"] or []
+            IF skills not empty:
+                DISPLAY text "**Skills:** " + join(skills, ", ")
+
+        IN col2:
+            similarity ← course["similarity"] or 0
+            DISPLAY metric ("Relevance", format similarity to two decimals)
+
+FUNCTION render_sidebar_settings()
+    BEGIN sidebar expander titled "SETTINGS", expanded by default
+        current_theme ← st.selectbox(
+            label = "Theme",
+            options = ["Light", "Dark", "System"],
+            default_index = 2,
+            help_text = "Select display theme"
+        )
+        DISPLAY caption "Version: 1.0.0 | Mode: {current_theme}"
+
+FUNCTION show_quick_actions()
+    BEGIN container with border
+        DISPLAY markdown "**Quick Queries:**"
+        columns ← split into 3 columns
+        sample_queries = [
+            ("Python Basics", "Find beginner Python courses"),
+            ("AWS Advanced",   "Show advanced cloud computing courses with AWS"),
+            ("Top Data Science","Data science courses with rating > 4.5")
+        ]
+        FOR each (col, (title, query)) in zip(columns, sample_queries):
+            IF col.button(title, help=query, full_width=True) clicked:
+                CALL handle_query_submission(query)
+
+FUNCTION handle_query_submission(query)
+    # Append user message to session history
+    CREATE user_msg dict with role="user", type="text", content=query, timestamp=now
+    APPEND user_msg to session_state.messages
+
+    TRY
+        SHOW spinner "Processing..."
+            start_time ← current_time()
+
+            # Generate plan and get results
+            plan    ← advisor.query_processor.generate_query_plan(query)
+            results ← advisor.process_query(query)
+
+            # Build system message
+            system_msg = {
+                role: "assistant",
+                type: "courses" if results else "text",
+                content: results or "No matching courses found",
+                metadata: {
+                    processing_time: elapsed_time since start_time,
+                    query_type: "course_search",
+                    query_plan: {
+                        steps: plan.steps,
+                        final_query: plan.final_query,
+                        debug_info: plan.debug_info
+                    }
+                }
+            }
+            APPEND system_msg to session_state.messages
+
+            # Refresh UI
+            CALL st.rerun()
+    EXCEPT error:
+        CALL handle_processing_error(error)
+
+FUNCTION handle_processing_error(error)
+    error_msg = {
+        role: "assistant",
+        type: "text",
+        content: "System error: {error type}",
+        metadata: {
+            error: error message,
+            timestamp: now
+        }
+    }
+    APPEND error_msg to session_state.messages
+
+FUNCTION display_chat_history()
+    FOR each msg in session_state.messages:
+        BEGIN chat_message with msg.role and avatar
+            IF msg.type == "text":
+                DISPLAY markdown msg.content
+            ELSE IF msg.type == "courses":
+                DISPLAY markdown "Found {count(msg.content)} results:"
+                FOR each course in msg.content:
+                    CALL render_course_card(course)
+
+            IF msg.metadata exists:
+                BEGIN expander "Query Execution Details"
+                    IF msg.metadata contains query_plan:
+                        qp = msg.metadata.query_plan
+                        di = qp.debug_info
+                        DISPLAY caption with gen_time, model, token counts
+                        DISPLAY subheader "Query Steps"
+                        FOR each step in qp.steps:
+                            DISPLAY markdown "- {step}"
+                        DISPLAY subheader "Generated Cypher"
+                        DISPLAY code block qp.final_query (language=cypher)
+                    DISPLAY JSON msg.metadata
+

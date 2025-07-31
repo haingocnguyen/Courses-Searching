@@ -1,0 +1,84 @@
+
+========================================
+ GPT-3.5 TURBO LLM-AS-A-JUDGE EVALUATION
+========================================
+Test ID: TC163
+Query: "Negotiation's kinda tricky — do you know of a course that could help?"
+Type: casual_skill_question
+Timestamp: 2025-07-22 20:02:25
+Overall Score: 9.33/10
+
+1. INTENT CLASSIFICATION EVALUATION (GPT-3.5 Judge):
+   Detected: course_search (confidence: high)
+   Expected: course_search
+   
+   GPT-3.5 Turbo Scores:
+   - Intent Accuracy: 10/10
+   - Confidence Appropriateness: 9/10  
+   - Overall Intent Quality: 9/10
+   - Is Correct: True
+   
+   GPT Reasoning: The predicted intent 'course_search' is a perfect match for the user query as it directly addresses the user's request for a course related to negotiation. The high confidence score is appropriate given the clear and unambiguous nature of the query. The overall intent quality is high as the system correctly identified the user's intent with a high level of confidence.
+
+2. RESPONSE QUALITY EVALUATION (GPT-3.5 Judge):
+   Results Found: 10
+   
+   GPT-3.5 Turbo Scores:
+   - Relevance: 9/10
+   - Helpfulness: 9/10
+   - Clarity: 8/10
+   - Completeness: 9/10
+   - Professional Tone: 10/10
+   - Hallucination Control: 10/10
+   
+   Overall Response Score: 9/10
+   
+   GPT Identified Strengths: Relevance to user query, Comprehensive information on negotiation courses
+   GPT Identified Weaknesses: Lack of personalized course recommendations, Limited emphasis on user's specific needs
+   GPT Suggestions: Include personalized course recommendations based on user's background or goals, Offer guidance on how to choose the most suitable course from the list provided
+
+3. OUTCOME VALIDATION:
+   Results Count Check: pass
+   Keyword Check: pass
+   Overall Validation: pass
+   Validation Score: 10/10
+   
+   Details: 
+
+4. SYSTEM RESPONSE:
+## 🎓 Negotiation Course Landscape: A Comprehensive Overview  
+
+Negotiation is a critical skill in both professional and personal contexts, and the course landscape for this topic is robust and highly rated. With **10 courses** available, the average rating of **4.7/5.0** (ranging from 4.5 to 4.8) reflects a strong consensus on the quality of these offerings. The **average duration of 10.9 weeks** suggests a balanced approach to mastering negotiation strategies, allowing learners to build foundational and advanced skills over a structured timeline. However, the **lack of level differentiation** (all courses at the same level) indicates that these courses are designed for a broad audience, from beginners to intermediate learners.  
+
+## 🧩 Quality Distribution and Learning Value  
+
+The **high average rating** and consistent top scores (with the top courses at 4.8/5.0) highlight that these courses are well-crafted and effective. The **uniform provider and institutional offerings** (0 unique providers or organizations) suggest a cohesive curriculum, likely from a single educational platform, which may ensure consistency in teaching methods and content. This is a key advantage for learners seeking a unified learning experience. However, the absence of level distinctions means that all courses are tailored for a general audience, which could be both a strength and a limitation depending on the learner’s prior knowledge.  
+
+## 🧠 Skill Focus and Learning Progression  
+
+The top-rated courses emphasize **principled negotiation**, **persuasive communication**, and **conflict resolution**, with specialized tracks like **procurement negotiation** and **Goldman Sachs 10,000 Women** adding unique value. The **Fundamentals of Negotiation** course serves as a strong starting point, while the **Successful Negotiation** course delves deeper into advanced strategies. The **Introduction to Negotiation** course, with its strategic playbook approach, appears to be ideal for those new to the field. While the courses are all at the same level, the **top 3 courses** (4.8/5.0, 4.8/5.0, and 4.7/5.0) offer a progression from basic principles to more nuanced techniques, making them a valuable resource for learners aiming to build expertise.  
+
+## 🧪 Comparing Course Approaches and Specializations  
+
+The courses vary in focus, with some emphasizing **practical application** (e.g., procurement negotiation) and others prioritizing **theoretical frameworks** (e.g., Goldman Sachs’ course). The **Introduction to Negotiation** and **Successful Negotiation** courses stand out for their structured, step-by-step approach, while the **Fundamentals of Negotiation** course provides a more comprehensive overview. The **Procurement Negotiation** course, with its 4.7 rating, is particularly useful for professionals in business or supply chain roles. However, the **lack of level diversity** means learners may need to supplement their learning with external resources if they seek more advanced or specialized content.  
+
+## 🧭 Provider and Institutional Insights  
+
+The **single provider** for all courses ensures a consistent curriculum, which is a significant advantage for learners seeking a unified learning experience. However, the **absence of institutional diversity** (0 unique organizations) may limit the range of perspectives or case studies included in the courses. This could be a drawback for learners looking for varied viewpoints, but it also ensures that the content is tightly integrated and cohesive. The **Goldman Sachs 10,000 Women** course, for example, adds a unique angle by focusing on gender equity in negotiation, which is a valuable addition to the standard curriculum.  
+
+## 🎯 Practical Selection Insights  
+
+For learners, the **top 3 courses** (4.8/5.0, 4.8/5.0, and 4.7/5.0) are the best bets for high-quality, well-structured content. If the goal is to build a strong foundation, the **Fundamentals of Negotiation** course is ideal. For those interested in specialized areas like procurement, the **Procurement Negotiation** course is a solid choice. The **Introduction to Negotiation** course is particularly suited for beginners, while the **Successful Negotiation** course offers a more advanced, strategic perspective. Given the **uniform provider**, learners can trust the consistency of the curriculum, but they should also consider the **specific skills** each course emphasizes to align with their goals. Overall, the negotiation course landscape is highly reliable, with a strong focus on practical, real-world application.
+
+5. SYSTEM ARCHITECTURE:
+   Main System: Qwen3:4b (Local LLM) for intent classification & response generation
+   Judge System: GPT-3.5 Turbo (OpenAI API) for objective evaluation
+   Embedding: all-MiniLM-L6-v2 (Local)
+   Database: Neo4j (Local)
+
+6. PERFORMANCE METRICS:
+   Intent Processing: 3.6405s
+   KB Processing: 5.6833s
+   Response Generation: 15.1133s
+
+========================================

@@ -1,0 +1,122 @@
+{
+  "test_id": "TC142",
+  "query": "Do you have Leadership skills courses that include quizzes, have great ratings, and are short in duration?",
+  "timestamp": "2025-07-22 19:38:32",
+  "type": "skill_rating_duration",
+  "expected_intent": "course_search",
+  "expected_outcomes": {
+    "should_find_results": true,
+    "expected_keywords": [
+      "Leadership",
+      "quizzes",
+      "great ratings",
+      "short duration"
+    ],
+    "minimum_results": 1
+  },
+  "intent_analysis": {
+    "detected_intent": "course_search",
+    "confidence": "high",
+    "processing_time": "1.9226s",
+    "reason": "The query specifically asks for Leadership skills courses with defined attributes (quizzes, ratings, duration), aligning with COURSE_SEARCH examples that focus on educational requests with clear topics and criteria.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 9,
+    "overall_intent_quality": 9,
+    "reasoning": "The predicted intent 'course_search' is a perfect match for the user query as it accurately captures the user's intent to search for leadership skills courses with specific criteria. The high confidence score is appropriate given the clear and specific nature of the query, although a slightly lower confidence could be justified due to the presence of multiple criteria in the query. Overall, the system performed excellently in accurately identifying the intent with a high confidence level.",
+    "is_correct": true
+  },
+  "processing_details": {
+    "results_found": 10,
+    "processing_time": "58.3974s",
+    "sample_results": [
+      {
+        "name": "Data-Driven Leadership Skills Capstone Project",
+        "url": "https://www.coursera.org/learn/data-driven-leadership-skills-course-4",
+        "rating": "No rating",
+        "skills": [
+          "Agile Management",
+          "Leadership Development",
+          "Leadership",
+          "Leadership And Management",
+          "Data-Informed Decision-Making"
+        ]
+      },
+      {
+        "name": "Foundations of Leadership",
+        "url": "https://www.coursera.org/learn/foundations-of-leadership",
+        "rating": "No rating",
+        "skills": [
+          "Self-Assessment and Leadership Evaluation",
+          "Critical Thinking and Problem Solving",
+          "Adaptable Leadership Techniques",
+          "Leadership Style Analysis",
+          "Ethical Decision Making"
+        ]
+      },
+      {
+        "name": "Leadership Skills",
+        "url": "https://www.coursera.org/learn/leadershipskills",
+        "rating": "4.8",
+        "skills": [
+          "Business Leadership",
+          "Professional Development",
+          "Leadership Development",
+          "Leadership",
+          "Emotional Intelligence",
+          "Personal Attributes",
+          "Leadership and Management",
+          "Organizational Development",
+          "Strategic Leadership",
+          "Culture Transformation",
+          "Business Management",
+          "Organizational Change",
+          "Management Training And Development",
+          "Leadership Studies",
+          "Initiative and Leadership",
+          "Organizational Leadership",
+          "People Management",
+          "Decision Making",
+          "Governance",
+          "Business Ethics"
+        ]
+      }
+    ]
+  },
+  "system_response": {
+    "generation_time": "12.3433s",
+    "content": "**🚀 Course Landscape Overview: Leadership Skills**  \nThe leadership skills course landscape is highly competitive and learner-centric, with a strong emphasis on practical, high-rated courses that cater to diverse learning needs. With an **average rating of 4.8/5.0** (ranging from 4.7 to 4.9), the courses reflect exceptional quality, making them a top choice for professionals and students alike. While the **average duration is 22.5 weeks**, this metric may vary across individual courses, suggesting that some offerings could be shorter or more intensive. The **mixed level distribution** (though no distinct levels are listed) indicates that courses are designed for a broad audience, from beginners to advanced learners.  \n\n**📊 Quality Distribution and Learning Value**  \nThe high ratings and consistent quality across courses mean learners can trust the content and structure of these programs. The **4.8/5.0 average** suggests that most courses are well-structured, with a focus on actionable skills like **Leadership Development**, **Leadership**, and **Business Leadership**. However, the **22.5-week average** might be a concern for those seeking shorter, more intensive programs. It’s worth noting that while the dataset doesn’t specify individual course durations, the top-rated courses (e.g., *Stepping Up: Preparing Yourself for Leadership*) likely balance depth with flexibility, ensuring learners can apply skills without excessive time commitment.  \n\n**🎯 Skill Focus and Learning Progression**  \nThe courses emphasize **leadership development** and **business leadership**, with a clear progression from foundational concepts to advanced strategies. For example, *Managing as a Coach* and *Adapt your leadership style* focus on adaptive leadership, while *The Discipline of Leadership* delves into structured, long-term leadership practices. This progression allows learners to build a comprehensive skill set, from self-awareness to strategic decision-making. The inclusion of **quizzes** in most courses ensures that learners can test their understanding and reinforce key concepts.  \n\n**🔍 Course Approaches and Specializations**  \nThe courses available are primarily **practical and theory-based**, with a focus on real-world applications. While the dataset doesn’t highlight variations in course approaches (e.g., case studies, simulations, or mentorship), the top-rated courses suggest a blend of **interactive learning** and **assessments**. The **uniform provider and institutional offerings** (0 unique providers) indicate that all courses are likely from a single platform, which may streamline access but could limit diversity in teaching styles. Learners should consider this if they seek varied perspectives or specialized content.  \n\n**📌 Practical Selection Insights**  \nFor learners seeking **short, high-rated leadership courses**, the top-rated options like *Stepping Up* and *Leadership Skills* are excellent starting points. While the average duration is 22.5 weeks, these courses may offer **modular or accelerated formats**. The **mixed level distribution** (interpreted as varying difficulty) suggests that courses are accessible to different experience levels, though the lack of explicit level labels requires careful review of course descriptions. Prioritize courses with **interactive elements** (e.g., quizzes, discussions) and check for **certification options** to validate learning.  \n\n**💡 Final Thoughts**  \nThis leadership course landscape is a goldmine for those aiming to enhance their skills, with a strong emphasis on quality and practicality. The high ratings and skill focus make these courses a reliable choice, though learners should verify individual course details (e.g., duration, level) to align with their goals. Whether you’re a professional seeking to advance your career or a student exploring leadership, these courses provide a solid foundation for growth. 🌟"
+  },
+  "response_evaluation": {
+    "relevance": 8,
+    "helpfulness": 9,
+    "clarity": 9,
+    "completeness": 8,
+    "professional_tone": 10,
+    "hallucination": 10,
+    "overall_score": 8.8,
+    "reasoning": "The response provides relevant information about leadership skills courses with quizzes, ratings, and duration, offering insights into the course landscape. It guides the user on quality, skill focus, and practical selection. The tone is professional and engaging. However, it lacks specific course recommendations matching all user criteria.",
+    "strengths": [
+      "Professional tone",
+      "Clear and structured information presentation"
+    ],
+    "weaknesses": [
+      "Lack of specific course recommendations matching all user criteria",
+      "Limited details on individual course durations"
+    ],
+    "suggestions": [
+      "Include more specific course recommendations meeting user criteria",
+      "Provide more detailed information on individual course durations"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['great ratings', 'short duration']"
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "test_id": "TC164",
+  "query": "Public Speaking terrifies me… think a course could fix that?",
+  "timestamp": "2025-07-22 20:02:55",
+  "type": "casual_skill_question",
+  "expected_intent": "course_search",
+  "expected_outcomes": {
+    "should_find_results": true,
+    "expected_keywords": [
+      "Public Speaking"
+    ],
+    "minimum_results": 1
+  },
+  "intent_analysis": {
+    "detected_intent": "general_chat",
+    "confidence": "medium",
+    "processing_time": "5.8855s",
+    "reason": "The query expresses a personal concern about public speaking and suggests a course as a potential solution, which aligns with both general chat (emotional expression) and course search (implied educational need). However, the lack of explicit course-related action words (e.g., 'recommend', 'find', 'search') and the focus on emotional state make it more aligned with general chat.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 2,
+    "confidence_appropriateness": 5,
+    "overall_intent_quality": 3,
+    "reasoning": "The predicted intent 'general_chat' is not semantically correct for the user query 'Public Speaking terrifies me… think a course could fix that?' as it does not capture the user's specific need for a course to overcome fear of public speaking. The confidence score is medium, which indicates some uncertainty in the prediction. Overall, the system's intent classification fell short in accurately identifying the user's intent.",
+    "is_correct": false
+  },
+  "system_response": {
+    "content": "Hello! I'm here to help you find courses. You can ask me about specific courses, instructors, or organizations offering courses."
+  },
+  "response_evaluation": {
+    "relevance": 2,
+    "helpfulness": 1,
+    "clarity": 7,
+    "completeness": 1,
+    "professional_tone": 8,
+    "hallucination": 10,
+    "overall_score": 4.8,
+    "reasoning": "The response lacks relevance as it does not address the user's specific query about overcoming fear of public speaking through a course. It is clear and professionally toned, but it lacks helpfulness and completeness as it fails to provide any guidance or information related to public speaking courses. The response contains hallucinations as it claims to be able to help find courses, but no results were provided.",
+    "strengths": [
+      "Professional tone",
+      "Clarity"
+    ],
+    "weaknesses": [
+      "Relevance",
+      "Helpfulness",
+      "Completeness"
+    ],
+    "suggestions": [
+      "Provide specific information on public speaking courses",
+      "Offer guidance or next steps for the user"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "fail",
+    "keyword_check": "partial",
+    "overall_validation": "fail",
+    "details": [
+      "Expected min 1 results, got 0",
+      "Missing keywords: ['Public Speaking']"
+    ]
+  }
+}

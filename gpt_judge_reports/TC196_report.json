@@ -1,0 +1,64 @@
+{
+  "test_id": "TC196",
+  "query": "Sing me a lullaby in binary code!",
+  "timestamp": "2025-07-22 20:09:23",
+  "type": "nonsense",
+  "expected_intent": "general_chat",
+  "expected_outcomes": {
+    "should_find_results": false,
+    "expected_keywords": [
+      "lullaby",
+      "binary code",
+      "find",
+      "courses"
+    ],
+    "minimum_results": 0
+  },
+  "intent_analysis": {
+    "detected_intent": "general_chat",
+    "confidence": "high",
+    "processing_time": "3.0044s",
+    "reason": "The query involves a playful, creative request (a lullaby in binary code) that aligns with casual conversation and fantasy topics in GENERAL_CHAT examples. It lacks specific educational/action-oriented keywords typical of COURSE_SEARCH, and instead focuses on a whimsical interaction.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 9,
+    "overall_intent_quality": 9,
+    "reasoning": "The predicted intent 'general_chat' is semantically correct for the user query as it falls under a general chat category. The query is clear and unambiguous, hence the high confidence level is appropriate. Overall, the system performed well in accurately identifying the intent with a high confidence level.",
+    "is_correct": true
+  },
+  "system_response": {
+    "content": "Hello! I'm here to help you find courses. You can ask me about specific courses, instructors, or organizations offering courses."
+  },
+  "response_evaluation": {
+    "relevance": 0,
+    "helpfulness": 1,
+    "clarity": 8,
+    "completeness": 2,
+    "professional_tone": 9,
+    "hallucination": 10,
+    "overall_score": 4.0,
+    "reasoning": "The response completely missed the mark in addressing the user's query for a binary lullaby. While the tone was professional and clear, it lacked relevance and helpfulness. The response also contained hallucinations by introducing a course-related context that was not requested.",
+    "strengths": [
+      "Professional tone",
+      "Clarity"
+    ],
+    "weaknesses": [
+      "Relevance",
+      "Completeness"
+    ],
+    "suggestions": [
+      "Improve relevance by acknowledging the user's query even if it's unconventional",
+      "Provide a more direct and helpful response even in the face of nonsensical queries"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['lullaby', 'binary code']"
+    ]
+  }
+}

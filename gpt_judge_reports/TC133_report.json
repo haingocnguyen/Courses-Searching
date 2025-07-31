@@ -1,0 +1,113 @@
+{
+  "test_id": "TC133",
+  "query": "Are there Marketing skills courses with video?",
+  "timestamp": "2025-07-22 19:33:43",
+  "type": "skill_rating",
+  "expected_intent": "course_search",
+  "expected_outcomes": {
+    "should_find_results": true,
+    "expected_keywords": [
+      "Marketing",
+      "video"
+    ],
+    "minimum_results": 1
+  },
+  "intent_analysis": {
+    "detected_intent": "course_search",
+    "confidence": "high",
+    "processing_time": "2.7578s",
+    "reason": "The query specifically asks about the availability of Marketing skills courses with video content, which aligns with COURSE_SEARCH examples that focus on educational requests with clear topics and action words like 'courses,' 'recommend,' or 'find.'",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 10,
+    "overall_intent_quality": 10,
+    "reasoning": "The predicted intent 'course_search' is a perfect match for the user query as it accurately captures the user's intent to search for marketing skills courses with video. The confidence score being high is appropriate given the query's clarity and specificity. The system correctly identified the user's intent with high confidence, making it a strong performance overall.",
+    "is_correct": true
+  },
+  "processing_details": {
+    "results_found": 10,
+    "processing_time": "8.1629s",
+    "sample_results": [
+      {
+        "name": "Marketing with Pictory.AI: Create and Edit Videos",
+        "url": "https://www.coursera.org/projects/marketing-with-pictory-ai-create-and-edit-videos",
+        "rating": "No rating",
+        "skills": [
+          "Multimedia",
+          "Media Production",
+          "Brand Marketing",
+          "Branding",
+          "Marketing Design",
+          "Content Management",
+          "Marketing",
+          "Digital Content",
+          "Strategic Marketing",
+          "Marketing Strategy and Techniques",
+          "Marketing Management",
+          "Brand Management",
+          "Business Management",
+          "Content Development and Management",
+          "Marketing and Public Relations"
+        ]
+      },
+      {
+        "name": "Digital Marketing Landscape",
+        "url": "https://www.coursera.org/learn/digital-marketing-landscape",
+        "rating": "No rating",
+        "skills": [
+          "UI and UX Design Strategy",
+          "Digital Marketing Strategy",
+          "Voice Search Optimization",
+          "Influencer and Video Marketing",
+          "ROI analysis"
+        ]
+      },
+      {
+        "name": "Digital Marketing",
+        "url": "https://www.coursera.org/learn/adobe-digital-marketing",
+        "rating": "No rating",
+        "skills": [
+          "Marketing Funnel",
+          "Promotional Mix",
+          "Campaign Performance Analysis",
+          "Marketing funnel",
+          "Advertising"
+        ]
+      }
+    ]
+  },
+  "system_response": {
+    "generation_time": "12.3932s",
+    "content": "🎥 **Course Landscape Overview: Marketing Skills with Video Content**  \nThe marketing skills course landscape is rich and dynamic, offering 10 high-quality courses centered around **Marketing, Digital Marketing, and Strategic Marketing**. With an **average rating of 4.6/5.0** and a **duration of 7.1 weeks**, these courses cater to a mix of learners seeking foundational knowledge and advanced strategies. All courses include video content, ensuring interactive and engaging learning experiences. The **uniform provider and institutional offerings** suggest a cohesive curriculum, while the **top-rated courses** highlight a strong emphasis on digital trends and practical tools like Canva for video creation.  \n\n**🔍 Quality Distribution & Learning Value**  \nThe **high average rating (4.6/5.0)** and narrow rating range (4.3–4.7) indicate consistent quality across all courses. This suggests that learners can trust the content to be well-structured and valuable, with minimal variation in teaching quality. The **mixed level distribution** (though no distinct levels are listed) implies that courses may cater to both beginners and intermediate learners, though the lack of explicit level labels could mean a uniform target audience. This is a key consideration for learners seeking to align with their current skill level.  \n\n**🎯 Skill Focus & Learning Progression**  \nThe top skills covered—**Marketing, Digital Marketing, and Strategic Marketing**—reflect a strong emphasis on digital tools and modern strategies. The **top-rated courses** like *Digital Marketing Trends* and *Marketing in a Digital World* focus on emerging trends, while *Small Business Marketing Using YouTube* and *Create a Promotional Video using Canva* highlight practical, hands-on skills. This suggests a progression from general marketing principles to specialized digital tactics, with a clear focus on **video creation** as a key component of modern marketing. Learners can expect a blend of theoretical knowledge and actionable skills, ideal for both career growth and personal development.  \n\n**📊 Comparative Course Approaches**  \nThe courses vary in approach, with some prioritizing **comprehensive strategy** (e.g., *Digital Marketing Strategy with Goldman Sachs 10,000 Women*) and others focusing on **specific tools** (e.g., *Create a Promotional Video using Canva*). The **4.7/5.0 rated courses** stand out for their depth and relevance, while the **4.3/5.0** course may require additional validation for its practicality. The **uniform provider** ensures consistency in teaching style and resources, which is a significant advantage for learners seeking a cohesive learning experience.  \n\n**📌 Notable Patterns in Providers & Institutions**  \nThe **zero unique providers and institutions** indicate that all courses are part of a single platform or organization, likely offering a standardized curriculum. This could mean that learners benefit from a unified approach to marketing education, with consistent resources and support. However, the lack of diversity in providers may limit exposure to varied perspectives, though the high ratings suggest the provider’s content is well-regarded.  \n\n**💡 Practical Selection Insights**  \nFor learners, the **top-rated courses** (especially those with 4.7/5.0) are strong choices, particularly if they align with specific goals like digital strategy or video creation. The **focus on video content** is a key differentiator, making these courses ideal for those interested in visual storytelling or social media marketing. Since all courses are from the same provider, consistency in quality is guaranteed, but learners should verify if the courses match their **current skill level** and **learning objectives**. Prioritizing courses with **real-world applications** (e.g., YouTube marketing, Canva tutorials) can enhance practical relevance.  \n\nThis course landscape offers a robust foundation for marketing professionals and students, with a clear emphasis on digital tools and strategic thinking. Whether you're a beginner or looking to refine your skills, the high-quality, video-rich content ensures a valuable learning journey. 🚀"
+  },
+  "response_evaluation": {
+    "relevance": 9,
+    "helpfulness": 8,
+    "clarity": 9,
+    "completeness": 8,
+    "professional_tone": 10,
+    "hallucination": 10,
+    "overall_score": 8.8,
+    "reasoning": "The response is highly relevant as it directly addresses the user's query about Marketing skills courses with video. It provides detailed information on the available courses, their ratings, duration, and focus on video content. The response is clear, well-structured, and maintains a professional tone throughout. It contains no false information and accurately reflects the actual results found. However, the completeness could be improved by including more specific details about each course.",
+    "strengths": [
+      "Relevance to user query",
+      "Professional tone and language"
+    ],
+    "weaknesses": [
+      "Lack of specific details on individual courses",
+      "Limited guidance on next steps for the user"
+    ],
+    "suggestions": [
+      "Include more specific information on each course such as course objectives, instructors, and syllabus",
+      "Provide guidance on how the user can enroll or access these courses"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "pass",
+    "overall_validation": "pass",
+    "details": []
+  }
+}

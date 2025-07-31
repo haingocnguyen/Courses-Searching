@@ -1,0 +1,62 @@
+
+========================================
+ GPT-3.5 TURBO LLM-AS-A-JUDGE EVALUATION
+========================================
+Test ID: TC185
+Query: "I sometimes chat with bots just to see if they'll surprise me — will you?"
+Type: general_chat
+Timestamp: 2025-07-22 20:07:38
+Overall Score: 6.33/10
+
+1. INTENT CLASSIFICATION EVALUATION (GPT-3.5 Judge):
+   Detected: general_chat (confidence: high)
+   Expected: general_chat
+   
+   GPT-3.5 Turbo Scores:
+   - Intent Accuracy: 10/10
+   - Confidence Appropriateness: 9/10  
+   - Overall Intent Quality: 9/10
+   - Is Correct: True
+   
+   GPT Reasoning: The predicted intent 'general_chat' is a perfect match for the user query as it clearly indicates a desire for casual conversation with a bot. The high confidence score is appropriate given the straightforward nature of the query. Overall, the system performed excellently in accurately identifying the intent with a high level of confidence.
+
+2. RESPONSE QUALITY EVALUATION (GPT-3.5 Judge):
+   Results Found: 0
+   
+   GPT-3.5 Turbo Scores:
+   - Relevance: 2/10
+   - Helpfulness: 3/10
+   - Clarity: 8/10
+   - Completeness: 2/10
+   - Professional Tone: 9/10
+   - Hallucination Control: 0/10
+   
+   Overall Response Score: 4.0/10
+   
+   GPT Identified Strengths: Professional tone, Clarity
+   GPT Identified Weaknesses: Relevance, Helpfulness, Completeness
+   GPT Suggestions: Tailor responses to user queries more closely, Provide actionable information or suggestions for engagement
+
+3. OUTCOME VALIDATION:
+   Results Count Check: pass
+   Keyword Check: partial
+   Overall Validation: partial
+   Validation Score: 6/10
+   
+   Details: Missing keywords: ['chat', 'surprise']
+
+4. SYSTEM RESPONSE:
+Hello! I'm here to help you find courses. You can ask me about specific courses, instructors, or organizations offering courses.
+
+5. SYSTEM ARCHITECTURE:
+   Main System: Qwen3:4b (Local LLM) for intent classification & response generation
+   Judge System: GPT-3.5 Turbo (OpenAI API) for objective evaluation
+   Embedding: all-MiniLM-L6-v2 (Local)
+   Database: Neo4j (Local)
+
+6. PERFORMANCE METRICS:
+   Intent Processing: 2.8229s
+   KB Processing: N/A
+   Response Generation: N/A
+
+========================================

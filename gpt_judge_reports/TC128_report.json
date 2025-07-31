@@ -1,0 +1,105 @@
+{
+  "test_id": "TC128",
+  "query": "Do you have Leadership skills courses with rating between 4 and 4.8?",
+  "timestamp": "2025-07-22 19:31:55",
+  "type": "skill_rating",
+  "expected_intent": "course_search",
+  "expected_outcomes": {
+    "should_find_results": true,
+    "expected_keywords": [
+      "Leadership",
+      "rating between 4 and 4.8"
+    ],
+    "minimum_results": 1
+  },
+  "intent_analysis": {
+    "detected_intent": "course_search",
+    "confidence": "high",
+    "processing_time": "2.6516s",
+    "reason": "The query specifically asks for Leadership skills courses with a rating range, which aligns with COURSE_SEARCH examples like 'show me courses with high ratings' or 'recommend beginner courses in artificial intelligence'.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 9,
+    "overall_intent_quality": 9,
+    "reasoning": "The predicted intent 'course_search' is a perfect match for the user query as it accurately captures the user's intention to search for Leadership skills courses with a specific rating range. The confidence level is appropriately high given the clear and specific nature of the query. The overall intent quality is high due to the accurate intent prediction and suitable confidence level.",
+    "is_correct": true
+  },
+  "processing_details": {
+    "results_found": 10,
+    "processing_time": "5.5706s",
+    "sample_results": [
+      {
+        "name": "Data-Driven Leadership Skills Capstone Project",
+        "url": "https://www.coursera.org/learn/data-driven-leadership-skills-course-4",
+        "rating": "No rating",
+        "skills": [
+          "Agile Management",
+          "Leadership Development",
+          "Leadership",
+          "Leadership And Management",
+          "Data-Informed Decision-Making"
+        ]
+      },
+      {
+        "name": "Foundations of Leadership",
+        "url": "https://www.coursera.org/learn/foundations-of-leadership",
+        "rating": "No rating",
+        "skills": [
+          "Self-Assessment and Leadership Evaluation",
+          "Critical Thinking and Problem Solving",
+          "Adaptable Leadership Techniques",
+          "Leadership Style Analysis",
+          "Ethical Decision Making"
+        ]
+      },
+      {
+        "name": "Professional IQ Capstone",
+        "url": "https://www.coursera.org/learn/professional-iq-capstone",
+        "rating": "No rating",
+        "skills": [
+          "Initiative and Leadership",
+          "Professionalism",
+          "Professional Development",
+          "Decisiveness",
+          "Personal Development",
+          "Decision Making",
+          "Dealing With Ambiguity",
+          "Lifelong Learning",
+          "Proactivity"
+        ]
+      }
+    ]
+  },
+  "system_response": {
+    "generation_time": "10.7771s",
+    "content": "🚀 **Course Landscape Overview: Leadership Skills**  \nThe leadership skills course landscape is highly competitive, with a **4.8/5.0 average rating** across 10 courses, all clustered between **4.7 and 4.9**. This indicates a strong emphasis on high-quality, well-structured programs that cater to both foundational and advanced learning needs. The **22.5-week average duration** suggests a balanced approach to skill development, allowing learners to engage deeply with content without overwhelming them. While the **mixed level distribution** (though no distinct levels are available) implies a broad audience, the consistent provider and institutional offerings suggest a cohesive curriculum tailored to diverse learner goals.  \n\n**Quality Distribution & Learning Value**  \nThe **4.7–4.9 rating range** reflects a high standard of course quality, with the top-rated courses (e.g., *Stepping Up* at 4.9) standing out for their comprehensive frameworks. These courses are likely designed to build **emotional intelligence** and **leadership development** alongside technical skills, ensuring learners gain both theoretical knowledge and practical application. The **4.8/5.0 average** means most courses are excellent, but the slight variation in ratings (e.g., *Personal Leadership Development* at 4.7) may indicate differences in depth or specialization. Learners should prioritize courses with higher ratings, as they often offer more refined insights and better alignment with industry standards.  \n\n**Skill Focus & Learning Progression**  \nThe top skills covered—**leadership**, **emotional intelligence**, and **leadership development**—highlight a curriculum that balances **soft skills** with **strategic thinking**. Courses like *The Discipline of Leadership* and *Developing a Leadership Framework* suggest a progression from self-awareness to actionable strategies, while *Leadership Skills* may focus on practical application. This structure allows learners to build from personal development to team management, ensuring a **holistic learning path**. The **mixed level distribution** (though no distinct levels are available) implies that courses may cater to both beginners and experienced professionals, though the lack of explicit level indicators requires careful review of course descriptions.  \n\n**Provider & Institutional Insights**  \nThe **0 unique providers** and **0 unique institutions** indicate that all courses are from a single entity, likely ensuring consistency in teaching style and content. This could be a strength for learners seeking a unified curriculum but may limit exposure to diverse perspectives. However, the **top-rated courses** (e.g., *Stepping Up* and *Leadership Skills*) suggest that the provider has a strong reputation for delivering high-quality, actionable leadership training. Learners should consider this consistency as a benefit, but also look for courses that emphasize **real-world applications** or **industry-specific insights** if they seek broader perspectives.  \n\n**Practical Selection Insights**  \nFor learners, the **4.8–4.9 rated courses** are the safest bets, as they represent the highest quality in this niche. Courses like *The Discipline of Leadership* and *Personal Leadership Development* offer a mix of theory and practice, making them ideal for those aiming to **develop a leadership framework**. The **22.5-week duration** is a key factor, as it allows time for reflection and application. To maximize value, prioritize courses that explicitly mention **emotional intelligence** or **team leadership** in their descriptions, as these often align with real-world challenges. Finally, while the provider is consistent, the **mixed level distribution** suggests that some courses may be more advanced, so learners should review course outlines to ensure they match their current skill level. 🌟"
+  },
+  "response_evaluation": {
+    "relevance": 9,
+    "helpfulness": 8,
+    "clarity": 8,
+    "completeness": 9,
+    "professional_tone": 10,
+    "hallucination": 10,
+    "overall_score": 8.8,
+    "reasoning": "The response is highly relevant as it addresses the user's query about Leadership skills courses with specific ratings. It provides detailed insights into the course landscape, quality distribution, skill focus, provider information, and practical selection insights. The response is helpful by offering guidance on selecting courses based on ratings and skill focus. It is clear and well-structured, presenting information in a logical manner. The response is comprehensive, covering various aspects of the courses available. The professional tone is maintained throughout the response. There are no hallucinations as the response accurately reflects the actual results found.",
+    "strengths": [
+      "Relevance to user query",
+      "Comprehensive information provided"
+    ],
+    "weaknesses": [],
+    "suggestions": [
+      "Include more specific details about each course such as course outlines or key topics covered for better decision-making."
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['rating between 4 and 4.8']"
+    ]
+  }
+}

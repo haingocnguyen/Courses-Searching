@@ -1,0 +1,38 @@
+
+========================================
+GPT-3.5 TURBO JUDGE EVALUATION SUMMARY
+========================================
+Evaluation Architecture:
+- Main System: Qwen3:4b (Local LLM)
+- Judge System: GPT-3.5 Turbo (OpenAI API)
+
+Results:
+- Total Test Cases: 99
+- Successfully Evaluated: 99
+- GPT API Calls Made: 198
+- Average Score: 8.05/10
+- Total Time: 3037.50s
+- Avg Time per Case: 30.68s
+
+INTENT CLASSIFICATION METRICS (Average):
+- Intent Accuracy: 9.76/10
+- Confidence Appropriateness: 9.26/10
+- Overall Intent Quality: 9.19/10
+
+RESPONSE QUALITY METRICS (Average):
+- Relevance: 5.92/10
+- Helpfulness: 6.13/10
+- Clarity: 8.29/10
+- Completeness: 6.02/10
+- Professional Tone: 9.39/10
+- Hallucination Control: 9.30/10
+- Overall Response Score: 7.23/10
+
+Score Distribution:
+- Excellent (9-10): 43 cases
+- Good (7-8.9): 27 cases
+- Fair (5-6.9): 26 cases
+- Poor (0-4.9): 3 cases
+
+Reports saved to: gpt_judge_reports/
+========================================

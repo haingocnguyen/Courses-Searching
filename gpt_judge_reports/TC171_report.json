@@ -1,0 +1,66 @@
+{
+  "test_id": "TC171",
+  "query": "If you could take a course, which one would you pick?",
+  "timestamp": "2025-07-22 20:05:21",
+  "type": "general_chat",
+  "expected_intent": "general_chat",
+  "expected_outcomes": {
+    "should_find_results": false,
+    "expected_keywords": [
+      "course",
+      "pick",
+      "choose",
+      "find",
+      "courses"
+    ],
+    "minimum_results": 0
+  },
+  "intent_analysis": {
+    "detected_intent": "general_chat",
+    "confidence": "high",
+    "processing_time": "2.8285s",
+    "reason": "The query is a hypothetical question about the assistant's personal preference, which aligns with general chat examples like greetings, system capability questions, and casual conversation. It lacks specific course-related action words or clear educational topics.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 10,
+    "overall_intent_quality": 10,
+    "reasoning": "The predicted intent 'general_chat' is a perfect match for the user query as it falls under a general conversation category. The confidence score being high is appropriate since the query is straightforward and unambiguous.",
+    "is_correct": true
+  },
+  "system_response": {
+    "content": "Hello! I'm here to help you find courses. You can ask me about specific courses, instructors, or organizations offering courses."
+  },
+  "response_evaluation": {
+    "relevance": 2,
+    "helpfulness": 3,
+    "clarity": 8,
+    "completeness": 2,
+    "professional_tone": 9,
+    "hallucination": 10,
+    "overall_score": 5.7,
+    "reasoning": "The response lacks relevance as it does not directly address the user's query about course preferences. It is clear and professionally toned, providing a general introduction to the system's capabilities. However, it falls short in helpfulness and completeness as it does not offer any specific course recommendations or guidance. The response hallucinates by implying the system can assist in finding courses, despite returning zero results.",
+    "strengths": [
+      "Professional tone",
+      "Clarity"
+    ],
+    "weaknesses": [
+      "Relevance",
+      "Helpfulness",
+      "Completeness"
+    ],
+    "suggestions": [
+      "Provide actual course recommendations based on user preferences",
+      "Ensure responses align with the system's actual capabilities"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['pick', 'choose']"
+    ]
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "test_id": "TC137",
+  "query": "I want Communication skills courses with over 3 reviews and less than 20 hours duration.",
+  "timestamp": "2025-07-22 19:36:00",
+  "type": "skill_rating_duration",
+  "expected_intent": "course_search",
+  "expected_outcomes": {
+    "should_find_results": true,
+    "expected_keywords": [
+      "Communication",
+      "3 reviews",
+      "less than 20 hours"
+    ],
+    "minimum_results": 1
+  },
+  "intent_analysis": {
+    "detected_intent": "course_search",
+    "confidence": "high",
+    "processing_time": "2.8877s",
+    "reason": "The query specifies a clear educational request for 'Communication skills courses' with measurable filters (number of reviews, duration), aligning with COURSE_SEARCH examples like 'show me courses with high ratings' or 'find information about Obsidian productivity courses'.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 9,
+    "overall_intent_quality": 9,
+    "reasoning": "The predicted intent 'course_search' is a perfect match for the user query as it accurately captures the user's request for Communication skills courses with specific criteria. The high confidence score is appropriate given the clear and specific nature of the query, although a slightly lower confidence could also be justified due to the presence of numerical constraints. Overall, the system performed excellently in accurately identifying the intent with a high confidence level.",
+    "is_correct": true
+  },
+  "processing_details": {
+    "results_found": 10,
+    "processing_time": "7.8563s",
+    "sample_results": [
+      {
+        "name": "Improving Communication Skills",
+        "url": "https://www.coursera.org/learn/wharton-communication-skills",
+        "rating": "4.7",
+        "skills": [
+          "Professional Development",
+          "Strategic Communication",
+          "Emotional Intelligence",
+          "Customer Relationship Building",
+          "Interpersonal Communications",
+          "Influencing",
+          "Initiative and Leadership",
+          "Relationship Building",
+          "Goal Setting",
+          "Rapport Building",
+          "Leadership",
+          "Communication Strategies",
+          "Persuasive Communication",
+          "Personal Development",
+          "Social Skills",
+          "Personal Attributes",
+          "Communication Planning",
+          "Communication"
+        ]
+      },
+      {
+        "name": "Lesson | Small Talk & Conversational Vocabulary",
+        "url": "https://www.coursera.org/learn/lesson-small-talk-and-conversational-vocabulary",
+        "rating": "4.2",
+        "skills": [
+          "Business Communication",
+          "Language Learning",
+          "Communication",
+          "Business Management",
+          "Communication Strategies",
+          "Vocabulary",
+          "Verbal Communication Skills",
+          "Literacy",
+          "Interpersonal Communications"
+        ]
+      },
+      {
+        "name": "Verbal Communications and Presentation Skills",
+        "url": "https://www.coursera.org/learn/verbal-communications-and-presentation-skills",
+        "rating": "4.5",
+        "skills": [
+          "Business Management",
+          "Interpersonal Communications",
+          "Business Communication",
+          "Public Speaking",
+          "Communication Strategies",
+          "Strategic Communication",
+          "Communication",
+          "Verbal Communication Skills",
+          "Presentations"
+        ]
+      }
+    ]
+  },
+  "system_response": {
+    "generation_time": "13.6743s",
+    "content": "## 🎓 Communication Skills Course Landscape: A High-Quality, Skill-Focused Overview  \n\nThe communication skills course landscape is robust, offering **10 courses** with **4.6/5.0 average ratings** (ranging from 4.2 to 4.8) and **11.4 weeks of content** on average. These courses are highly rated, with **five top-rated options** scoring 4.7–4.8, indicating strong learner satisfaction. All courses meet the **minimum 3-review threshold**, ensuring a reliable user base. The **mixed-level** (but uniform) course structure suggests flexibility for learners at varying stages of their communication journey.  \n\n**🔍 Quality Distribution: High Standards, Consistent Excellence**  \nThe **4.6 average rating** reflects a high-quality offering, with **top courses** like *Communication Strategies for a Virtual Age* (4.8/5.0) and *Fundamentals of Internal Business Communications* (4.8/5.0) leading the pack. This consistency means learners can trust the courses to deliver value, though the **lower end of the rating spectrum (4.2)** might indicate minor variations in course depth or structure. The **uniform provider and institutional offerings** suggest a cohesive curriculum, but the lack of diversity in providers could limit exposure to different teaching styles.  \n\n**🎯 Skill Focus: From Basics to Advanced Strategies**  \nThe top skills covered—**communication, interpersonal communication, and communication strategies**—highlight a curriculum that balances **general skills** with **specialized techniques**. Courses like *Improving Communication Skills* (4.7/5.0) and *Developing Interpersonal Skills* (4.7/5.0) emphasize practical application, while *Low Intermediate English: Calls & Messaging* (4.7/5.0) targets language-specific communication. This **progression from foundational to advanced** ensures learners can build expertise in both **general communication** and **context-specific strategies** (e.g., virtual, business, or language-based).  \n\n**📊 Comparing Approaches: Specialization vs. Generalization**  \nThe courses vary in **focus areas**: some target **virtual communication** (e.g., *Communication Strategies for a Virtual Age*), while others focus on **business internal communication** or **language-specific skills**. This diversity allows learners to choose based on their **specific needs**. However, the **lack of level diversity** (all courses are mixed-level) means learners may need to assess whether a course balances **beginner-friendly content** with **advanced techniques**. The **uniform provider** ensures a consistent teaching style but may limit exposure to varied pedagogical approaches.  \n\n**💡 Practical Insights: What to Look For**  \nFor learners, the **top-rated courses** are strong choices, especially if they align with specific goals (e.g., virtual communication, business strategies). The **mixed-level structure** suggests courses are designed for **self-directed learners**, so checking for **interactive elements** (e.g., exercises, case studies) is key. Since all courses are from the same provider, focus on **skill-specific details** (e.g., whether a course includes role-playing or real-world scenarios). The **11-week duration** is standard for online learning, but the **high ratings** and **consistent quality** make these courses a reliable investment.  \n\n**🌟 Final Takeaway**  \nThis course landscape offers **high-quality, skill-focused options** for communication learners, with a strong emphasis on **practical application** and **specialized strategies**. The **uniform provider** and **high ratings** ensure reliability, but learners should prioritize **specific skill alignment** and **course structure** to maximize their learning outcomes. 🚀"
+  },
+  "response_evaluation": {
+    "relevance": 9,
+    "helpfulness": 8,
+    "clarity": 9,
+    "completeness": 8,
+    "professional_tone": 10,
+    "hallucination": 10,
+    "overall_score": 8.8,
+    "reasoning": "The response is highly relevant as it addresses the user's specific query about Communication skills courses with over 3 reviews and less than 20 hours duration. It provides detailed information on the courses meeting these criteria. The response is clear, well-structured, and maintains a professional tone throughout. It offers a comprehensive overview of the available courses, their ratings, duration, and skill focus. The response contains no false information and accurately reflects the actual results found.",
+    "strengths": [
+      "Relevance to user query",
+      "Professional tone and language"
+    ],
+    "weaknesses": [
+      "Slight lack of actionable next steps for the user"
+    ],
+    "suggestions": [
+      "Include specific recommendations based on user preferences",
+      "Provide guidance on how to enroll or access the courses"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['3 reviews', 'less than 20 hours']"
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+
+========================================
+ GPT-3.5 TURBO LLM-AS-A-JUDGE EVALUATION
+========================================
+Test ID: TC190
+Query: "Hey, could you write a love letter to my fridge?"
+Type: nonsense
+Timestamp: 2025-07-22 20:08:30
+Overall Score: 6.67/10
+
+1. INTENT CLASSIFICATION EVALUATION (GPT-3.5 Judge):
+   Detected: general_chat (confidence: high)
+   Expected: general_chat
+   
+   GPT-3.5 Turbo Scores:
+   - Intent Accuracy: 10/10
+   - Confidence Appropriateness: 10/10  
+   - Overall Intent Quality: 10/10
+   - Is Correct: True
+   
+   GPT Reasoning: The predicted intent 'general_chat' is semantically correct for the user query as it falls under a general conversational category. The query is ambiguous and open-ended, making 'general_chat' an appropriate intent. The high confidence score is justified as the query is straightforward and does not require specific domain knowledge.
+
+2. RESPONSE QUALITY EVALUATION (GPT-3.5 Judge):
+   Results Found: 0
+   
+   GPT-3.5 Turbo Scores:
+   - Relevance: 0/10
+   - Helpfulness: 1/10
+   - Clarity: 8/10
+   - Completeness: 2/10
+   - Professional Tone: 9/10
+   - Hallucination Control: 10/10
+   
+   Overall Response Score: 4.0/10
+   
+   GPT Identified Strengths: Clarity of response, Professional tone
+   GPT Identified Weaknesses: Lack of relevance, Low helpfulness, Incompleteness
+   GPT Suggestions: Ensure responses directly address user queries, Provide relevant and helpful information even in case of nonsensical queries
+
+3. OUTCOME VALIDATION:
+   Results Count Check: pass
+   Keyword Check: partial
+   Overall Validation: partial
+   Validation Score: 6/10
+   
+   Details: Missing keywords: ['love letter', 'fridge']
+
+4. SYSTEM RESPONSE:
+Hello! I'm here to help you find courses. You can ask me about specific courses, instructors, or organizations offering courses.
+
+5. SYSTEM ARCHITECTURE:
+   Main System: Qwen3:4b (Local LLM) for intent classification & response generation
+   Judge System: GPT-3.5 Turbo (OpenAI API) for objective evaluation
+   Embedding: all-MiniLM-L6-v2 (Local)
+   Database: Neo4j (Local)
+
+6. PERFORMANCE METRICS:
+   Intent Processing: 2.7938s
+   KB Processing: N/A
+   Response Generation: N/A
+
+========================================

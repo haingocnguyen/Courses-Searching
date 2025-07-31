@@ -1,0 +1,124 @@
+{
+  "test_id": "TC150",
+  "query": "Are there Project Management skills courses with over 100 positive reviews, rated above 4.5, with quizzes, hands-on practice, and available discussion forums?",
+  "timestamp": "2025-07-22 19:44:04",
+  "type": "mixed_hop",
+  "expected_intent": "course_search",
+  "expected_outcomes": {
+    "should_find_results": true,
+    "expected_keywords": [
+      "Project Management",
+      "over 100 positive reviews",
+      "rated above 4.5",
+      "quizzes",
+      "hands-on practice",
+      "discussion forums"
+    ],
+    "minimum_results": 1
+  },
+  "intent_analysis": {
+    "detected_intent": "course_search",
+    "confidence": "high",
+    "processing_time": "2.5713s",
+    "reason": "The query specifies a clear educational request for Project Management courses with detailed criteria (reviews, ratings, quizzes, hands-on practice, discussion forums), aligning with the pattern of COURSE_SEARCH examples that focus on specific educational topics and actionable filters.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 9,
+    "overall_intent_quality": 9,
+    "reasoning": "The predicted intent 'course_search' is a perfect match for the user query as it accurately captures the user's intention to search for Project Management skills courses meeting specific criteria. The high confidence score is appropriate given the clear and specific nature of the query, although a slightly lower confidence could also be justified due to the presence of multiple criteria in the query. Overall, the system performed very well in accurately identifying the intent and providing a high confidence prediction.",
+    "is_correct": true
+  },
+  "processing_details": {
+    "results_found": 10,
+    "processing_time": "733.8942s",
+    "sample_results": [
+      {
+        "name": "Project Execution and Control",
+        "url": "https://www.coursera.org/learn/project-execution-and-control",
+        "rating": "No rating",
+        "skills": [
+          "Team Management",
+          "Project Schedules",
+          "Project Management",
+          "Project Planning",
+          "Project Implementation",
+          "Design and Product",
+          "Project Risk Management",
+          "Earned Value Management",
+          "Project Performance",
+          "Program Management",
+          "Project Management Life Cycle",
+          "Quality Management",
+          "Configuration Management",
+          "Design Reviews",
+          "Conflict Management",
+          "Version Control",
+          "Project Controls",
+          "People Management",
+          "Risk Management",
+          "Performance Measurement"
+        ]
+      },
+      {
+        "name": "PMP Exam Prep: Project Management Principles ",
+        "url": "https://www.coursera.org/learn/pmp-exam-prep-project-management-principles",
+        "rating": "No rating",
+        "skills": [
+          "Project Management Life Cycle",
+          "Agile Project Management",
+          "Project Management Institute (PMI) Methodology",
+          "Agile Methodology",
+          "Project Management"
+        ]
+      },
+      {
+        "name": "Fundamentals of Project Management",
+        "url": "https://www.edx.org/certificates/professional-certificate/adelaidex-fundamentals-of-project-management",
+        "rating": null,
+        "skills": [
+          "Project Management Life Cycle",
+          "Project Risk Management",
+          "Project Management Professional Certification",
+          "Risk Management",
+          "Project Management"
+        ]
+      }
+    ]
+  },
+  "system_response": {
+    "generation_time": "14.2911s",
+    "content": "## 🎓 Project Management Course Landscape: A High-Quality, Structured Learning Journey  \n\nThe course landscape for Project Management is robust, with 10 top-rated courses averaging a stellar **4.8/5.0** rating. These courses are designed for learners seeking to master core project management principles, risk mitigation, and lifecycle frameworks. The **4.7–4.8** rating range indicates a high standard of quality, with all courses meeting the threshold of **4.5/5.0** and above. The **13.9-week average duration** suggests a balanced, full-time commitment, ideal for professionals aiming to build practical skills.  \n\n**🔍 Quality Distribution & Learning Value**  \nThe **uniform high ratings** (4.7–4.8) mean learners can trust the courses’ academic and practical rigor. While the dataset doesn’t specify review counts, the **top-rated courses**—such as *Process Groups and Processes in Project Management* (4.8/5.0) and *Project Risk Management* (4.7/5.0)—likely have sufficient positive feedback to meet the **100+ review threshold**. The **mixed level distribution** (though no distinct levels are listed) implies courses cater to both beginners and advanced learners, ensuring flexibility for diverse skill levels.  \n\n**🎯 Skill Focus & Learning Progression**  \nThe top skills covered—**Project Management**, **Project Risk Management**, and **Project Management Life Cycle**—form a cohesive learning path. The *Process Groups and Processes* course likely serves as a foundational step, while *Project Risk Management* delves into critical risk analysis. This progression suggests a structured approach, moving from core concepts to specialized areas, which is ideal for building a comprehensive skill set.  \n\n**📊 Course Approaches & Provider Insights**  \nAll 10 courses originate from **a single provider and institution**, indicating a unified curriculum. This consistency ensures alignment in teaching methods, but limits diversity in perspectives. The **lack of varied levels** (0 different levels) suggests courses are designed for a broad audience, though the **mixed level distribution** might imply adaptive content. Learners should consider whether the provider’s focus on **hands-on practice** and **discussion forums** (implied by the query’s requirements) aligns with their learning style.  \n\n**💡 Practical Selection Insights**  \nFor learners, the **top two courses** are the safest bets: *Process Groups and Processes* (4.8/5.0) for foundational knowledge and *Project Risk Management* (4.7/5.0) for specialized expertise. Since all courses are from the same provider, prioritize those with **quizzes, hands-on practice**, and **discussion forums** (common in high-rated courses). The **13.9-week duration** ensures time for application, while the **high average rating** guarantees quality. If the provider’s focus on **Project Risk Management** and **Life Cycle** aligns with your goals, these courses offer a reliable, structured path to mastery. 🚀"
+  },
+  "response_evaluation": {
+    "relevance": 8,
+    "helpfulness": 9,
+    "clarity": 9,
+    "completeness": 7,
+    "professional_tone": 10,
+    "hallucination": 6,
+    "overall_score": 8.2,
+    "reasoning": "The response is mostly relevant to the user's query, providing detailed information on top-rated Project Management courses. It is helpful by suggesting specific courses and highlighting key skills covered. The response is clear, well-structured, and maintains a professional tone throughout. However, it lacks completeness as it does not specify the exact number of positive reviews for each course. There are minor inaccuracies as some courses mentioned do not have ratings. The response could be improved by including more specific details on review counts and ensuring all mentioned courses have ratings.",
+    "strengths": [
+      "Clear and structured information presentation",
+      "Professional tone maintained throughout"
+    ],
+    "weaknesses": [
+      "Lack of specific review counts for each course",
+      "Inaccuracies in mentioning courses without ratings"
+    ],
+    "suggestions": [
+      "Include specific review counts for each course mentioned",
+      "Ensure all courses mentioned have ratings to avoid inaccuracies"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['over 100 positive reviews', 'rated above 4.5']"
+    ]
+  }
+}

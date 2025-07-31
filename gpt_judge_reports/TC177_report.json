@@ -1,0 +1,64 @@
+{
+  "test_id": "TC177",
+  "query": "If I say 'hi' a thousand times, do you keep answering?",
+  "timestamp": "2025-07-22 20:06:09",
+  "type": "general_chat",
+  "expected_intent": "general_chat",
+  "expected_outcomes": {
+    "should_find_results": false,
+    "expected_keywords": [
+      "hi",
+      "keep answering",
+      "find",
+      "courses"
+    ],
+    "minimum_results": 0
+  },
+  "intent_analysis": {
+    "detected_intent": "general_chat",
+    "confidence": "high",
+    "processing_time": "2.3858s",
+    "reason": "The query asks about the system's behavior in response to repeated greetings, which aligns with system capability questions in the GENERAL_CHAT category. It does not involve specific course searches, educational topics, or action words related to course recommendations.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 10,
+    "overall_intent_quality": 10,
+    "reasoning": "The predicted intent 'general_chat' is a perfect match for the user query as it falls under a general conversation category. The confidence score is appropriately high as the query is straightforward and unambiguous.",
+    "is_correct": true
+  },
+  "system_response": {
+    "content": "Hello! I'm here to help you find courses. You can ask me about specific courses, instructors, or organizations offering courses."
+  },
+  "response_evaluation": {
+    "relevance": 2,
+    "helpfulness": 3,
+    "clarity": 8,
+    "completeness": 2,
+    "professional_tone": 9,
+    "hallucination": 10,
+    "overall_score": 5.7,
+    "reasoning": "The response lacks relevance as it does not directly address the user's query about repetitive interactions. It is somewhat helpful by providing general information about finding courses. The clarity is good with a clear and well-structured response. Completeness is low as it does not provide specific information related to the user query. The professional tone is maintained throughout the response. There is a hallucination present as the response talks about finding courses even though no results were found for the user query.",
+    "strengths": [
+      "Professional tone",
+      "Clarity"
+    ],
+    "weaknesses": [
+      "Relevance",
+      "Completeness"
+    ],
+    "suggestions": [
+      "Improve relevance by acknowledging the user's query directly",
+      "Provide more specific guidance or options related to the user's query"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['hi', 'keep answering']"
+    ]
+  }
+}

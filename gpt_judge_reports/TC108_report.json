@@ -1,0 +1,84 @@
+{
+  "test_id": "TC108",
+  "query": "Can you show me courses about Leadership skills?",
+  "timestamp": "2025-07-22 19:23:06",
+  "type": "skill_only",
+  "expected_intent": "course_search",
+  "expected_outcomes": {
+    "should_find_results": true,
+    "expected_keywords": [
+      "Leadership"
+    ],
+    "minimum_results": 1
+  },
+  "intent_analysis": {
+    "detected_intent": "course_search",
+    "confidence": "high",
+    "processing_time": "3.0004s",
+    "reason": "The query explicitly requests 'courses about Leadership skills' which aligns with COURSE_SEARCH examples like 'find programming courses for beginners' and 'recommend beginner courses in artificial intelligence'. The action word 'show me' and specific topic 'Leadership skills' match the pattern of educational requests with clear topics and action words.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 10,
+    "overall_intent_quality": 10,
+    "reasoning": "The predicted intent 'course_search' is a perfect match for the user query 'Can you show me courses about Leadership skills?' as it clearly indicates the user's intent to search for courses. The confidence score being high is appropriate given the query's clarity and lack of ambiguity. The system correctly identified the user's intent with high confidence, making the overall intent quality excellent.",
+    "is_correct": true
+  },
+  "processing_details": {
+    "results_found": 10,
+    "processing_time": "4.5840s",
+    "sample_results": [
+      {
+        "name": "Remotely Humorous: Build Joyful and Resilient Virtual Teams with Humor",
+        "url": "https://www.edx.org/certificates/professional-certificate/humorx-remotely-humorous",
+        "rating": null,
+        "skills": []
+      },
+      {
+        "name": "Working as a Scrum Master",
+        "url": "https://www.coursera.org/learn/working-as-a-scrum-master",
+        "rating": 4.6,
+        "skills": []
+      },
+      {
+        "name": "Visionary leadership, identity & motivation: Become a meaning maker",
+        "url": "https://www.coursera.org/learn/visionary-leadership-meaning-maker",
+        "rating": 4.8,
+        "skills": []
+      }
+    ]
+  },
+  "system_response": {
+    "generation_time": "9.2648s",
+    "content": "🚀 **Course Landscape Overview: Leadership Skills**  \nThe landscape of leadership courses is robust and highly rated, with 10 courses offering comprehensive insights into leadership, management, and organizational behavior. These courses average a stellar **4.7/5.0 rating**, with the top-rated course scoring an impressive **4.8/5.0**. The average duration of **19.3 weeks** suggests a deep dive into leadership concepts, catering to both foundational and advanced learners. While the dataset indicates a **mixed level distribution** (though no distinct levels are available), the high ratings and consistent quality suggest a well-structured curriculum for diverse learning goals.  \n\n**Quality Distribution & Learner Impact**  \nThe **uniform high ratings** (4.6–4.8) indicate that all courses meet high academic and practical standards, ensuring learners receive valuable, actionable knowledge. The **longer duration** implies a focus on sustained learning, which is ideal for developing nuanced leadership skills. However, the lack of level differentiation (0 unique levels) means all courses are likely designed for a similar audience, possibly requiring learners to assess their current skill level against the course’s assumed prerequisites. This could be a consideration for those seeking specialized tracks.  \n\n**Skill Focus & Learning Progression**  \nThe top skills covered include **visionary leadership**, **organizational behavior**, **management principles**, and **social action**, reflecting a blend of theoretical and applied learning. Courses like *Visionary Leadership, Identity & Motivation* and *Understanding Korean Politics* highlight niche specializations, while *Principles of Management* and *Music and Social Action* emphasize practical application. This suggests a progression from **foundational concepts** (e.g., management principles) to **advanced strategies** (e.g., visionary leadership), though the lack of explicit level breakdowns makes it challenging to map a clear learning path. Learners may need to prioritize courses that align with their specific interests, such as political leadership or team dynamics.  \n\n**Provider & Institutional Insights**  \nThe dataset reveals **zero unique providers** and **zero unique institutions**, indicating that all courses are from a single provider or organization. This could mean a cohesive, unified curriculum but may limit diversity in teaching approaches or specializations. The top-rated courses, such as *Understanding Korean Politics*, suggest that the provider may integrate interdisciplinary perspectives, offering a unique angle for learners. However, the lack of institutional diversity might mean fewer options for learners seeking varied perspectives.  \n\n**Practical Selection Insights**  \nFor learners, the **top-rated courses** (e.g., *Visionary Leadership, Identity & Motivation*) are strong choices due to their high scores and specialized focus. The **19.3-week duration** is a key factor for those seeking in-depth learning, though it requires time commitment. Since all courses are from the same provider, learners should evaluate the curriculum’s alignment with their goals—whether it’s mastering management principles, exploring cultural leadership, or integrating creativity into leadership. Prioritizing courses with **practical applications** (e.g., *Music and Social Action*) can also enhance real-world relevance. 🌟"
+  },
+  "response_evaluation": {
+    "relevance": 9,
+    "helpfulness": 8,
+    "clarity": 9,
+    "completeness": 8,
+    "professional_tone": 10,
+    "hallucination": 10,
+    "overall_score": 8.8,
+    "reasoning": "The response is highly relevant as it provides detailed insights into leadership courses, aligning well with the user's query. It is helpful by offering a comprehensive overview of the course landscape, skill focus, and practical selection insights. The information is presented clearly and structured logically, enhancing readability. While the response is mostly complete, it lacks specific details on course content and instructors. The professional tone is maintained throughout, making it suitable for an educational context. There are no hallucinations, and all information provided is factual.",
+    "strengths": [
+      "Relevance to user query",
+      "Professional tone maintained throughout"
+    ],
+    "weaknesses": [
+      "Lack of specific details on course content and instructors",
+      "Limited institutional insights"
+    ],
+    "suggestions": [
+      "Include more specific details on course content and instructors for better decision-making by users",
+      "Enhance diversity by providing insights from multiple institutions or providers"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "pass",
+    "overall_validation": "pass",
+    "details": []
+  }
+}

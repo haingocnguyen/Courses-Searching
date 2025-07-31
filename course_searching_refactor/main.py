@@ -16,6 +16,7 @@ logging.basicConfig(
 )
 logging.getLogger("neo4j.io").setLevel(logging.WARNING)
 logger = logging.getLogger(__name__)
+logging.getLogger("watchdog.observers.inotify_buffer").setLevel(logging.INFO)
 
 # Register cleanup
 atexit.register(clear_all_caches)
@@ -48,7 +49,8 @@ if st.session_state.clear_requested:
     # Reset flag
     st.session_state.clear_requested = False
 
-# Initialize cached components
+
+# Initialize session state
 if 'advisor' not in st.session_state:
     with st.spinner("🚀 Initializing system..."):
         st.session_state.advisor = get_knowledge_base_qa()
@@ -56,7 +58,6 @@ if 'advisor' not in st.session_state:
 if 'llm' not in st.session_state:
     st.session_state.llm = get_llm(small=True)
 
-# Initialize session state
 if 'messages' not in st.session_state:
     st.session_state.messages = []
 
@@ -155,7 +156,7 @@ st.title("🎓 CourseFinder")
 st.markdown("Ask me about educational courses and I'll provide comprehensive information!")
 
 # Display chat history
-display_chat()
+display_chat(llm=st.session_state.llm)
 
 # Handle pending query from sidebar
 if 'pending_query' in st.session_state and st.session_state.pending_query:
@@ -183,10 +184,10 @@ if st.session_state.get('show_clarification_buttons', False):
     
     with col2:
         if st.button(
-            "🔍 Search & Analyze Multiple Courses", 
+            "🔍 Search & Analyze Detail Information", 
             key="btn_general", 
             use_container_width=True,
-            help="Find multiple courses and get landscape overview"
+            help="Find detail information and get landscape overview"
         ):
             st.session_state.show_clarification_buttons = False
             original_query = st.session_state.get('clarification_query', '')

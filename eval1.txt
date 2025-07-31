@@ -1,0 +1,418 @@
+python D:\Thesis\Courses-Searching\src\query_classification\eval.py
+2025-05-19 00:57:16.259299: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off 
+errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-05-19 00:57:17.510389: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off 
+errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-05-19 00:57:20,772 INFO:__main__: Bắt đầu đánh giá...
+2025-05-19 00:57:20,772 INFO:__main__: Xử lý case 1...
+2025-05-19 00:58:36,936 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 00:58:37,598 INFO:__main__:
+            [Case 1] full_match
+            Expected courses: 305
+            Generated courses: 305
+            Match: True
+            Generated query: MATCH (c:Course)-[:OFFERED_BY]->(o:Organization {name: 'University of Michigan'}) RETURN c.name, c.u...
+            Error: None
+
+2025-05-19 00:58:37,598 INFO:__main__: Xử lý case 2...
+2025-05-19 00:58:48,652 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 00:58:48,985 INFO:__main__:
+            [Case 2] full_match
+            Expected courses: 802
+            Generated courses: 802
+            Match: True
+            Generated query: MATCH (c:Course)-[:TEACHES]->(s:Skill {name: 'Data Analysis'}) RETURN c.name, c.url, c.duration, c.r...
+            Error: None
+
+2025-05-19 00:58:48,985 INFO:__main__: Xử lý case 3...
+2025-05-19 00:59:00,348 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 00:59:00,473 INFO:__main__:
+            [Case 3] full_match
+            Expected courses: 10
+            Generated courses: 10
+            Match: True
+            Generated query: MATCH (c:Course)-[:TAUGHT_BY]->(i:Instructor {name: 'Christopher Brooks'}) RETURN c.name, c.url, c.d...
+            Error: None
+
+2025-05-19 00:59:00,473 INFO:__main__: Xử lý case 4...
+2025-05-19 00:59:11,454 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 00:59:12,296 INFO:__main__: 
+            [Case 4] full_match
+            Expected courses: 3999
+            Generated courses: 3999
+            Match: True
+            Generated query: MATCH (c:Course)-[:HAS_LEVEL]->(l:Level {name: 'Intermediate'}) RETURN c.name, c.url, c.duration, c....
+            Error: None
+
+2025-05-19 00:59:12,296 INFO:__main__: Xử lý case 5...
+2025-05-19 00:59:23,159 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 00:59:23,190 INFO:__main__: 
+            [Case 5] full_match
+            Expected courses: 58
+            Generated courses: 58
+            Match: True
+            Generated query: MATCH (c:Course)-[:OFFERED_BY]->(o:Organization {name: 'Stanford University'}) RETURN c.name, c.url,...
+            Error: None
+
+2025-05-19 00:59:23,190 INFO:__main__: Xử lý case 6...
+2025-05-19 00:59:34,047 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 00:59:34,112 INFO:__main__: 
+            [Case 6] full_match
+            Expected courses: 416
+            Generated courses: 416
+            Match: True
+            Generated query: MATCH (c:Course)-[:TEACHES]->(s:Skill {name: 'Machine Learning'}) RETURN c.name, c.url, c.duration, ...
+            Error: None
+
+2025-05-19 00:59:34,112 INFO:__main__: Xử lý case 7...
+2025-05-19 00:59:45,649 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 00:59:45,723 INFO:__main__: 
+            [Case 7] full_match
+            Expected courses: 43
+            Generated courses: 43
+            Match: True
+            Generated query: MATCH (c:Course)-[:TAUGHT_BY]->(i:Instructor {name: 'Andrew Ng'}) RETURN c.name, c.url, c.duration, ...
+            Error: None
+
+2025-05-19 00:59:45,724 INFO:__main__: Xử lý case 8...
+2025-05-19 00:59:56,889 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 00:59:57,342 INFO:__main__: 
+            [Case 8] full_match
+            Expected courses: 7305
+            Generated courses: 7305
+            Match: True
+            Generated query: MATCH (c:Course)-[:HAS_LEVEL]->(l:Level {name: 'Beginner'}) RETURN c.name, c.url, c.duration, c.rati...
+            Error: None
+
+2025-05-19 00:59:57,342 INFO:__main__: Xử lý case 9...
+2025-05-19 01:00:07,957 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:00:07,980 INFO:__main__: 
+            [Case 9] full_match
+            Expected courses: 28
+            Generated courses: 28
+            Match: True
+            Generated query: MATCH (c:Course)-[:OFFERED_BY]->(o:Organization {name: 'Harvard University'}) RETURN c.name, c.url, ...
+            Error: None
+
+2025-05-19 01:00:07,981 INFO:__main__: Xử lý case 10...
+2025-05-19 01:00:18,168 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:00:18,199 INFO:__main__: 
+            [Case 10] full_match
+            Expected courses: 5
+            Generated courses: 5
+            Match: True
+            Generated query: MATCH (c:Course)-[:TEACHES]->(s:Skill {name: 'Python'}) RETURN c.name, c.url, c.duration, c.rating, ...
+            Error: None
+
+2025-05-19 01:00:18,199 INFO:__main__: Xử lý case 11...
+2025-05-19 01:00:30,879 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:00:30,953 INFO:__main__: 
+            [Case 11] full_match
+            Expected courses: 416
+            Generated courses: 416
+            Match: True
+            Generated query: MATCH (c:Course)-[:TEACHES]->(s:Skill {name: 'Machine Learning'}), (c)-[:TAUGHT_BY]->(i:Instructor) ...
+            Error: None
+
+2025-05-19 01:00:30,954 INFO:__main__: Xử lý case 12...
+2025-05-19 01:00:42,988 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:00:43,056 INFO:__main__: 
+            [Case 12] full_match
+            Expected courses: 449
+            Generated courses: 449
+            Match: True
+            Generated query: MATCH (c:Course)-[:HAS_LEVEL]->(l:Level {name: 'Advanced'}), (c)-[:OFFERED_BY]->(o:Organization) RET...
+            Error: None
+
+2025-05-19 01:00:43,057 INFO:__main__: Xử lý case 13...
+2025-05-19 01:00:55,750 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:00:55,806 INFO:__main__: 
+            [Case 13] full_match
+            Expected courses: 113
+            Generated courses: 113
+            Match: True
+            Generated query: MATCH (c:Course)-[:TEACHES]->(s:Skill), (c)-[:TAUGHT_BY]->(i:Instructor {name: 'Christopher Brooks'}...
+            Error: None
+
+2025-05-19 01:00:55,806 INFO:__main__: Xử lý case 14...
+2025-05-19 01:01:09,046 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:01:09,113 INFO:__main__: 
+            [Case 14] full_match
+            Expected courses: 305
+            Generated courses: 305
+            Match: True
+            Generated query: MATCH (c:Course)-[:OFFERED_BY]->(o:Organization {name: 'University of Michigan'}), (c)-[:TAUGHT_BY]-...
+            Error: None
+
+2025-05-19 01:01:09,113 INFO:__main__: Xử lý case 15...
+2025-05-19 01:01:21,130 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:01:21,183 INFO:__main__: 
+            [Case 15] full_match
+            Expected courses: 5
+            Generated courses: 5
+            Match: True
+            Generated query: MATCH (c:Course)-[:TEACHES]->(s:Skill {name: 'Python'}), (c)-[:OFFERED_BY]->(o:Organization) RETURN ...
+            Error: None
+
+2025-05-19 01:01:21,183 INFO:__main__: Xử lý case 16...
+2025-05-19 01:01:37,932 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:01:38,052 INFO:__main__: 
+            [Case 16] partial_match
+            Expected courses: 1015
+            Generated courses: 0
+            Match: False
+            Generated query: MATCH (c:Course)-[:TEACHES]->(s:Skill), (c)-[:OFFERED_BY]->(o:Organization), (o)-[:OFFERED_BY]->(c2:...
+            Error: None
+
+2025-05-19 01:01:38,052 INFO:__main__: Xử lý case 17...
+2025-05-19 01:01:54,378 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:01:54,609 INFO:__main__: 
+            [Case 17] partial_match
+            Expected courses: 4146
+            Generated courses: 7467
+            Match: False
+            Generated query: MATCH (c:Course)-[:TAUGHT_BY]->(i:Instructor), (c)-[:OFFERED_BY]->(o:Organization), (c)-[:HAS_LEVEL]...
+            Error: None
+
+2025-05-19 01:01:54,609 INFO:__main__: Xử lý case 18...
+2025-05-19 01:02:10,729 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:02:10,832 INFO:__main__: 
+            [Case 18] partial_match
+            Expected courses: 18
+            Generated courses: 2468
+            Match: False
+            Generated query: MATCH (c:Course)-[:OFFERED_BY]->(o:Organization {name: 'University of Michigan'}), (c)-[:TEACHES]->(...
+            Error: None
+
+2025-05-19 01:02:10,832 INFO:__main__: Xử lý case 19...
+2025-05-19 01:02:29,913 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:02:30,895 INFO:__main__: 
+            [Case 19] partial_match
+            Expected courses: 4405
+            Generated courses: 0
+            Match: False
+            Generated query: MATCH (c:Course)-[:TEACHES]->(s:Skill), (c)-[:TAUGHT_BY]->(i:Instructor), (c2:Course)-[:TAUGHT_BY]->...
+            Error: None
+
+2025-05-19 01:02:30,896 INFO:__main__: Xử lý case 20...
+2025-05-19 01:02:47,490 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:02:47,563 INFO:__main__: 
+            [Case 20] partial_match
+            Expected courses: 99
+            Generated courses: 808
+            Match: False
+            Generated query: MATCH (c:Course)-[:TEACHES]->(s:Skill {name: 'Data Analysis'}), (c)-[:TAUGHT_BY]->(i:Instructor), (c...
+            Error: None
+
+2025-05-19 01:02:47,563 INFO:__main__: Xử lý case 21...
+2025-05-19 01:02:47,586 WARNING:neo4j.notifications: Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.AggregationSkippedNull} {category: UNRECOGNIZED} {title: The query contains an aggregation function that skips null values.} {description: null value eliminated in set function.} {position: None} for query: "MATCH (c:Course)-[:TEACHES]->(s:Skill {name: 'Data Analysis'}), (c)-[:OFFERED_BY]->(o:Organization {name: 'University of Michigan'}) RETURN AVG(toFloat(c.rating))"
+2025-05-19 01:03:01,549 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:03:01,658 ERROR:__main__: Lỗi thực thi query: {code: Neo.ClientError.Statement.TypeError} {message: avg() can only handle numerical values, duration, and null. Got 
+String("4.8")}
+2025-05-19 01:03:01,658 INFO:__main__: 
+            [Case 21] generated_execution_failed
+            Expected courses: 1
+            Generated courses: 0
+            Match: False
+            Generated query: MATCH (c:Course)-[:TEACHES]->(s:Skill {name: 'Data Analysis'}), (c)-[:OFFERED_BY]->(o:Organization {...
+            Error: None
+
+2025-05-19 01:03:01,658 INFO:__main__: Xử lý case 22...
+2025-05-19 01:03:01,674 WARNING:neo4j.notifications: Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make 
+sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: nu_reviews)} {position: line: 1, column: 75, offset: 74} for query: "MATCH (c:Course)-[:TEACHES]->(s:Skill {name: 'Python'}) WHERE toInteger(c.nu_reviews) > 100 RETURN c.name, c.rating ORDER BY toFloat(c.rating) DESC LIMIT 1"
+2025-05-19 01:03:16,686 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:03:16,763 INFO:__main__: 
+            [Case 22] partial_match
+            Expected courses: 0
+            Generated courses: 1
+            Match: False
+            Generated query: MATCH (c:Course)-[:TEACHES]->(s:Skill {name: 'Python'}) RETURN c.name, c.url, c.rating ORDER BY c.ra...
+            Error: None
+
+2025-05-19 01:03:16,763 INFO:__main__: Xử lý case 23...
+2025-05-19 01:03:27,287 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:03:27,374 INFO:__main__: 
+            [Case 23] full_match
+            Expected courses: 527
+            Generated courses: 527
+            Match: True
+            Generated query: MATCH (c:Course)-[:OFFERED_BY]->(o:Organization) RETURN o.name, count(c) AS course_count...
+            Error: None
+
+2025-05-19 01:03:27,374 INFO:__main__: Xử lý case 24...
+2025-05-19 01:03:43,567 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:03:43,638 INFO:__main__: 
+            [Case 24] full_match
+            Expected courses: 129
+            Generated courses: 129
+            Match: True
+            Generated query: MATCH (c:Course)-[:TEACHES]->(s1:Skill {name: 'Data Analysis'}), (c:Course)-[:TEACHES]->(s2:Skill {n...
+            Error: None
+
+2025-05-19 01:03:43,638 INFO:__main__: Xử lý case 25...
+2025-05-19 01:03:56,600 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:03:56,653 INFO:__main__: 
+            [Case 25] partial_match
+            Expected courses: 5
+            Generated courses: 5
+            Match: False
+            Generated query: MATCH (c:Course)-[:TEACHES]->(s:Skill {name: 'Data Analysis'}) RETURN c.name, c.url, c.rating ORDER ...
+            Error: None
+
+2025-05-19 01:03:56,654 INFO:__main__: Xử lý case 26...
+2025-05-19 01:04:07,493 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:04:07,565 INFO:__main__: 
+            [Case 26] partial_match
+            Expected courses: 5668
+            Generated courses: 0
+            Match: False
+            Generated query: MATCH (c:Course) WHERE c.rating > 4.5 RETURN c.name, c.url, c.duration, c.rating, c.description...
+            Error: None
+
+2025-05-19 01:04:07,565 INFO:__main__: Xử lý case 27...
+2025-05-19 01:04:18,014 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:04:18,262 INFO:__main__: 
+            [Case 27] full_match
+            Expected courses: 5941
+            Generated courses: 5941
+            Match: True
+            Generated query: MATCH (c:Course) WHERE c.duration < 10 RETURN c.name, c.url, c.duration, c.rating, c.description...
+            Error: None
+
+2025-05-19 01:04:18,262 INFO:__main__: Xử lý case 28...
+2025-05-19 01:04:18,262 WARNING:neo4j.notifications: Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make 
+sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: nu_reviews)} {position: line: 1, column: 36, offset: 35} for query: 'MATCH (c:Course) WHERE toInteger(c.nu_reviews) > 50 RETURN c.name'
+2025-05-19 01:04:28,367 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:04:28,400 INFO:__main__: 
+            [Case 28] full_match
+            Expected courses: 0
+            Generated courses: 0
+            Match: True
+            Generated query: MATCH (c:Course) WHERE c.rating > 50 RETURN c.name, c.url, c.duration, c.rating, c.description...
+            Error: None
+
+2025-05-19 01:04:28,400 INFO:__main__: Xử lý case 29...
+2025-05-19 01:04:40,665 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:04:40,719 INFO:__main__: 
+            [Case 29] full_match
+            Expected courses: 1
+            Generated courses: 1
+            Match: True
+            Generated query: MATCH (c:Course)-[:OFFERED_BY]->(o:Organization) RETURN o.name, count(c) AS course_count ORDER BY co...
+            Error: None
+
+2025-05-19 01:04:40,720 INFO:__main__: Xử lý case 30...
+2025-05-19 01:04:50,765 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:04:50,767 INFO:__main__: 
+            [Case 30] full_match
+            Expected courses: 1
+            Generated courses: 1
+            Match: True
+            Generated query: MATCH (c:Course)-[:TEACHES]->(s:Skill {name: 'Python'}) RETURN AVG(c.duration)...
+            Error: None
+
+2025-05-19 01:04:50,767 INFO:__main__: Xử lý case 31...
+2025-05-19 01:05:05,460 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:05:05,531 INFO:__main__: 
+            [Case 31] full_match
+            Expected courses: 29
+            Generated courses: 29
+            Match: True
+            Generated query: MATCH (c:Course)-[:TEACHES]->(s:Skill {name: 'Data Analysis'}), (c)-[:OFFERED_BY]->(o:Organization {...
+            Error: None
+
+2025-05-19 01:05:05,532 INFO:__main__: Xử lý case 32...
+2025-05-19 01:05:19,722 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:05:19,789 INFO:__main__: 
+            [Case 32] full_match
+            Expected courses: 10
+            Generated courses: 10
+            Match: True
+            Generated query: MATCH (c:Course)-[:TAUGHT_BY]->(i:Instructor {name: 'Christopher Brooks'}), (c)-[:HAS_LEVEL]->(l:Lev...
+            Error: None
+
+2025-05-19 01:05:19,789 INFO:__main__: Xử lý case 33...
+2025-05-19 01:05:31,051 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:05:31,132 INFO:__main__: 
+            [Case 33] partial_match
+            Expected courses: 178
+            Generated courses: 263
+            Match: False
+            Generated query: MATCH (c:Course)-[:TEACHES]->(s:Skill {name: 'Statistics'}) RETURN c.name, c.url, c.rating...
+            Error: None
+
+2025-05-19 01:05:31,132 INFO:__main__: Xử lý case 34...
+2025-05-19 01:05:31,142 ERROR:__main__: Lỗi thực thi query: {code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input ']': expected an expression, ')' or ',' (line 1, column 108 (offset: 107))
+"MATCH (c:Course)-[:OFFERED_BY]->(o:Organization {name: 'Stanford University'}) WHERE toInteger(c.nu_reviews] > 20 RETURN c.name"
+                                                                                                            ^}
+2025-05-19 01:05:31,142 INFO:__main__:
+            [Case 34] expected_execution_failed
+            Expected courses: 0
+            Generated courses: 0
+            Match: False
+            Generated query: ...
+            Error: None
+
+2025-05-19 01:05:31,143 INFO:__main__: Xử lý case 35...
+2025-05-19 01:05:44,601 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:05:44,665 INFO:__main__: 
+            [Case 35] full_match
+            Expected courses: 2
+            Generated courses: 2
+            Match: True
+            Generated query: MATCH (c:Course)-[:TEACHES]->(s:Skill {name: 'Python'}), (c)-[:HAS_LEVEL]->(l:Level {name: 'Beginner...
+            Error: None
+
+2025-05-19 01:05:44,665 INFO:__main__: Xử lý case 36...
+2025-05-19 01:05:57,149 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:05:57,149 INFO:__main__: 
+            [Case 36] full_match
+            Expected courses: 26
+            Generated courses: 26
+            Match: True
+            Generated query: MATCH (c:Course)-[:OFFERED_BY]->(o:Organization {name: 'Harvard University'}), (c)-[:TAUGHT_BY]->(i:...
+            Error: None
+
+2025-05-19 01:05:57,149 INFO:__main__: Xử lý case 37...
+2025-05-19 01:06:08,766 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:06:08,852 INFO:__main__: 
+            [Case 37] full_match
+            Expected courses: 2842
+            Generated courses: 2842
+            Match: True
+            Generated query: MATCH (c:Course)-[:HAS_LEVEL]->(l:Level {name: 'Advanced'}), (c)-[:TEACHES]->(s:Skill) RETURN s.name...
+            Error: None
+
+2025-05-19 01:06:08,852 INFO:__main__: Xử lý case 38...
+2025-05-19 01:06:21,370 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:06:21,423 INFO:__main__: 
+            [Case 38] full_match
+            Expected courses: 47
+            Generated courses: 47
+            Match: True
+            Generated query: MATCH (c:Course)-[:TAUGHT_BY]->(i:Instructor {name: 'Andrew Ng'}), (c)-[:OFFERED_BY]->(o:Organizatio...
+            Error: None
+
+2025-05-19 01:06:21,423 INFO:__main__: Xử lý case 39...
+2025-05-19 01:06:33,629 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:06:33,667 INFO:__main__: 
+            [Case 39] full_match
+            Expected courses: 263
+            Generated courses: 263
+            Match: True
+            Generated query: MATCH (c:Course)-[:TEACHES]->(s:Skill {name: 'Statistics'}), (c)-[:TAUGHT_BY]->(i:Instructor) RETURN...
+            Error: None
+
+2025-05-19 01:06:33,667 INFO:__main__: Xử lý case 40...
+2025-05-19 01:06:47,002 INFO:httpx: HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-19 01:06:47,064 INFO:__main__: 
+            [Case 40] partial_match
+            Expected courses: 3705
+            Generated courses: 0
+            Match: False
+            Generated query: MATCH (c:Course) WHERE c.duration > 10 AND c.rating >= 4.5 RETURN c.name, c.url, c.duration, c.ratin...
+            Error: None
+
+2025-05-19 01:06:47,099 INFO:__main__: Đã lưu kết quả vào D:\Thesis\Courses-Searching\course_searching_main\data\evaluation_results.json
+
+Kết quả: 28/42 truy vấn chính xác (66.7%)

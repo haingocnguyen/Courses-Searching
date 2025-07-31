@@ -29,7 +29,7 @@ Avoid reasoning too much.
 Course name:"""
 
         # Use small and fast LLM
-        llm = OllamaLLM(model="qwen3:1.7b", small=True)
+        llm = OllamaLLM(model="qwen3:4b", small=True)
         response = llm.invoke([{"role": "user", "content": prompt}])
         
         # Clean response
@@ -181,7 +181,7 @@ def handle_specific_course_flow(original_query: str):
             time.sleep(0.5)
             
             # Step 2: Search database
-            simulate_progress_step(tracker, 30, 60, "Searching course database", "🗄️", 1.2)
+            simulate_progress_step(tracker, 30, 60, "Searching database", "🗄️", 1.2)
             results = run_specific_course_search(course_name)
             tracker.update(65, f"Found {len(results)} matching courses", "📊")
             time.sleep(0.3)
@@ -479,7 +479,7 @@ Choose your preferred approach below:
                 st.rerun()
                 return
             
-            # Non-course search flows
+            # General chat flow (includes scope inquiry)
             elif intent == "general_chat":
                 simulate_progress_step(tracker, 25, 60, "Preparing response", "💭", 0.8)
                 
@@ -497,18 +497,60 @@ Choose your preferred approach below:
                     if context:
                         context = f"Recent context:\n{context}\n"
 
-                prompt = f"""{context}You are Course Finder, a friendly course finding system with 13793 courses. 
+                # Enhanced prompt with system information
+                prompt = f"""{context}You are Course Finder, a friendly course finding system. Here's your system information:
 
-                        Current user message: "{q}"
+=== SYSTEM INFORMATION ===
+You are backed by a Neo4j knowledge graph containing:
+• 169,046 total nodes
+• 282,507 total relationships
 
-                        - When users ask about conversation history, chat history, or past queries, acknowledge that you can see recent messages and offer to help with course topics
-                        - If they greet you, greet them back warmly
-                        - If they ask how you are, respond appropriately 
-                        - If the user asks about something outside your scope, politely decline and redirect back to course topics, say that you are just able to help for course searching only.
-                        - Keep responses conversational, warm, and helpful
-                        - Avoid long explanations unless specifically needed
-                        - Don't overthink responses - be direct and friendly).
-                        """
+Node breakdown (8 types):
+- Course: 13,793
+- Instructor: 6,027
+- Level: 4 (Beginner, Intermediate, Advance, Mix)
+- Organization: 526
+- Provider: 2
+- Review: 136,767
+- Skill: 11,897
+- Subject: 30
+
+Relationship breakdown (7 types):
+- HAS_LEVEL: 13,982
+- HAS_REVIEW: 136,767
+- HAS_SUBJECT: 1,537
+- OFFERED_BY: 14,118
+- PROVIDED_BY: 13,793
+- TAUGHT_BY: 15,749
+- TEACHES: 86,561
+
+=== YOUR ROLE & CAPABILITIES ===
+You are a smart course discovery assistant designed to help users find and understand learning opportunities from your database of 13,793 courses.
+
+**What you can help with:**
+- Course discovery and search
+- Educational insights and course landscapes
+- Understanding course characteristics, levels, and learning paths
+- Providing information about instructors, organizations, and course reviews
+- General conversation about learning and education topics
+
+**Your approach:**
+- Provide comprehensive overviews without making specific recommendations
+- Empower users with insights so they can choose courses themselves
+- Be warm, helpful, and conversational
+- When asked about your capabilities or database, share the system metrics above
+
+Current user message: "{q}"
+
+RESPONSE GUIDELINES:
+- If they greet you, greet them back warmly
+- If they ask how you are, respond appropriately 
+- If they ask about your capabilities, system, or database, explain using the system information above
+- If they ask about conversation history, acknowledge you can see recent messages
+- If they ask about something outside your scope, politely decline and redirect to course topics
+- Keep responses conversational, warm, and helpful
+- Don't overthink - be direct and friendly
+"""
                 
                 tracker.update(95, "Generating response", "💬")
                 time.sleep(0.3)
@@ -521,42 +563,6 @@ Choose your preferred approach below:
                     "role":"assistant","type":"text","content":analysis
                 })
                 
-            elif intent == "scope_inquiry":
-                simulate_progress_step(tracker, 25, 90, "Generating explanation", "📝", 0.6)
-                
-                scope_explanation = """
-Hi! I'm an educational course analysis assistant. Here's what I can help you with:
-
-🎯 **My Purpose**: I provide comprehensive overviews and insights about educational courses to help you make informed decisions.
-
-📊 **What I Do**:
-- Provide course landscapes across different subjects (programming, data science, etc.)
-- Provide statistical insights about available courses 
-- Give you overviews of course characteristics, levels, and quality
-- Help you understand what's available in specific learning areas
-
-🚫 **What I Don't Do**:
-- I don't recommend specific individual courses
-- I don't make personalized course selections for you
-- I focus on giving you information so YOU can decide
-- I don't deeply focus on course analytics
-
-💡 **How to Use Me**:
-Try asking things like:
-- "Help me understand the Python course landscape"
-- "I want to know about data science course options?"
-- "Provide the characteristics of web development programs"
-
-Feel free to ask me about any subject area you're interested in learning about!
-"""
-                tracker.update(100, "Explanation ready", "✅")
-                time.sleep(0.5)
-                tracker.clear()
-                response_container.markdown(scope_explanation)
-                st.session_state.messages.append({
-                    "role":"assistant","type":"text","content":scope_explanation
-                })
-            
         except Exception as e:
             tracker.clear()
             response_container.markdown(f"❌ Error: {e}")
@@ -579,10 +585,10 @@ def handle_general_search(original_query: str):
         
         try:
             # Step 1: Process query
-            simulate_progress_step(tracker, 0, 30, "Analyzing query for multiple courses", "🔍", 1.0)
+            simulate_progress_step(tracker, 0, 30, "Analyzing query for database", "🔍", 1.0)
             
             # Step 2: Search database
-            simulate_progress_step(tracker, 30, 70, "Searching course database", "🗄️", 1.5)
+            simulate_progress_step(tracker, 30, 70, "Searching database", "🗄️", 1.5)
             
             # Use existing process_query logic
             results = st.session_state.advisor.process_query(original_query)

@@ -1,0 +1,87 @@
+{
+  "test_id": "TC134",
+  "query": "Do you offer Negotiation skills courses rated higher than 4.5?",
+  "timestamp": "2025-07-22 19:34:10",
+  "type": "skill_rating",
+  "expected_intent": "course_search",
+  "expected_outcomes": {
+    "should_find_results": true,
+    "expected_keywords": [
+      "Negotiation",
+      "rated higher than 4.5"
+    ],
+    "minimum_results": 1
+  },
+  "intent_analysis": {
+    "detected_intent": "course_search",
+    "confidence": "high",
+    "processing_time": "3.0269s",
+    "reason": "The query specifically asks about courses (Negotiation skills) with a rating criterion (>4.5), aligning with COURSE_SEARCH examples that focus on educational content with clear topics and filters.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 9,
+    "overall_intent_quality": 9,
+    "reasoning": "The predicted intent 'course_search' is semantically correct for the query as it accurately identifies the user's intent to search for negotiation skills courses rated higher than 4.5. The confidence level is appropriately high given the clear and specific nature of the query. The system's performance is commendable in accurately classifying the intent with high confidence.",
+    "is_correct": true
+  },
+  "processing_details": {
+    "results_found": 10,
+    "processing_time": "6.4374s",
+    "sample_results": [
+      {
+        "name": "Foundations of Purchasing: Principles and Practices ",
+        "url": "https://www.coursera.org/learn/foundations-of-purchasing-principles-and-practices",
+        "rating": 4.8,
+        "skills": []
+      },
+      {
+        "name": "Women in Leadership: Inspiring Positive Change",
+        "url": "https://www.coursera.org/learn/women-in-leadership",
+        "rating": 4.7,
+        "skills": []
+      },
+      {
+        "name": "Successful Negotiation: Essential Strategies and Skills",
+        "url": "https://www.coursera.org/learn/negotiation-skills",
+        "rating": 4.8,
+        "skills": []
+      }
+    ]
+  },
+  "system_response": {
+    "generation_time": "8.7110s",
+    "content": "**🚀 Course Landscape Overview: Mastering Negotiation Skills**  \nThe course landscape for negotiation skills is exceptionally robust, with **10 courses** available, all rated above **4.5/5.0**. The **average rating of 4.8/5.0** reflects a high-quality offering, with the top-rated course, *Negotiation* (4.9/5.0), leading the pack. This suggests a strong focus on practical, high-impact learning for professionals seeking to refine their negotiation expertise.  \n\n**📊 Quality Distribution & Learning Value**  \nThe **4.6–4.9 rating range** indicates that all courses meet rigorous standards, with minimal variation in quality. This consistency means learners can trust the depth of content across courses, though the **15-week average duration** may be a consideration for those seeking shorter, more intensive programs. The **mixed level distribution** (though no distinct levels are available) implies that courses are designed for a broad audience, making them accessible to both beginners and experienced professionals.  \n\n**🔍 Skill Focus & Learning Progression**  \nThe top-rated courses emphasize **negotiation strategies**, **mediation techniques**, and **conflict resolution**, with additional coverage of **purchasing principles** and **game theory**. This suggests a **holistic approach** to negotiation, blending theoretical frameworks with real-world applications. Learners can expect a progression from foundational skills (e.g., *Foundations of Purchasing*) to advanced topics (e.g., *Strategy and Game Theory*), ensuring a well-rounded skill set.  \n\n**🎯 Course Approaches & Specializations**  \nWhile the dataset shows **no provider or institutional diversity**, all courses are likely from a single provider, which may offer a cohesive learning experience. The **Capstone Project** course stands out as a practical application of skills, while others focus on theoretical or situational analysis. This variety allows learners to choose between **practical, analytical, or hybrid** approaches, depending on their career goals.  \n\n**📌 Provider & Institutional Insights**  \nThe **lack of provider and institutional diversity** indicates that all courses are part of a unified curriculum, which could be a benefit for learners seeking consistency in teaching style and content. However, this also limits exposure to different pedagogical methods or industry-specific insights.  \n\n**💡 Practical Selection Insights**  \nFor learners, the **top-rated courses** (e.g., *Negotiation* and *Strategy and Game Theory*) are ideal for those seeking high-quality, expert-led content. The **Capstone Project** is perfect for hands-on application, while *Foundations of Purchasing* offers a broader perspective. Given the **15-week duration**, prioritize courses that align with your time commitment and career stage. All courses are equally accessible, so focus on the **skill focus** and **provider reputation** to maximize value.  \n\nThis landscape underscores a **highly rated, cohesive** negotiation learning ecosystem, ideal for professionals aiming to master both theoretical and practical aspects of negotiation. 🌟"
+  },
+  "response_evaluation": {
+    "relevance": 9,
+    "helpfulness": 8,
+    "clarity": 9,
+    "completeness": 8,
+    "professional_tone": 10,
+    "hallucination": 10,
+    "overall_score": 8.8,
+    "reasoning": "The response is highly relevant as it directly addresses the user's query about negotiation skills courses rated higher than 4.5. It provides detailed information on the available courses, their ratings, skill focus, and learning progression. The response is clear, well-structured, and maintains a professional tone throughout. It is mostly complete, offering insights into course approaches, specializations, and practical selection advice. There are no hallucinations, and all information provided aligns with the actual results found.",
+    "strengths": [
+      "Relevance to user query",
+      "Professional tone and language"
+    ],
+    "weaknesses": [
+      "Slight lack of emphasis on user action steps",
+      "Could provide more details on course content"
+    ],
+    "suggestions": [
+      "Include specific action steps for the user to take next",
+      "Enhance completeness by adding more detailed descriptions of course content"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['rated higher than 4.5']"
+    ]
+  }
+}

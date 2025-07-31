@@ -1,0 +1,108 @@
+{
+  "test_id": "TC139",
+  "query": "Can you show me Design skills courses with positive feedback and less than 5 hours long?",
+  "timestamp": "2025-07-22 19:36:58",
+  "type": "skill_rating_duration",
+  "expected_intent": "course_search",
+  "expected_outcomes": {
+    "should_find_results": true,
+    "expected_keywords": [
+      "Design",
+      "positive feedback",
+      "less than 5 hours"
+    ],
+    "minimum_results": 1
+  },
+  "intent_analysis": {
+    "detected_intent": "course_search",
+    "confidence": "high",
+    "processing_time": "3.2252s",
+    "reason": "The query specifies a clear educational request for 'Design skills courses' with filters on feedback and duration, matching the pattern of specific educational queries in COURSE_SEARCH examples like 'show me machine learning courses with high ratings' or 'recommend beginner courses in artificial intelligence'.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 9,
+    "overall_intent_quality": 9,
+    "reasoning": "The predicted intent 'course_search' is semantically correct as it accurately captures the user's request to find Design skills courses with specific criteria. The high confidence score is appropriate given the clear and specific nature of the query. The system correctly identified the user's intent with high confidence, demonstrating a strong performance.",
+    "is_correct": true
+  },
+  "processing_details": {
+    "results_found": 10,
+    "processing_time": "15.1748s",
+    "sample_results": [
+      {
+        "name": "Design: Creation of Artifacts in Society",
+        "url": "https://www.coursera.org/learn/design",
+        "rating": "4.6",
+        "skills": []
+      },
+      {
+        "name": "Build Dynamic User Interfaces (UI) for Websites",
+        "url": "https://www.coursera.org/learn/responsive-web-design-adobe-xd",
+        "rating": "4.8",
+        "skills": [
+          "User Experience Design (UXD)",
+          "User Experience (UX)",
+          "Prototype",
+          "Usability Testing"
+        ]
+      },
+      {
+        "name": "Graphic Design",
+        "url": "https://www.coursera.org/learn/presentation-design",
+        "rating": "4.8",
+        "skills": [
+          "Visual Design",
+          "Creative Design",
+          "Design and Product",
+          "Public Speaking",
+          "Design Elements And Principles",
+          "Graphic and Visual Design Software",
+          "Design Reviews",
+          "Color Theory",
+          "Presentations",
+          "Digital Design",
+          "Design",
+          "Graphic Design",
+          "Graphic and Visual Design",
+          "Typography"
+        ]
+      }
+    ]
+  },
+  "system_response": {
+    "generation_time": "12.0136s",
+    "content": "🎨 **Course Landscape Overview: Design Skills with Positive Feedback**  \nThe design skills course landscape is vibrant and highly rated, with 10 courses offering exceptional value for learners. These courses boast an **average rating of 4.7/5.0** (ranging from 4.5 to 4.8), indicating a strong focus on quality and learner satisfaction. However, the **average duration of 18.9 weeks** raises questions about the feasibility of completing these courses in under 5 hours, as the user requested. This discrepancy suggests a need to clarify whether the duration is in weeks or hours, but based on the dataset, all courses are long-term, project-based programs.  \n\n**Quality Distribution & Learner Impact**  \nThe **uniform high ratings** (4.5–4.8) imply that all courses meet rigorous standards, with no significant outliers. This consistency is a boon for learners seeking reliable, well-structured content. However, the **lack of level diversity** (all courses at the same level) means learners may need to assess their prior experience before enrolling. The **zero unique providers** and **institutions** indicate that all courses are from a single source, which could limit exposure to varied teaching styles or industry insights. Despite this, the **top-rated courses** (e.g., \"Build Dynamic User Interfaces\" and \"Create High-Fidelity Designs\") are praised for their practical, hands-on approach, making them ideal for beginners and intermediate learners.  \n\n**Skill Focus & Learning Progression**  \nThe **top skills covered**—User Experience Design (UXD), User Experience (UX), and Prototyping—align with industry demands, emphasizing both theoretical and applied knowledge. The **top-rated courses** focus on real-world applications, such as designing for social good or using Figma for high-fidelity prototypes. This suggests a clear progression path: starting with foundational UX principles, then advancing to interface design, and finally mastering tools like Figma. However, the **lack of level diversity** means learners may not find specialized tracks for advanced skills or niche areas like motion design or accessibility.  \n\n**Provider & Institutional Insights**  \nThe **zero unique providers** and **institutions** highlight a centralized offering, which could be a strength (consistent quality) or a limitation (limited diversity in teaching approaches). While this ensures a cohesive curriculum, it may also reduce opportunities for learners to explore alternative perspectives or industry-specific content. The **mixed level distribution** (though all courses are at the same level) suggests that the courses are designed for a broad audience, which is both a benefit and a challenge for learners with varying experience levels.  \n\n**Practical Selection Insights**  \nFor learners seeking **positive feedback and short courses**, the dataset reveals a paradox: while all courses are highly rated, their **18.9-week duration** contradicts the 5-hour requirement. This may indicate a misunderstanding in the dataset or a need to prioritize courses with shorter, micro-learning modules. However, the **top-rated courses** are structured for depth, making them ideal for those aiming to build a strong foundation in UXD and prototyping. Learners should also consider the **single provider** and **institution** to ensure alignment with their learning goals, and prioritize courses that emphasize practical, project-based learning for immediate skill application. 🚀"
+  },
+  "response_evaluation": {
+    "relevance": 4,
+    "helpfulness": 6,
+    "clarity": 8,
+    "completeness": 7,
+    "professional_tone": 9,
+    "hallucination": 2,
+    "overall_score": 6.0,
+    "reasoning": "The response partially addresses the user's query by providing information on design skills courses with positive feedback but fails to meet the user's requirement for courses less than 5 hours long. The response is clear, well-structured, and maintains a professional tone. It contains some relevant details but lacks actionable information for the user's goal. There are minor inaccuracies in the response, such as the duration of the courses not aligning with the user's request.",
+    "strengths": [
+      "Clear and well-structured response",
+      "Professional tone maintained throughout"
+    ],
+    "weaknesses": [
+      "Does not meet the user's specific query for short courses",
+      "Lacks actionable information for the user's goal"
+    ],
+    "suggestions": [
+      "Provide courses that meet the user's specified duration criteria",
+      "Include actionable steps or recommendations for the user"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['less than 5 hours']"
+    ]
+  }
+}

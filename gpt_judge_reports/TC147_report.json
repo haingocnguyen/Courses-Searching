@@ -1,0 +1,91 @@
+{
+  "test_id": "TC147",
+  "query": "I'm looking for a Communication skills course with high ratings, quizzes, hands-on projects, community discussion, and practical assignments — do you have any?",
+  "timestamp": "2025-07-22 19:42:14",
+  "type": "mixed_hop",
+  "expected_intent": "course_search",
+  "expected_outcomes": {
+    "should_find_results": true,
+    "expected_keywords": [
+      "Communication",
+      "high ratings",
+      "quizzes",
+      "hands-on projects",
+      "community discussion",
+      "practical assignments"
+    ],
+    "minimum_results": 1
+  },
+  "intent_analysis": {
+    "detected_intent": "course_search",
+    "confidence": "high",
+    "processing_time": "4.4437s",
+    "reason": "The query specifically requests a Communication skills course with detailed requirements (high ratings, quizzes, projects, etc.), aligning with COURSE_SEARCH examples that focus on educational requests with clear topics and action words like 'looking for' and 'do you have any?'",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 9,
+    "overall_intent_quality": 9,
+    "reasoning": "The predicted intent 'course_search' is a perfect match for the user query as it accurately captures the user's intent to search for a course. The confidence level is appropriately high given the specificity and clarity of the query. The system correctly identified the user's intent with high confidence, but there is always room for slight uncertainty in complex queries, hence a slightly lower confidence score. Overall, the system performed excellently in accurately classifying the intent with a high confidence level.",
+    "is_correct": true
+  },
+  "processing_details": {
+    "results_found": 10,
+    "processing_time": "14.8770s",
+    "sample_results": [
+      {
+        "name": "Training and Learning Online",
+        "url": "https://www.coursera.org/learn/training-and-learning-online",
+        "rating": 4.7,
+        "skills": []
+      },
+      {
+        "name": "Marketing, Communication, and PR",
+        "url": "https://www.coursera.org/learn/marketing-communication-and-pr",
+        "rating": null,
+        "skills": []
+      },
+      {
+        "name": "Women's Leadership: Boost your skills and drive change",
+        "url": "https://www.coursera.org/learn/womens-leadership-boost-you-skills-and-drive-change",
+        "rating": null,
+        "skills": []
+      }
+    ]
+  },
+  "system_response": {
+    "generation_time": "15.8902s",
+    "content": "**🌱 Course Landscape Overview**  \nThe course landscape for communication skills is vibrant and high-quality, with a strong emphasis on practical learning and real-world application. Out of 10 courses identified, the average rating is **4.6/5.0**, with top-rated courses like *Verbal Communications and Presentation Skills* (4.5/5.0) and *Unleashing the Impact of your Social Enterprise* (4.6/5.0) standing out. While the top-rated courses are not strictly communication-focused, they often incorporate communication skills as a key component. The average duration of 11.5 weeks suggests a balanced approach to skill development, combining theory, practice, and community engagement.  \n\n**📊 Quality Distribution and Learning Value**  \nThe high average rating (4.6/5.0) indicates that most courses meet or exceed expectations, with a range of 4.4–4.9. However, the top-rated courses (e.g., *What is Climate Change?* at 4.9/5.0) are in unrelated fields, which may suggest that communication skills are a secondary focus in some courses. This could mean that learners seeking **explicit communication training** might need to look beyond the top-rated list. The **mixed level distribution** (though no distinct levels are available) implies that courses are designed for a broad audience, making them accessible to beginners and intermediate learners alike.  \n\n**🎯 Skill Focus and Learning Progression**  \nThe top skills covered include **verbal communication, presentation skills, and social enterprise**, with courses like *Training and Learning Online* (4.7/5.0) and *What is Palliative Care?* (4.8/5.0) integrating communication into their broader themes. This suggests that while some courses are explicitly about communication, others use it as a tool for other disciplines. Learners aiming for **practical assignments** and **hands-on projects** will find courses like *Verbal Communications and Presentation Skills* (4.5/5.0) and *Unleashing the Impact of your Social Enterprise* (4.6/5.0) particularly useful, as they emphasize real-world application.  \n\n**🔍 Course Approaches and Specializations**  \nThe courses vary in their **approaches to communication**: some focus on formal presentation skills, while others integrate communication into social impact or healthcare contexts. For example, *Training and Learning Online* (4.7/5.0) emphasizes interactive learning, while *What is Climate Change?* (4.9/5.0) uses communication to explain complex scientific concepts. This diversity allows learners to choose courses that align with their **specific goals**—whether it’s public speaking, team collaboration, or persuasive communication.  \n\n**📌 Provider and Institutional Insights**  \nThe dataset shows **zero unique providers** and **zero unique institutions**, indicating that all courses are from a single provider. This could mean consistent quality across courses but limited diversity in teaching styles or content. Learners should consider this when evaluating whether the provider’s approach aligns with their learning preferences.  \n\n**💡 Practical Selection Insights**  \nTo find a communication skills course that meets your needs, prioritize courses explicitly labeled as \"communication\" or \"presentation skills,\" even if they are not the top-rated. For example, *Verbal Communications and Presentation Skills* (4.5/5.0) offers structured lessons on public speaking, while *Unleashing the Impact of your Social Enterprise* (4.6/5.0) uses communication to build persuasive narratives. Look for courses with **quizzes, community discussions, and practical assignments** to ensure hands-on learning. Since all courses are from the same provider, focus on the **skill focus** and **duration** to choose the best fit for your goals. 🌟"
+  },
+  "response_evaluation": {
+    "relevance": 7,
+    "helpfulness": 8,
+    "clarity": 9,
+    "completeness": 8,
+    "professional_tone": 9,
+    "hallucination": 10,
+    "overall_score": 8.5,
+    "reasoning": "The response provides relevant information about communication skills courses with high ratings, quizzes, hands-on projects, community discussion, and practical assignments. It addresses the user's query by presenting an overview of available courses, their quality, skill focus, and approaches. The response is clear, well-structured, and maintains a professional tone throughout. It contains no false information and accurately reflects the actual results found.",
+    "strengths": [
+      "Clear and detailed overview of available courses",
+      "Provides practical selection insights for users"
+    ],
+    "weaknesses": [
+      "Lack of specific ratings for some courses",
+      "Limited diversity in providers and institutions"
+    ],
+    "suggestions": [
+      "Include specific ratings for all courses listed",
+      "Consider expanding the dataset to include courses from multiple providers for more diversity"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['high ratings']"
+    ]
+  }
+}

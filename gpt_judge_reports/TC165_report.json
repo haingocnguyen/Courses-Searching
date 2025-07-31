@@ -1,0 +1,62 @@
+{
+  "test_id": "TC165",
+  "query": "Any suggestions for getting better at Creative Thinking?",
+  "timestamp": "2025-07-22 20:03:07",
+  "type": "casual_skill_question",
+  "expected_intent": "course_search",
+  "expected_outcomes": {
+    "should_find_results": true,
+    "expected_keywords": [
+      "Creative Thinking"
+    ],
+    "minimum_results": 1
+  },
+  "intent_analysis": {
+    "detected_intent": "general_chat",
+    "confidence": "high",
+    "processing_time": "4.0795s",
+    "reason": "The query asks for general suggestions to improve a skill (creative thinking) without specifying a course, training, or actionable educational request. It aligns with GENERAL_CHAT examples like 'help me learn' or 'what should I learn' rather than COURSE_SEARCH examples which focus on specific educational topics or action words like 'find,' 'search,' or 'recommend' for courses/training.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 2,
+    "confidence_appropriateness": 9,
+    "overall_intent_quality": 5,
+    "reasoning": "The predicted intent 'general_chat' is not semantically correct for the query about getting better at Creative Thinking. However, the high confidence level indicates that the system was very certain about its incorrect prediction. The confidence level was not appropriate given the complexity of the query. Overall, the system's intent prediction was inaccurate but with high confidence.",
+    "is_correct": false
+  },
+  "system_response": {
+    "content": "Hello! I'm here to help you find courses. You can ask me about specific courses, instructors, or organizations offering courses."
+  },
+  "response_evaluation": {
+    "relevance": 1,
+    "helpfulness": 2,
+    "clarity": 7,
+    "completeness": 1,
+    "professional_tone": 8,
+    "hallucination": 10,
+    "overall_score": 4.8,
+    "reasoning": "The response lacks relevance as it does not address the user's query on improving Creative Thinking. It is somewhat clear and maintains a professional tone. However, it is unhelpful as it does not provide any actionable information or guidance. The response is incomplete as it fails to offer any course recommendations. There is a major hallucination as the system claims to help find courses but provides zero results.",
+    "strengths": [
+      "Professional tone",
+      "Clarity in language"
+    ],
+    "weaknesses": [
+      "Lack of relevance",
+      "Unhelpful and incomplete response"
+    ],
+    "suggestions": [
+      "Improve relevance by directly addressing the user query",
+      "Provide actionable information or guidance for the user's goal"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "fail",
+    "keyword_check": "partial",
+    "overall_validation": "fail",
+    "details": [
+      "Expected min 1 results, got 0",
+      "Missing keywords: ['Creative Thinking']"
+    ]
+  }
+}

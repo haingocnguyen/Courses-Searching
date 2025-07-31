@@ -1,0 +1,91 @@
+{
+  "test_id": "TC149",
+  "query": "Can you recommend a Leadership skills course with great reviews, video content, hands-on projects, peer work, and community support?",
+  "timestamp": "2025-07-22 19:43:23",
+  "type": "mixed_hop",
+  "expected_intent": "course_search",
+  "expected_outcomes": {
+    "should_find_results": true,
+    "expected_keywords": [
+      "Leadership",
+      "great reviews",
+      "video content",
+      "hands-on projects",
+      "peer work",
+      "community support"
+    ],
+    "minimum_results": 1
+  },
+  "intent_analysis": {
+    "detected_intent": "course_search",
+    "confidence": "high",
+    "processing_time": "3.7946s",
+    "reason": "The query explicitly requests a course recommendation with specific criteria (leadership skills, great reviews, video content, hands-on projects, peer work, community support), aligning with COURSE_SEARCH examples that focus on educational resources with clear topics and actionable requests.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 9,
+    "overall_intent_quality": 9,
+    "reasoning": "The predicted intent 'course_search' is a perfect match for the user query as it clearly indicates the user's intent to search for a course. The high confidence score is appropriate given the specificity and clarity of the query. The system correctly identified the user's intent with a high level of confidence, making the overall intent quality very good.",
+    "is_correct": true
+  },
+  "processing_details": {
+    "results_found": 10,
+    "processing_time": "19.3859s",
+    "sample_results": [
+      {
+        "name": "Working as a Scrum Master",
+        "url": "https://www.coursera.org/learn/working-as-a-scrum-master",
+        "rating": 4.6,
+        "skills": []
+      },
+      {
+        "name": "Visionary leadership, identity & motivation: Become a meaning maker",
+        "url": "https://www.coursera.org/learn/visionary-leadership-meaning-maker",
+        "rating": 4.8,
+        "skills": []
+      },
+      {
+        "name": "Understanding Korean Politics",
+        "url": "https://www.coursera.org/learn/understanding-korean-politics",
+        "rating": 4.8,
+        "skills": []
+      }
+    ]
+  },
+  "system_response": {
+    "generation_time": "12.6929s",
+    "content": "**🚀 Course Landscape Overview: Leadership Skills**  \nThe leadership skills course landscape is robust, offering a curated selection of 10 courses with an **average rating of 4.7/5.0**, reflecting high-quality content and learner satisfaction. These courses span a 20-week duration, balancing theoretical knowledge with practical application. The **mixed-level design** ensures accessibility for learners at various stages, though all courses are tailored to a single provider, suggesting a cohesive curriculum. This landscape emphasizes **practical skills** like strategic thinking, team management, and organizational behavior, while also highlighting niche topics like Korean politics, which may appeal to specific interests.  \n\n**🔍 Quality Distribution & Learner Impact**  \nThe **top-rated course, \"Leading from Within\" (5.0/5.0)**, stands out as a benchmark for excellence, showcasing a perfect blend of video content, peer collaboration, and real-world projects. The **next three courses** (4.8/5.0 and 4.7/5.0) also deliver strong value, with \"Visionary leadership\" and \"Principles of Management\" focusing on identity, motivation, and operational strategies. The **high average rating** indicates that most courses meet or exceed expectations, though the **4.6-5.0 range** suggests minor variations in depth or engagement. Learners can expect a **consistent quality** across courses, with a focus on actionable insights and community-driven learning.  \n\n**🎯 Skill Focus & Learning Progression**  \nThe top courses emphasize **holistic leadership development**, covering both **soft skills** (e.g., motivation, identity) and **hard skills** (e.g., management, organizational behavior). \"Understanding Korean Politics\" adds a unique angle, highlighting how cultural context shapes leadership. The **20-week duration** allows for gradual progression, with hands-on projects and peer work fostering practical application. Learners can expect a **balanced mix** of theory, case studies, and interactive elements, ensuring they build a comprehensive skill set.  \n\n**📊 Comparative Approaches & Specializations**  \nWhile all courses are from the same provider, the **skill focus** varies: \"Leading from Within\" prioritizes self-awareness, while \"Organizational Behavior\" delves into team dynamics. The **4.8/5.0 course on visionary leadership** stands out for its emphasis on long-term strategy, making it ideal for aspiring leaders. The **4.7/5.0 Principles of Management** course offers a structured approach, suitable for those seeking foundational knowledge. The **uniform provider** ensures consistency in teaching style and resources, though the **niche topics** (e.g., Korean politics) may limit broader applicability.  \n\n**🌟 Notable Patterns & Provider Insights**  \nThe **single provider** suggests a unified curriculum, which is advantageous for learners seeking a cohesive learning experience. The **lack of level diversity** indicates that all courses are designed for intermediate learners, assuming prior knowledge of leadership concepts. This could be a consideration for beginners, though the **20-week duration** allows for gradual mastery. The **strong emphasis on community support**—likely through discussion forums or peer projects—enhances engagement, making these courses ideal for collaborative learning.  \n\n**💡 Practical Selection Insights**  \nFor learners, the **top-rated \"Leading from Within\"** is a must-try, offering a 5.0 rating and a focus on personal leadership. If seeking a **practical, project-based approach**, \"Organizational Behavior\" or \"Principles of Management\" provide structured frameworks. The **4.8/5.0 visionary leadership course** is excellent for those interested in strategic thinking. Always check for **hands-on components** (e.g., simulations, case studies) and **community features** (e.g., forums, mentorship). The **single provider** ensures consistency, but the **niche topics** may require flexibility in skill goals. Prioritize courses with **high-rated peer interaction** and **real-world applications** to maximize learning outcomes. 🌟"
+  },
+  "response_evaluation": {
+    "relevance": 4,
+    "helpfulness": 7,
+    "clarity": 8,
+    "completeness": 6,
+    "professional_tone": 9,
+    "hallucination": 0,
+    "overall_score": 6.0,
+    "reasoning": "The response partially addresses the user's query by providing information on leadership courses but lacks specific recommendations matching all requested criteria. It is helpful in giving an overview of available courses and their ratings. The response is clear and well-structured, maintaining a professional tone throughout. However, it lacks completeness as it does not directly recommend courses with video content, hands-on projects, and community support. There are no hallucinations in the response.",
+    "strengths": [
+      "Clear and well-structured overview of leadership courses",
+      "Professional tone maintained throughout"
+    ],
+    "weaknesses": [
+      "Lacks specific recommendations matching all user criteria",
+      "Incomplete in directly addressing the user's query"
+    ],
+    "suggestions": [
+      "Provide direct recommendations that align with the user's requested criteria",
+      "Include more detailed information on courses with video content, hands-on projects, and community support"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['great reviews']"
+    ]
+  }
+}

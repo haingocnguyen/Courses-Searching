@@ -1,0 +1,65 @@
+{
+  "test_id": "TC180",
+  "query": "I wonder if you secretly roll your eyes at my questions…",
+  "timestamp": "2025-07-22 20:06:47",
+  "type": "general_chat",
+  "expected_intent": "general_chat",
+  "expected_outcomes": {
+    "should_find_results": false,
+    "expected_keywords": [
+      "eyes",
+      "questions",
+      "haha",
+      "find",
+      "courses"
+    ],
+    "minimum_results": 0
+  },
+  "intent_analysis": {
+    "detected_intent": "general_chat",
+    "confidence": "high",
+    "processing_time": "2.9929s",
+    "reason": "The query is a casual, rhetorical question about the AI's behavior, resembling examples like 'hello how are you doing today' or 'nice to meet you there'. It does not involve course-related topics, action words, or educational requests.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 9,
+    "overall_intent_quality": 9,
+    "reasoning": "The predicted intent 'general_chat' is semantically correct for the user query as it reflects a general conversational tone. The confidence score is appropriately high as the query is clear and unambiguous. The overall intent quality is high due to the accurate intent prediction and suitable confidence level.",
+    "is_correct": true
+  },
+  "system_response": {
+    "content": "Hello! I'm here to help you find courses. You can ask me about specific courses, instructors, or organizations offering courses."
+  },
+  "response_evaluation": {
+    "relevance": 3,
+    "helpfulness": 4,
+    "clarity": 8,
+    "completeness": 2,
+    "professional_tone": 9,
+    "hallucination": 10,
+    "overall_score": 5.9,
+    "reasoning": "The response is partially relevant as it does not directly address the user's query about eye-rolling. It is somewhat helpful by redirecting the user to the system's purpose. The clarity is good with a clear and friendly tone. However, the response lacks completeness as it does not provide any information related to the user's query. The professional tone is maintained throughout. There are no hallucinations as the response sticks to the system's purpose.",
+    "strengths": [
+      "Professional tone",
+      "Clarity"
+    ],
+    "weaknesses": [
+      "Relevance",
+      "Completeness"
+    ],
+    "suggestions": [
+      "Include a response acknowledging the user's initial query before redirecting",
+      "Provide a brief response related to the user's query to enhance relevance"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['eyes', 'questions', 'haha']"
+    ]
+  }
+}

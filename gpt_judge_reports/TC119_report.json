@@ -1,0 +1,84 @@
+{
+  "test_id": "TC119",
+  "query": "Do you offer courses for Financial Analysis skills?",
+  "timestamp": "2025-07-22 19:27:50",
+  "type": "skill_only",
+  "expected_intent": "course_search",
+  "expected_outcomes": {
+    "should_find_results": true,
+    "expected_keywords": [
+      "Financial Analysis"
+    ],
+    "minimum_results": 1
+  },
+  "intent_analysis": {
+    "detected_intent": "course_search",
+    "confidence": "high",
+    "processing_time": "2.6585s",
+    "reason": "The query directly asks about the availability of courses in a specific skill area (Financial Analysis), matching the pattern of specific educational requests with clear topics and action words seen in COURSE_SEARCH examples.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 9,
+    "overall_intent_quality": 9,
+    "reasoning": "The predicted intent 'course_search' is a perfect match for the user query as it directly relates to searching for courses. The confidence level is appropriately high given the clear and unambiguous nature of the query. The system shows strong performance in accurately identifying the user's intent with high confidence.",
+    "is_correct": true
+  },
+  "processing_details": {
+    "results_found": 10,
+    "processing_time": "5.4607s",
+    "sample_results": [
+      {
+        "name": "Financial Statement Analysis",
+        "url": "https://www.coursera.org/learn/financial-statement-analysis",
+        "rating": 4.6,
+        "skills": []
+      },
+      {
+        "name": "Fundamentals of Finance",
+        "url": "https://www.coursera.org/learn/finance-fundamentals-uci",
+        "rating": 4.7,
+        "skills": []
+      },
+      {
+        "name": "Liquidity and Solvency in Financial Accounting",
+        "url": "https://www.coursera.org/learn/liquidity-and-solvency-in-financial-accounting",
+        "rating": null,
+        "skills": []
+      }
+    ]
+  },
+  "system_response": {
+    "generation_time": "10.5284s",
+    "content": "💰 **Course Landscape for Financial Analysis Skills**  \nThe financial analysis course landscape is robust, offering 10 structured programs with an average rating of **4.6/5.0** (ranging from 4.2 to 4.8). These courses, averaging **15.1 weeks** in duration, provide a solid foundation for mastering financial analysis. While the data indicates **0 unique providers** and **0 unique institutions**, the courses are consistently rated high, suggesting a cohesive and reliable curriculum. This uniformity may benefit learners seeking consistency but could limit exposure to diverse teaching styles or perspectives.  \n\n**Quality Distribution & Learner Impact**  \nThe **high average rating** (4.6/5.0) and narrow rating range (4.2–4.8) indicate that all courses meet high standards of quality. This consistency ensures learners can trust the material, though the lack of variation in provider or institutional offerings might reduce opportunities for specialized insights. The **mixed level distribution** (though technically 0 distinct levels) suggests courses are tailored for intermediate to advanced learners, which is ideal for those with prior financial knowledge. However, learners should verify if the courses align with their current skill level to avoid gaps in understanding.  \n\n**Skill Focus & Learning Progression**  \nThe top-rated courses emphasize **foundational skills** like financial accounting and finance fundamentals, while also covering advanced topics such as **financial statement analysis** and **startup valuation**. This progression allows learners to build from basic principles to complex analytical techniques. The curriculum appears to prioritize **accounting, valuation, and financial modeling**, which are critical for roles in investment banking, corporate finance, or consulting. The **structured skill path** ensures learners develop a comprehensive understanding of financial metrics, ratios, and market valuation methods.  \n\n**Provider & Institutional Insights**  \nThe **lack of provider diversity** (0 unique providers) means all courses are from a single institution, which could offer a unified teaching approach but may limit exposure to varied methodologies. However, the **consistency in quality** across courses suggests a well-organized curriculum. Learners should consider whether the provider’s reputation or accreditation aligns with their career goals, as this could influence the course’s value.  \n\n**Practical Selection Insights**  \nFor learners, the **top-rated courses**—such as *What is Financial Accounting?* and *Fundamentals of Finance*—are excellent starting points for building a strong foundation. Those aiming for advanced skills should prioritize courses like *Financial Statement Analysis* or *Valuation for Startups*, which combine theoretical knowledge with real-world applications. Given the **uniform provider and institutional offerings**, focus on course content depth, instructor expertise, and alignment with your career stage. A **15-week duration** is sufficient for most learners, but those with time constraints may benefit from shorter, focused modules. Overall, the landscape offers high-quality, structured learning, but diversity in providers could enhance the range of perspectives available. 🚀"
+  },
+  "response_evaluation": {
+    "relevance": 9,
+    "helpfulness": 8,
+    "clarity": 9,
+    "completeness": 8,
+    "professional_tone": 10,
+    "hallucination": 10,
+    "overall_score": 8.8,
+    "reasoning": "The response is highly relevant as it directly addresses the user's query about courses for Financial Analysis skills. It provides detailed insights into the course landscape, quality distribution, skill focus, and practical selection advice. The information is presented clearly and professionally, maintaining a tone suitable for an educational context. The response is mostly complete, offering valuable information about the courses found. There are no hallucinations, and the information provided aligns with the actual results.",
+    "strengths": [
+      "Detailed information on course landscape and skill progression",
+      "Clear and professional tone"
+    ],
+    "weaknesses": [
+      "Lack of information on all 10 courses found",
+      "Limited insights on provider diversity"
+    ],
+    "suggestions": [
+      "Include details on all 10 courses found for better completeness",
+      "Provide more insights on the importance of provider diversity for a well-rounded learning experience"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "pass",
+    "overall_validation": "pass",
+    "details": []
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "test_id": "TC184",
+  "query": "Do you ever want to ignore people's messages… or is that just me?",
+  "timestamp": "2025-07-22 20:07:30",
+  "type": "general_chat",
+  "expected_intent": "general_chat",
+  "expected_outcomes": {
+    "should_find_results": false,
+    "expected_keywords": [
+      "ignore",
+      "messages",
+      "find",
+      "courses"
+    ],
+    "minimum_results": 0
+  },
+  "intent_analysis": {
+    "detected_intent": "general_chat",
+    "confidence": "high",
+    "processing_time": "3.4867s",
+    "reason": "The query is a casual, introspective question about the assistant's perspective on ignoring messages, which aligns with GENERAL_CHAT examples like greetings, system capability questions, or philosophical topics. It lacks specific educational requests or action words related to courses/training.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 9,
+    "overall_intent_quality": 9,
+    "reasoning": "The predicted intent 'general_chat' is a perfect match for the user query as it falls under a general conversational category. The confidence level is appropriately high as the query is straightforward and unambiguous. Overall, the system performed excellently in accurately classifying the intent with high confidence.",
+    "is_correct": true
+  },
+  "system_response": {
+    "content": "Hello! I'm here to help you find courses. You can ask me about specific courses, instructors, or organizations offering courses."
+  },
+  "response_evaluation": {
+    "relevance": 1,
+    "helpfulness": 2,
+    "clarity": 8,
+    "completeness": 2,
+    "professional_tone": 9,
+    "hallucination": 10,
+    "overall_score": 4.3,
+    "reasoning": "The response lacks relevance as it completely ignores the user's query about ignoring people's messages. It is somewhat clear and professionally toned, but it fails to provide any helpful information or address the user's goal of discussing message ignoring. The response is incomplete as it does not offer any guidance or next steps. It hallucinates by introducing a topic about finding courses, which was not requested by the user.",
+    "strengths": [
+      "Professional tone",
+      "Clarity"
+    ],
+    "weaknesses": [
+      "Relevance",
+      "Helpfulness",
+      "Completeness"
+    ],
+    "suggestions": [
+      "Ensure responses directly address user queries",
+      "Provide relevant information to assist users in achieving their goals"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['ignore', 'messages']"
+    ]
+  }
+}

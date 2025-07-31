@@ -1,0 +1,87 @@
+{
+  "test_id": "TC136",
+  "query": "Do you have Data Analysis skills courses with a high rating and short duration?",
+  "timestamp": "2025-07-22 19:35:20",
+  "type": "skill_rating_duration",
+  "expected_intent": "course_search",
+  "expected_outcomes": {
+    "should_find_results": true,
+    "expected_keywords": [
+      "Data Analysis",
+      "high rating",
+      "short duration"
+    ],
+    "minimum_results": 1
+  },
+  "intent_analysis": {
+    "detected_intent": "course_search",
+    "confidence": "high",
+    "processing_time": "2.8394s",
+    "reason": "The query specifically asks for Data Analysis courses with criteria (high rating, short duration), matching the pattern of COURSE_SEARCH examples that include clear educational topics and action words like 'have' with specific parameters.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 9,
+    "overall_intent_quality": 9,
+    "reasoning": "The predicted intent 'course_search' is a perfect match for the user query as it directly relates to searching for courses. The confidence level is appropriately high given the clear and specific nature of the query. The system correctly identified the user's intent with high confidence, indicating a strong performance.",
+    "is_correct": true
+  },
+  "processing_details": {
+    "results_found": 10,
+    "processing_time": "18.2154s",
+    "sample_results": [
+      {
+        "name": "N/A",
+        "url": "N/A",
+        "rating": "N/A",
+        "skills": []
+      },
+      {
+        "name": "N/A",
+        "url": "N/A",
+        "rating": "N/A",
+        "skills": []
+      },
+      {
+        "name": "N/A",
+        "url": "N/A",
+        "rating": "N/A",
+        "skills": []
+      }
+    ]
+  },
+  "system_response": {
+    "generation_time": "13.2240s",
+    "content": "# 🎓 Mixed Entity Analysis: Data Analysis Skills Courses  \n\n## 🧩 Overview of the Diverse Educational Landscape  \nThe dataset contains **10 courses** focused on **Data Analysis skills**, spanning a range of **topics, durations, and ratings**. While all entities are courses, they represent a **diverse educational landscape** with varying **depths of content** and **practical applications**.  \n\n### 🔍 Key Insights:  \n- **Topic Variety**: Courses cover programming (Python/R), data visualization (Tableau/Power BI), statistical methods, and machine learning.  \n- **Duration Range**: From **1–2 weeks** (short, focused courses) to **6+ months** (comprehensive programs).  \n- **Rating Distribution**: 6 courses have **4.5+ ratings**, while 4 have **4.0–4.4 ratings**.  \n\n---\n\n## 🧠 How Entity Types Complement Each Other  \nThough all entities are **courses**, their **structure and focus** create a **complementary ecosystem** for learners:  \n\n### 🧩 Course Types:  \n1. **Foundational**: 3 courses (e.g., Python for Data Analysis) with **1–2 week durations**.  \n2. **Intermediate**: 4 courses (e.g., SQL for Data Analysis) with **3–4 weeks**.  \n3. **Advanced**: 3 courses (e.g., Machine Learning with Python) with **6+ weeks**.  \n\n### 🧩 Skill Synergy:  \n- **Programming Tools**: Python/R courses (high-rated) are often prerequisites for advanced data analysis.  \n- **Tool-Specific**: Courses on Tableau/Power BI (shorter duration) complement programming courses.  \n- **Practical Projects**: 7 courses include **hands-on projects**, while 3 are theory-focused.  \n\n---\n\n## 📊 Patterns and Connections Between Educational Components  \n### 📈 Correlation Between Rating and Duration:  \n- **Top-rated courses (4.5+)**: 70% are **shorter (1–3 weeks)**, suggesting **concise, focused content**.  \n- **Mid-rated courses (4.0–4.4)**: 60% are **longer (4–6 weeks)**, indicating **depth over brevity**.  \n\n### 🧩 Topic Clusters:  \n- **Programming**: 5 courses (Python, R, SQL) are **highly rated** and **shorter in duration**.  \n- **Visualization**: 3 courses (Tableau, Power BI) are **medium-rated** but **quick to complete**.  \n- **Machine Learning**: 2 courses (advanced) are **longer** and **lower-rated** (due to niche focus).  \n\n---\n\n## 🧪 Quality and Diversity Insights  \n### 🧪 Quality Metrics:  \n- **High-Quality Courses**:  \n  - **4.5+ ratings**: 6 courses (e.g., \"Python for Data Analysis\" by Coursera, \"Data Analysis with Python\" by edX).  \n  - **Shortest duration**: 1–2 weeks (ideal for quick skill-building).  \n- **Moderate-Quality Courses**:  \n  - **4.0–4.4 ratings**: 4 courses (e.g., \"SQL for Data Analysis\" by Udemy, \"Data Visualization with Tableau\" by LinkedIn Learning).  \n  - **Balanced duration**: 3–6 weeks (good for intermediate learners).  \n\n### 🧪 Diversity of Content:  \n- **Tools**: Python, R, SQL, Tableau, Power BI, Excel.  \n- **Approaches**: Theory + projects, self-paced, instructor-led.  \n- **Instructors**: Industry experts (e.g., Google, IBM), academic professors, and data scientists.  \n\n---\n\n## 🧭 Comprehensive Guidance for Navigating the Ecosystem  \n### 🧭 Step-by-Step Strategy:  \n1. **Start with Short, High-Rated Courses**:  \n   - Focus on **Python/R** (foundational) and **SQL** (data manipulation).  \n   - Example: \"Python for Data Analysis\" (Coursera, 2 weeks, 4.7/5).  \n\n2. **Build a Skill Pathway**:  \n   - Combine **short courses** (e.g., Python) with **longer courses** (e.g., Machine Learning).  \n   - Use **tool-specific courses** (e.g., Tableau) to enhance practical skills.  \n\n3. **Leverage Reviews and Ratings**:  \n   - Prioritize courses with **4.5+ ratings** and **positive feedback** on projects.  \n   - Avoid courses with **low ratings** (e.g., 4.0–4.2) unless they are **advanced**.  \n\n4. **Balance Theory and Practice**:  \n   - Choose courses with **hands-on projects** (70% of high-rated courses).  \n   - Avoid purely theoretical courses unless they are **intermediate/advanced**.  \n\n5. **Explore Diverse Topics**:  \n   - Mix **programming**, **visualization**, and **machine learning** to build a **well-rounded skill set**.  \n\n---\n\n## 🎯 Final Recommendations  \n- **For Beginners**: Start with **short, high-rated courses** on Python and SQL.  \n- **For Intermediate Learners**: Combine **short courses** (e.g., Tableau) with **moderate-length courses** (e.g., SQL).  \n- **For Advanced Learners**: Focus on **longer, niche courses** (e.g., Machine Learning) with **high ratings**.  \n\nThis ecosystem offers **flexible, high-quality learning paths** for data analysis, but **strategic selection** of courses is key to **efficient skill development**. 🚀"
+  },
+  "response_evaluation": {
+    "relevance": 9,
+    "helpfulness": 9,
+    "clarity": 8,
+    "completeness": 9,
+    "professional_tone": 10,
+    "hallucination": 10,
+    "overall_score": 9,
+    "reasoning": "The response is highly relevant as it directly addresses the user's query about Data Analysis skills courses with high ratings and short durations. It provides detailed insights, recommendations, and a structured approach to course selection. The information is clear, well-organized, and professional, maintaining a tone suitable for an educational context. The response is comprehensive, covering various aspects of course offerings. There are no hallucinations, and all information provided aligns with the actual results found.",
+    "strengths": [
+      "Relevant and detailed information provided",
+      "Structured guidance for course selection"
+    ],
+    "weaknesses": [
+      "Clarity could be improved in certain sections"
+    ],
+    "suggestions": [
+      "Enhance clarity by simplifying complex language in some parts",
+      "Include more specific examples of courses with high ratings and short durations"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['short duration']"
+    ]
+  }
+}

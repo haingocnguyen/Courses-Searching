@@ -1,0 +1,65 @@
+{
+  "test_id": "TC189",
+  "query": "Can you book me a flight to Mars next Tuesday?",
+  "timestamp": "2025-07-22 20:08:08",
+  "type": "nonsense",
+  "expected_intent": "general_chat",
+  "expected_outcomes": {
+    "should_find_results": false,
+    "expected_keywords": [
+      "Mars",
+      "flight",
+      "find",
+      "courses"
+    ],
+    "minimum_results": 0
+  },
+  "intent_analysis": {
+    "detected_intent": "general_chat",
+    "confidence": "medium",
+    "processing_time": "6.2368s",
+    "reason": "The query involves a specific request for a service (booking a flight) which is not covered in the COURSE_SEARCH examples. While it's not a casual greeting, it doesn't align with course-related terms or actions in the COURSE_SEARCH category. The action 'book' and the context of a flight are more aligned with general conversation rather than educational course searches.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 8,
+    "overall_intent_quality": 9,
+    "reasoning": "The predicted intent 'general_chat' is semantically correct for the user query as it is a general conversation request rather than a specific flight booking intent. The confidence score being medium is appropriate as the query involves a unique request to book a flight to Mars, which could introduce some ambiguity. Overall, the system performed well in accurately identifying the intent with a reasonable confidence level.",
+    "is_correct": true
+  },
+  "system_response": {
+    "content": "Hello! I'm here to help you find courses. You can ask me about specific courses, instructors, or organizations offering courses."
+  },
+  "response_evaluation": {
+    "relevance": 0,
+    "helpfulness": 1,
+    "clarity": 8,
+    "completeness": 2,
+    "professional_tone": 9,
+    "hallucination": 10,
+    "overall_score": 4.0,
+    "reasoning": "The response is highly irrelevant as it fails to address the user's query about booking a flight to Mars. It is clear and professionally toned, but lacks helpfulness and completeness. The response hallucinates by assuming the user is seeking information on courses.",
+    "strengths": [
+      "Professional tone",
+      "Clarity"
+    ],
+    "weaknesses": [
+      "Relevance",
+      "Helpfulness",
+      "Completeness"
+    ],
+    "suggestions": [
+      "Improve relevance by acknowledging the user's query even if it's not within the system's capabilities",
+      "Provide guidance on how to proceed or politely decline if unable to assist"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['Mars', 'flight']"
+    ]
+  }
+}

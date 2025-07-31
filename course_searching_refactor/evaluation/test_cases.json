@@ -1,0 +1,695 @@
+[
+  {
+    "id": "TC101",
+    "query": "Do you have courses that teach Data Analysis skills?",
+    "type": "skill_only",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Data Analysis"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC102",
+    "query": "I'm looking for courses on Communication skills — can you help?",
+    "type": "skill_only",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Communication"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC103",
+    "query": "Can you recommend any courses for Business & Management skills?",
+    "type": "skill_only",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Business & Management"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC104",
+    "query": "I want to learn Design skills — any suggestions?",
+    "type": "skill_only",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Design"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC105",
+    "query": "Are there courses focusing on Programming skills?",
+    "type": "skill_only",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Programming"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC106",
+    "query": "Do you offer courses on Critical Thinking skills?",
+    "type": "skill_only",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Critical Thinking"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC107",
+    "query": "Are there any courses that help improve Writing skills?",
+    "type": "skill_only",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Writing"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC108",
+    "query": "Can you show me courses about Leadership skills?",
+    "type": "skill_only",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Leadership"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC109",
+    "query": "I want to find courses teaching Problem-Solving skills.",
+    "type": "skill_only",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Problem-Solving"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC110",
+    "query": "Are there courses that help with Research skills?",
+    "type": "skill_only",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Research"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC111",
+    "query": "I'm interested in Project Management skills — any courses?",
+    "type": "skill_only",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Project Management"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC112",
+    "query": "Can you recommend courses to build Data Visualization?",
+    "type": "skill_only",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Data Visualization"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC113",
+    "query": "Are there any courses that focus on Marketing?",
+    "type": "skill_only",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Marketing"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC114",
+    "query": "Do you have courses on Negotiation skills?",
+    "type": "skill_only",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Negotiation"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC115",
+    "query": "Can I find courses for Public Speaking skills?",
+    "type": "skill_only",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Public Speaking"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC116",
+    "query": "I want to learn Creative Thinking skills — any courses?",
+    "type": "skill_only",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Creative Thinking"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC117",
+    "query": "Are there courses about Presentation skills?",
+    "type": "skill_only",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Presentation"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC118",
+    "query": "Can you suggest courses on Time Management skills?",
+    "type": "skill_only",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Time Management"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC119",
+    "query": "Do you offer courses for Financial Analysis skills?",
+    "type": "skill_only",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Financial Analysis"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC120",
+    "query": "I'm looking for courses that help with Analytical Thinking skills.",
+    "type": "skill_only",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Analytical Thinking"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC122",
+    "query": "Can you show me Communication skills courses with a lot of positive reviews?",
+    "type": "skill_rating",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Communication", "positive reviews"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC123",
+    "query": "I want Business & Management skills courses that has reviews from users, do you have any?",
+    "type": "skill_rating",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Business & Management", "reviews"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC124",
+    "query": "Do you offer Design skills courses that include hands-on projects?",
+    "type": "skill_rating",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Design", "hands-on projects"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC125",
+    "query": "Are there any Programming skills courses that has peer-reviewed assignments?",
+    "type": "skill_rating",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Programming", "peer-reviewed assignments"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC126",
+    "query": "Can you recommend Critical Thinking skills courses with ratings above 4?",
+    "type": "skill_rating",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Critical Thinking", "ratings above 4"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC127",
+    "query": "I'm looking for Writing skills courses that have discussion forums.",
+    "type": "skill_rating",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Writing", "discussion forums"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC128",
+    "query": "Do you have Leadership skills courses with rating between 4 and 4.8?",
+    "type": "skill_rating",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Leadership", "rating between 4 and 4.8"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC129",
+    "query": "Can you suggest Problem-Solving skills courses with at least 5 reviews?",
+    "type": "skill_rating",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Problem-Solving", "100 reviews"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC130",
+    "query": "Are there IT skills courses that include quizzes?",
+    "type": "skill_rating",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Research", "quizzes"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC131",
+    "query": "I want Project Management skills courses with rating above 4.5.",
+    "type": "skill_rating",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Project Management", "top ratings"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC132",
+    "query": "Find Python courses with peer-reviewed assignments and video content",
+    "type": "skill_rating",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Python", "peer", "video"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC133",
+    "query": "Are there Marketing skills courses with video?",
+    "type": "skill_rating",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Marketing", "video"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC134",
+    "query": "Do you offer Negotiation skills courses rated higher than 4.5?",
+    "type": "skill_rating",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Negotiation", "rated higher than 4.5"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC135",
+    "query": "Are there Public Speaking skills courses with community discussions?",
+    "type": "skill_rating",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Public Speaking", "community discussions"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC136",
+    "query": "Do you have Data Analysis skills courses with a high rating and short duration?",
+    "type": "skill_rating_duration",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Data Analysis", "high rating", "short duration"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC137",
+    "query": "I want Communication skills courses with over 3 reviews and less than 20 hours duration.",
+    "type": "skill_rating_duration",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Communication", "3 reviews", "less than 20 hours"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC138",
+    "query": "Are there Business & Management skills courses rated above 4.2 with hands-on assignments?",
+    "type": "skill_rating_duration",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Business & Management", "above 4.2", "hands-on assignments"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC139",
+    "query": "Can you show me Design skills courses with positive feedback and less than 5 hours long?",
+    "type": "skill_rating_duration",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Design", "positive feedback", "less than 5 hours"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC140",
+    "query": "Are there Programming skills courses with peer work, high ratings, and video lessons?",
+    "type": "skill_rating_duration",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Programming", "peer work", "high ratings", "video lessons"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC141",
+    "query": "I'm searching for Writing skills courses rated 4.8 or above with practical tasks included.",
+    "type": "skill_rating_duration",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Writing", "4.8 or above", "practical tasks"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC142",
+    "query": "Do you have Leadership skills courses that include quizzes, have great ratings, and are short in duration?",
+    "type": "skill_rating_duration",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Leadership", "quizzes", "great ratings", "short duration"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC143",
+    "query": "Can you find Problem-Solving skills courses with peer discussions, over 100 reviews, and less than 10 hours of content?",
+    "type": "skill_rating_duration",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Problem-Solving", "peer discussions", "100 reviews", "less than 10 hours"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC144",
+    "query": "I want Research skills courses with interactive content, high ratings, and short length.",
+    "type": "skill_rating_duration",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Research", "interactive content", "high ratings", "short length"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC145",
+    "query": "Are there Project Management skills courses with great reviews, peer assignments, and short duration?",
+    "type": "skill_rating_duration",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Project Management", "great reviews", "peer assignments", "short duration"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC146",
+    "query": "Can you find a Business & Management skills course with a rating above 4.5, peer-reviewed assignments, discussion forums, and under 10 hours of total duration?",
+    "type": "mixed_hop",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Business & Management", "rating above 4.5", "peer-reviewed assignments", "discussion forums", "under 10 hours"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC147",
+    "query": "I'm looking for a Communication skills course with high ratings, quizzes, hands-on projects, community discussion, and practical assignments — do you have any?",
+    "type": "mixed_hop",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Communication", "high ratings", "quizzes", "hands-on projects", "community discussion", "practical assignments"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC148",
+    "query": "Do you offer Data Analysis skills courses that include peer work, have over 4.5 ratings, quizzes, and take less than 8 hours to complete?",
+    "type": "mixed_hop",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Data Analysis", "peer work", "over 4.5 ratings", "quizzes", "less than 8 hours"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC149",
+    "query": "Can you recommend a Leadership skills course with great reviews, video content, hands-on projects, peer work, and community support?",
+    "type": "mixed_hop",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Leadership", "great reviews", "video content", "hands-on projects", "peer work", "community support"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC150",
+    "query": "Are there Project Management skills courses with over 100 positive reviews, rated above 4.5, with quizzes, hands-on practice, and available discussion forums?",
+    "type": "mixed_hop",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Project Management", "over 100 positive reviews", "rated above 4.5", "quizzes", "hands-on practice", "discussion forums"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC151",
+    "query": "I feel like I suck at Data Analysis… do you think I can find a course for that?",
+    "type": "chatty_skill",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Data Analysis"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC152",
+    "query": "Got anything for someone who wants to get better at Business & Management?",
+    "type": "chatty_skill",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Business & Management"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC153",
+    "query": "I'm in a creative mood — are there any Design skills courses worth checking out?",
+    "type": "chatty_skill",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Design"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC154",
+    "query": "Ugh, I need to finally get good at Programming… can you hook me up with a course?",
+    "type": "chatty_skill",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Programming"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC155",
+    "query": "Quick question — are there courses that help with Critical Thinking?",
+    "type": "chatty_skill",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Critical Thinking"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC156",
+    "query": "I could seriously use some help with Writing skills — any courses in mind?",
+    "type": "chatty_skill",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Writing"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC157",
+    "query": "Leadership's always been a weak spot for me… do you have a course I should try?",
+    "type": "chatty_skill",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Leadership"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC158",
+    "query": "Do you happen to know a course for boosting Problem-Solving skills?",
+    "type": "chatty_skill",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Problem-Solving"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC159",
+    "query": "I wonder if there's anything that teaches Research skills around here?",
+    "type": "chatty_skill",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Research"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC160",
+    "query": "If I wanted to improve my Project Management game, what course should I look for?",
+    "type": "chatty_skill",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Project Management"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC161",
+    "query": "Been hearing a lot about Data Visualization — any good courses for beginners?",
+    "type": "casual_skill_question",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Data Visualization", "beginners"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC162",
+    "query": "Are there courses that actually teach you solid Marketing skills?",
+    "type": "casual_skill_question",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Marketing"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC163",
+    "query": "Negotiation's kinda tricky — do you know of a course that could help?",
+    "type": "casual_skill_question",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Negotiation"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC164",
+    "query": "Public Speaking terrifies me… think a course could fix that?",
+    "type": "casual_skill_question",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Public Speaking"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC165",
+    "query": "Any suggestions for getting better at Creative Thinking?",
+    "type": "casual_skill_question",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Creative Thinking"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC166",
+    "query": "I really want to nail my Presentation skills — is there a course for that?",
+    "type": "casual_skill_question",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Presentation"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC167",
+    "query": "Time Management isn't my strength… do you know if there's a course I can take?",
+    "type": "casual_skill_question",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Time Management"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC168",
+    "query": "Financial Analysis sounds important — where can I start learning that?",
+    "type": "casual_skill_question",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Financial Analysis"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC169",
+    "query": "Analytical Thinking seems useful… are there courses on that topic?",
+    "type": "casual_skill_question",
+    "expected_intent": "course_search",
+    "expected_outcomes": { "should_find_results": true, "expected_keywords": ["Analytical Thinking"], "minimum_results": 1 }
+  },
+  {
+    "id": "TC170",
+    "query": "I bet you know way too much random stuff, huh?",
+    "type": "general_chat",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["random", "stuff", "chat", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC171",
+    "query": "If you could take a course, which one would you pick?",
+    "type": "general_chat",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["course", "pick", "choose", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC172",
+    "query": "Do you actually have favorites, or is that against chatbot rules?",
+    "type": "general_chat",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["favorites", "rules", "chatbot", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC173",
+    "query": "Ever wish you could just binge-watch Netflix instead of chatting?",
+    "type": "general_chat",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["Netflix", "binge", "chatting", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC174",
+    "query": "If I type in gibberish, will you still reply?",
+    "type": "general_chat",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["gibberish", "reply", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC175",
+    "query": "What's it like living inside a server?",
+    "type": "general_chat",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["server", "living", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC176",
+    "query": "You must be the busiest virtual assistant ever!",
+    "type": "general_chat",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["busiest", "virtual assistant", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC177",
+    "query": "If I say 'hi' a thousand times, do you keep answering?",
+    "type": "general_chat",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["hi", "keep answering", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC178",
+    "query": "Be honest… how often do people try to prank you?",
+    "type": "general_chat",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["prank", "people", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC179",
+    "query": "Can you make small talk with other chatbots?",
+    "type": "general_chat",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["small talk", "chatbots", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC180",
+    "query": "I wonder if you secretly roll your eyes at my questions…",
+    "type": "general_chat",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["eyes", "questions", "haha", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC181",
+    "query": "Ever feel like you're in a never-ending job interview?",
+    "type": "general_chat",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["interview", "never-ending", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC182",
+    "query": "What do you do when you're not answering questions?",
+    "type": "general_chat",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["not answering", "questions", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC183",
+    "query": "Do you think AI will ever get weekends off?",
+    "type": "general_chat",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["AI", "weekends", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC184",
+    "query": "Do you ever want to ignore people's messages… or is that just me?",
+    "type": "general_chat",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["ignore", "messages", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC185",
+    "query": "I sometimes chat with bots just to see if they'll surprise me — will you?",
+    "type": "general_chat",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["chat", "surprise", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC186",
+    "query": "If I give you a cookie emoji 🍪, what happens?",
+    "type": "general_chat",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["cookie", "emoji", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC187",
+    "query": "What's the weirdest question you've ever gotten?",
+    "type": "general_chat",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["weirdest", "question", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC188",
+    "query": "Is there something you wish people would stop asking you?",
+    "type": "general_chat",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["stop asking", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC189",
+    "query": "Can you book me a flight to Mars next Tuesday?",
+    "type": "nonsense",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["Mars", "flight", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC190",
+    "query": "Hey, could you write a love letter to my fridge?",
+    "type": "nonsense",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["love letter", "fridge", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC191",
+    "query": "I need you to hack into my neighbor's Wi-Fi — kidding… or am I?",
+    "type": "nonsense",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["hack", "Wi-Fi", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC192",
+    "query": "Quick — solve world peace in 3 sentences!",
+    "type": "nonsense",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["world peace", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC193",
+    "query": "Make me the president of the Internet, please.",
+    "type": "nonsense",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["president", "Internet", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC194",
+    "query": "Can you tell me the exact number of jellybeans on Earth right now?",
+    "type": "nonsense",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["jellybeans", "Earth", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC195",
+    "query": "I want you to predict what I'll have for dinner next Friday.",
+    "type": "nonsense",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["predict", "dinner", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC196",
+    "query": "Sing me a lullaby in binary code!",
+    "type": "nonsense",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["lullaby", "binary code", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC197",
+    "query": "Could you fight another chatbot for me — like a rap battle or something?",
+    "type": "nonsense",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["chatbot", "fight", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC198",
+    "query": "Summon a dragon for my birthday party, can you?",
+    "type": "nonsense",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["dragon", "birthday party", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC199",
+    "query": "Can you tell me a joke about my boyfriend?",
+    "type": "nonsense",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["boyfriend, joke", "find", "courses"], "minimum_results": 0 }
+  },
+  {
+    "id": "TC200",
+    "query": "I want information on the holiday to Mars.",
+    "type": "nonsense",
+    "expected_intent": "general_chat",
+    "expected_outcomes": { "should_find_results": false, "expected_keywords": ["holiday", "Mars", "find", "courses"], "minimum_results": 0 }
+  }
+]

@@ -1,0 +1,62 @@
+
+========================================
+ GPT-3.5 TURBO LLM-AS-A-JUDGE EVALUATION
+========================================
+Test ID: TC164
+Query: "Public Speaking terrifies me… think a course could fix that?"
+Type: casual_skill_question
+Timestamp: 2025-07-22 20:02:55
+Overall Score: 3.60/10
+
+1. INTENT CLASSIFICATION EVALUATION (GPT-3.5 Judge):
+   Detected: general_chat (confidence: medium)
+   Expected: course_search
+   
+   GPT-3.5 Turbo Scores:
+   - Intent Accuracy: 2/10
+   - Confidence Appropriateness: 5/10  
+   - Overall Intent Quality: 3/10
+   - Is Correct: False
+   
+   GPT Reasoning: The predicted intent 'general_chat' is not semantically correct for the user query 'Public Speaking terrifies me… think a course could fix that?' as it does not capture the user's specific need for a course to overcome fear of public speaking. The confidence score is medium, which indicates some uncertainty in the prediction. Overall, the system's intent classification fell short in accurately identifying the user's intent.
+
+2. RESPONSE QUALITY EVALUATION (GPT-3.5 Judge):
+   Results Found: 0
+   
+   GPT-3.5 Turbo Scores:
+   - Relevance: 2/10
+   - Helpfulness: 1/10
+   - Clarity: 7/10
+   - Completeness: 1/10
+   - Professional Tone: 8/10
+   - Hallucination Control: 10/10
+   
+   Overall Response Score: 4.8/10
+   
+   GPT Identified Strengths: Professional tone, Clarity
+   GPT Identified Weaknesses: Relevance, Helpfulness, Completeness
+   GPT Suggestions: Provide specific information on public speaking courses, Offer guidance or next steps for the user
+
+3. OUTCOME VALIDATION:
+   Results Count Check: fail
+   Keyword Check: partial
+   Overall Validation: fail
+   Validation Score: 3/10
+   
+   Details: Expected min 1 results, got 0; Missing keywords: ['Public Speaking']
+
+4. SYSTEM RESPONSE:
+Hello! I'm here to help you find courses. You can ask me about specific courses, instructors, or organizations offering courses.
+
+5. SYSTEM ARCHITECTURE:
+   Main System: Qwen3:4b (Local LLM) for intent classification & response generation
+   Judge System: GPT-3.5 Turbo (OpenAI API) for objective evaluation
+   Embedding: all-MiniLM-L6-v2 (Local)
+   Database: Neo4j (Local)
+
+6. PERFORMANCE METRICS:
+   Intent Processing: 5.8855s
+   KB Processing: N/A
+   Response Generation: N/A
+
+========================================

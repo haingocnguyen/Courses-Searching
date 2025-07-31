@@ -1,0 +1,84 @@
+{
+  "test_id": "TC113",
+  "query": "Are there any courses that focus on Marketing?",
+  "timestamp": "2025-07-22 19:25:13",
+  "type": "skill_only",
+  "expected_intent": "course_search",
+  "expected_outcomes": {
+    "should_find_results": true,
+    "expected_keywords": [
+      "Marketing"
+    ],
+    "minimum_results": 1
+  },
+  "intent_analysis": {
+    "detected_intent": "course_search",
+    "confidence": "high",
+    "processing_time": "2.5269s",
+    "reason": "The query specifically asks about courses focused on Marketing, which aligns with the COURSE_SEARCH category examples that involve clear educational requests with defined topics.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 10,
+    "overall_intent_quality": 10,
+    "reasoning": "The predicted intent 'course_search' is a perfect match for the user query 'Are there any courses that focus on Marketing?' as it directly relates to searching for courses. The confidence score being high is appropriate as the query is clear and unambiguous, leading to a confident prediction.",
+    "is_correct": true
+  },
+  "processing_details": {
+    "results_found": 10,
+    "processing_time": "5.3589s",
+    "sample_results": [
+      {
+        "name": "Developing a Marketing Mix for Growth",
+        "url": "https://www.coursera.org/learn/marketing-management-two",
+        "rating": 4.8,
+        "skills": []
+      },
+      {
+        "name": "The \"Who\" of the Marketing Strategy:Segmentation & Targeting",
+        "url": "https://www.coursera.org/learn/the-who-of-the-marketing-strategysegmentation--targeting",
+        "rating": null,
+        "skills": []
+      },
+      {
+        "name": "Marketing Management Essentials: Market Analysis",
+        "url": "https://www.coursera.org/learn/marketing-management-essentials-market-analysis",
+        "rating": null,
+        "skills": []
+      }
+    ]
+  },
+  "system_response": {
+    "generation_time": "9.7999s",
+    "content": "## 🌟 Course Landscape Overview: Marketing Specialization  \nThe marketing course landscape is robust and highly rated, with **10 courses** offering comprehensive insights into marketing strategies, customer needs, and business-to-business practices. The **average rating of 4.6/5.0** (ranging from 4.4 to 4.8) reflects a strong overall quality, with top-rated courses like *Developing a Marketing Mix for Growth* and *Marketing Strategy* leading the pack. These courses cater to a **mixed level** (though all courses appear to be at the same level, as no variations are listed), making them accessible to both beginners and professionals seeking to deepen their expertise.  \n\n## 📊 Quality Distribution and Learner Impact  \nThe **high average rating** indicates that most courses meet or exceed expectations, with only minor variations in quality. The **top-rated courses** (4.8/5.0) are particularly strong in covering strategic frameworks and practical applications, while the lower-rated courses (4.5/5.0) focus on foundational concepts like customer needs. This distribution suggests that learners can expect **consistent quality** across all courses, though those aiming for advanced topics may benefit from the higher-rated courses. The **uniform provider and institutional offerings** (0 unique providers/organizations) imply a cohesive curriculum, which is a significant advantage for learners seeking structured, standardized content.  \n\n## 🧠 Skill Focus and Learning Progression  \nThe courses emphasize **core marketing skills** suchity strategy, customer-centric approaches, and international B2B practices. The **top skills** include marketing mix development, sales integration, and global market analysis, with one course uniquely pairing marketing with **Goldman Sachs 10,000 Women** for real-world insights. This suggests a progression from **foundational concepts** (e.g., customer needs) to **specialized areas** (e.g., international B2B). Learners can expect a mix of theoretical knowledge and practical tools, though the lack of level diversity means all courses are likely designed for a similar audience.  \n\n## 🧩 Course Approaches and Specializations  \nThe courses vary in focus, with some emphasizing **strategic planning** (e.g., *Marketing Strategy*) and others focusing on **practical execution** (e.g., *Fundamentals of Sales and Marketing*). The inclusion of a partnership with Goldman Sachs highlights a **practical, industry-aligned** approach, which is a standout feature. However, the **lack of provider or institutional diversity** means learners have limited options for varied perspectives. This could be a drawback for those seeking multiple viewpoints, but it ensures a **consistent, high-quality curriculum** from a single source.  \n\n## 🎯 Practical Selection Insights  \nFor learners, the key is to prioritize **specific focus areas**. If targeting **strategic marketing**, the top-rated courses are ideal. For **practical, real-world applications**, the Goldman Sachs course offers a unique edge. Since all courses are from the same provider, consistency in content and structure is guaranteed, but learners should also consider **duration** (varies) and whether the courses align with their career goals. The **high average rating** and **uniform quality** make this a reliable choice for those seeking to build a solid marketing foundation or advance their expertise.  \n\n**Final Tip:** Look for courses that align with your career stage—foundational courses for beginners and advanced ones for professionals. The provider’s uniformity ensures a cohesive learning experience, but the lack of diversity in offerings may limit exposure to varied perspectives. 🚀"
+  },
+  "response_evaluation": {
+    "relevance": 9,
+    "helpfulness": 8,
+    "clarity": 9,
+    "completeness": 8,
+    "professional_tone": 10,
+    "hallucination": 10,
+    "overall_score": 8.8,
+    "reasoning": "The response is highly relevant as it directly addresses the user's query about marketing courses. It provides a detailed overview of the marketing specialization landscape, including ratings, skill focus, learning progression, and practical insights. The information is presented clearly and structured well, making it easy to follow. While the response is comprehensive, it lacks specific details on all 10 courses found, which slightly affects completeness. The tone is professional and suitable for an educational context. There are no hallucinations, and all information provided is factual.",
+    "strengths": [
+      "Relevance to user query",
+      "Professional tone and language"
+    ],
+    "weaknesses": [
+      "Lack of specific details on all 10 courses found",
+      "Limited information on course duration and alignment with career goals"
+    ],
+    "suggestions": [
+      "Include more specific details on each course found",
+      "Provide guidance on how to select the most suitable course based on individual goals"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "pass",
+    "overall_validation": "pass",
+    "details": []
+  }
+}

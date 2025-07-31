@@ -1,0 +1,64 @@
+{
+  "test_id": "TC178",
+  "query": "Be honest… how often do people try to prank you?",
+  "timestamp": "2025-07-22 20:06:18",
+  "type": "general_chat",
+  "expected_intent": "general_chat",
+  "expected_outcomes": {
+    "should_find_results": false,
+    "expected_keywords": [
+      "prank",
+      "people",
+      "find",
+      "courses"
+    ],
+    "minimum_results": 0
+  },
+  "intent_analysis": {
+    "detected_intent": "general_chat",
+    "confidence": "high",
+    "processing_time": "2.9599s",
+    "reason": "The query is a casual, conversational question about interactions with the AI, similar to examples like 'hello how are you doing today' or 'tell me a funny joke please'. It does not involve specific course searches, educational topics, or action words related to learning.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 10,
+    "overall_intent_quality": 10,
+    "reasoning": "The predicted intent 'general_chat' is a perfect match for the user query 'Be honest… how often do people try to prank you?' as it falls under a general conversation category. The confidence score being high is appropriate since the query is straightforward and unambiguous.",
+    "is_correct": true
+  },
+  "system_response": {
+    "content": "Hello! I'm here to help you find courses. You can ask me about specific courses, instructors, or organizations offering courses."
+  },
+  "response_evaluation": {
+    "relevance": 0,
+    "helpfulness": 1,
+    "clarity": 8,
+    "completeness": 2,
+    "professional_tone": 9,
+    "hallucination": 10,
+    "overall_score": 4.0,
+    "reasoning": "The response completely missed the mark in addressing the user's query about pranks, making it irrelevant. However, the response was clear, well-structured, and maintained a professional tone. It lacked helpfulness as it did not provide any guidance or actionable information. The response was incomplete as it failed to offer any relevant information. The major issue was the hallucination score, as the system introduced a completely unrelated topic of finding courses, which is false and unsupported in the context of the user query.",
+    "strengths": [
+      "Professional tone",
+      "Clarity"
+    ],
+    "weaknesses": [
+      "Relevance",
+      "Completeness"
+    ],
+    "suggestions": [
+      "Ensure responses are relevant to the user query",
+      "Provide helpful information or guidance even if the query is not directly related to the system's purpose"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['prank', 'people']"
+    ]
+  }
+}

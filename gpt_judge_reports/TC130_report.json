@@ -1,0 +1,64 @@
+{
+  "test_id": "TC130",
+  "query": "Are there IT skills courses that include quizzes?",
+  "timestamp": "2025-07-22 19:32:46",
+  "type": "skill_rating",
+  "expected_intent": "course_search",
+  "expected_outcomes": {
+    "should_find_results": true,
+    "expected_keywords": [
+      "Research",
+      "quizzes"
+    ],
+    "minimum_results": 1
+  },
+  "intent_analysis": {
+    "detected_intent": "general_chat",
+    "confidence": "high",
+    "processing_time": "2.8635s",
+    "reason": "The query specifically asks about IT skills courses with quizzes, which aligns with the COURSE_SEARCH category as it involves a clear educational request with a defined topic and feature (quizzes).",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 2,
+    "confidence_appropriateness": 9,
+    "overall_intent_quality": 5,
+    "reasoning": "The predicted intent 'general_chat' is not semantically correct for the user query about IT skills courses with quizzes. The confidence score is high, which is inappropriate given the mismatch in intent. While the confidence level is high, the predicted intent is not suitable for the query, leading to a lower overall intent quality.",
+    "is_correct": false
+  },
+  "system_response": {
+    "content": "Hello! I'm here to help you find courses. You can ask me about specific courses, instructors, or organizations offering courses."
+  },
+  "response_evaluation": {
+    "relevance": 1,
+    "helpfulness": 2,
+    "clarity": 7,
+    "completeness": 1,
+    "professional_tone": 8,
+    "hallucination": 10,
+    "overall_score": 4.8,
+    "reasoning": "The response lacks relevance as it does not address the user's specific query about IT skills courses with quizzes. It is somewhat clear and maintains a professional tone. However, it is unhelpful as it does not provide any actionable information or guidance. The response is incomplete as it fails to provide any relevant course recommendations. There is a major hallucination as the system claims to be able to help find courses but returns zero results.",
+    "strengths": [
+      "Professional tone",
+      "Clarity in language"
+    ],
+    "weaknesses": [
+      "Lack of relevance",
+      "Unhelpful response",
+      "Incomplete information"
+    ],
+    "suggestions": [
+      "Improve the system's ability to understand and address user queries more accurately",
+      "Provide actionable information or next steps for the user"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "fail",
+    "keyword_check": "partial",
+    "overall_validation": "fail",
+    "details": [
+      "Expected min 1 results, got 0",
+      "Missing keywords: ['Research', 'quizzes']"
+    ]
+  }
+}

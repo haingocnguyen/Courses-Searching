@@ -1,0 +1,84 @@
+{
+  "test_id": "TC115",
+  "query": "Can I find courses for Public Speaking skills?",
+  "timestamp": "2025-07-22 19:26:00",
+  "type": "skill_only",
+  "expected_intent": "course_search",
+  "expected_outcomes": {
+    "should_find_results": true,
+    "expected_keywords": [
+      "Public Speaking"
+    ],
+    "minimum_results": 1
+  },
+  "intent_analysis": {
+    "detected_intent": "course_search",
+    "confidence": "high",
+    "processing_time": "3.3362s",
+    "reason": "The query includes a specific educational request with a clear topic (Public Speaking skills) and an action word 'find', aligning with COURSE_SEARCH examples like 'find programming courses for beginners' and 'search for data science training programs'.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 10,
+    "overall_intent_quality": 10,
+    "reasoning": "The predicted intent 'course_search' is a perfect match for the user query 'Can I find courses for Public Speaking skills?' as it directly relates to searching for courses. The confidence score being high is appropriate since the query is clear and unambiguous, leading to a confident prediction.",
+    "is_correct": true
+  },
+  "processing_details": {
+    "results_found": 10,
+    "processing_time": "19.3407s",
+    "sample_results": [
+      {
+        "name": "Leadership and Communication",
+        "url": "https://www.edx.org/certificates/professional-certificate/harvardx-leadership-and-communication",
+        "rating": null,
+        "skills": []
+      },
+      {
+        "name": "Habilidades de comunicación para abogados",
+        "url": "https://www.edx.org/certificates/professional-certificate/urosariox-habilidades-de-comunicacion-para-abogados",
+        "rating": null,
+        "skills": []
+      },
+      {
+        "name": "The Authentic Human in the Global Workplace",
+        "url": "https://www.edx.org/certificates/professional-certificate/davidsonx-the-authentic-human-in-the-global-workplace",
+        "rating": null,
+        "skills": []
+      }
+    ]
+  },
+  "system_response": {
+    "generation_time": "9.3803s",
+    "content": "**🚀 Course Landscape for Public Speaking Skills**  \nThe course landscape for Public Speaking skills is highly promising, with **10 courses** available, all rated **4.7–4.8/5.0** on average. These courses are designed for learners seeking to enhance their communication, presentation, and interpersonal skills, with a focus on both academic and practical applications. The **5.3-week average duration** suggests a balanced approach to skill development, while the **mixed level distribution** (though no distinct levels are available) indicates that most courses cater to intermediate to advanced learners.  \n\n**📊 Quality Distribution & Learner Impact**  \nThe **exceptionally high ratings** (4.7–4.8) reflect a strong emphasis on quality, with courses that are well-structured and engaging. This consistency in quality means learners can trust the material and instructor expertise. However, the **lack of level differentiation** (0 unique levels) may mean that some courses are more suited to specific audiences, suchity those with prior experience in communication or public speaking. Learners should review course descriptions to ensure alignment with their current skill level.  \n\n**🎯 Skill Focus & Learning Progression**  \nThe top-rated courses highlight a blend of **communication strategies**, **virtual presentation techniques**, and **public speaking fundamentals**. For instance, *Communication Strategies for a Virtual Age* emphasizes adapting to digital communication, while *Cómo crear presentaciones usando Canva* focuses on design tools for visual storytelling. This suggests a **progression from foundational skills (e.g., body language, tone) to advanced techniques (e.g., virtual delivery, design integration)**. Learners can expect a mix of theoretical knowledge and hands-on practice, such as capstone projects or interactive exercises.  \n\n**🔍 Course Approaches & Specializations**  \nWhile all courses are from the same provider (0 unique providers), the **skill focus areas** reveal diverse specializations. Some courses are tailored for professionals (e.g., engineering scholars), while others are more general (e.g., \"Effective Communication Capstone Project\"). This diversity allows learners to choose between **academic-focused** or **practical, real-world applications**. However, the **lack of institutional diversity** (0 unique organizations) means all courses share a similar pedagogical approach, which could be a benefit for consistency but a limitation in terms of varied perspectives.  \n\n**📌 Practical Selection Insights**  \nFor learners, the key is to prioritize **course descriptions** and **specific skill alignment**. While the provider’s uniformity ensures quality, the **emphasis on virtual communication** and **presentation design** may not fully capture traditional public speaking skills. Opt for courses explicitly mentioning \"public speaking,\" \"oral communication,\" or \"delivery techniques.\" Additionally, the **capstone projects** in some courses offer a chance to apply skills in real scenarios, making them ideal for advanced learners.  \n\n**💡 Final Thoughts**  \nThis course landscape offers a **highly rated, cohesive set of resources** for Public Speaking, with a strong focus on both technical and soft skills. Learners should prioritize courses that align with their goals—whether it’s mastering virtual communication, designing impactful presentations, or refining oral delivery. With a **consistent quality standard**, the courses are a reliable choice for those aiming to elevate their communication skills. 🎤📚"
+  },
+  "response_evaluation": {
+    "relevance": 9,
+    "helpfulness": 8,
+    "clarity": 9,
+    "completeness": 8,
+    "professional_tone": 10,
+    "hallucination": 10,
+    "overall_score": 8.8,
+    "reasoning": "The response is highly relevant to the user's query, providing detailed information on courses related to Public Speaking skills. It is helpful by offering insights into course quality, skill focus, and practical selection advice. The response is clear, well-structured, and maintains a professional tone throughout. While mostly complete, it could benefit from more specific details on individual courses. There are no hallucinations, and the information provided aligns with the actual results found.",
+    "strengths": [
+      "Relevance to user query",
+      "Professional tone and language"
+    ],
+    "weaknesses": [
+      "Lack of specific details on individual courses",
+      "Could provide more actionable steps for users"
+    ],
+    "suggestions": [
+      "Include more specific information on course content and instructors",
+      "Offer clearer guidance on next steps for users"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "pass",
+    "overall_validation": "pass",
+    "details": []
+  }
+}

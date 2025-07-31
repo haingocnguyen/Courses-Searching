@@ -1,0 +1,139 @@
+{
+  "test_id": "TC141",
+  "query": "I'm searching for Writing skills courses rated 4.8 or above with practical tasks included.",
+  "timestamp": "2025-07-22 19:38:01",
+  "type": "skill_rating_duration",
+  "expected_intent": "course_search",
+  "expected_outcomes": {
+    "should_find_results": true,
+    "expected_keywords": [
+      "Writing",
+      "4.8 or above",
+      "practical tasks"
+    ],
+    "minimum_results": 1
+  },
+  "intent_analysis": {
+    "detected_intent": "course_search",
+    "confidence": "high",
+    "processing_time": "2.8033s",
+    "reason": "The query specifies a clear educational request for 'Writing skills courses' with filters (rating 4.8 or above) and includes actionable terms like 'searching' and 'practical tasks,' aligning closely with COURSE_SEARCH examples.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 9,
+    "overall_intent_quality": 9,
+    "reasoning": "The predicted intent 'course_search' is semantically correct for the user query as it accurately captures the user's intent to search for writing skills courses rated 4.8 or above with practical tasks included. The confidence level is appropriately high given the specificity and clarity of the query. Overall, the system performed excellently in accurately identifying the intent with a high confidence level.",
+    "is_correct": true
+  },
+  "processing_details": {
+    "results_found": 10,
+    "processing_time": "8.1569s",
+    "sample_results": [
+      {
+        "name": "Growing Great Writers with Writable",
+        "url": "https://www.coursera.org/projects/writing-with-writable-elementary-teaching",
+        "rating": "4.4",
+        "skills": [
+          "Instructional Design",
+          "Instructing",
+          "Classroom Management",
+          "Instructional and Curriculum Design",
+          "Teaching",
+          "Pedagogy",
+          "Education and Training",
+          "Instructional Strategies"
+        ]
+      },
+      {
+        "name": "Writing Practice",
+        "url": "https://www.coursera.org/learn/bits-writing-practice",
+        "rating": "No rating",
+        "skills": [
+          "Grammar",
+          "Personal Integrity",
+          "Research",
+          "Proofreading",
+          "Curriculum Development",
+          "Organizational Structure",
+          "Creative Thinking",
+          "Writing and Editing",
+          "Creative Problem-Solving",
+          "Research Reports",
+          "Personal Attributes",
+          "General Science and Research",
+          "Report Writing",
+          "Writing",
+          "Educational Materials",
+          "Literacy",
+          "Scientific Methods",
+          "Editing",
+          "Instructional Design",
+          "Brainstorming"
+        ]
+      },
+      {
+        "name": "Writing and Editing: Drafting",
+        "url": "https://www.coursera.org/learn/writing-editing-drafting",
+        "rating": "4.8",
+        "skills": [
+          "Organizational Skills",
+          "Editing",
+          "Grammar",
+          "Planning",
+          "Writing and Editing",
+          "Problem Solving",
+          "Creative Thinking",
+          "Ability To Meet Deadlines",
+          "Creative Problem-Solving",
+          "Learning Strategies",
+          "Innovation",
+          "Time Management",
+          "Human Learning",
+          "Motivational Skills",
+          "Self-Motivation",
+          "Writing",
+          "Personal Development",
+          "Influencing",
+          "Proofreading",
+          "Literacy"
+        ]
+      }
+    ]
+  },
+  "system_response": {
+    "generation_time": "11.1723s",
+    "content": "**📚 Course Landscape Analysis: Writing Skills with High Ratings and Practical Focus**  \nThe writing skills course landscape for this query is highly concentrated, with 10 courses rated **4.4–4.8/5.0**, averaging **4.7/5.0**. These courses are designed for learners seeking **practical, skill-based training** in writing, grammar, and proofreading. The **20.4-week average duration** suggests a structured, long-term approach to mastering these competencies, which is ideal for building proficiency. While the **level distribution is mixed**, the absence of distinct levels (0 different levels available) indicates that all courses are tailored to a similar target audience, likely intermediate to advanced learners.  \n\n**🔍 Quality Distribution and Learning Value**  \nThe **4.8/5.0 rating** of top courses like *Writing and Editing: Drafting* and *Revising* highlights exceptional quality, with minimal variation in ratings (4.4–4.8). This consistency means learners can trust the overall quality of the courses, though the **4.7/5.0** rating of *Writing in English at University* suggests a slightly lower emphasis on practical tasks compared to the top-rated courses. The **20-week average** ensures that learners have ample time to apply skills, but the lack of level diversity may limit flexibility for those needing tailored content.  \n\n**📝 Skill Focus and Learning Progression**  \nThe top courses emphasize **drafting, revising, and academic writing**, with **grammar and punctuation** as core components. This aligns with a **progressive learning path**: starting with foundational drafting, moving to editing, and then refining skills through specialized courses like *Advanced Writing* and *Grammar and Punctuation*. The **university-level course** stands out for its focus on academic writing, which is critical for students or professionals needing formal writing skills. However, the **lack of level diversity** means learners may not find content that matches their specific needs (e.g., creative writing vs. technical writing).  \n\n**🎯 Course Approaches and Specializations**  \nThe courses are structured around **practical tasks**, such as writing exercises, peer reviews, and grammar drills, which are emphasized in the top-rated courses. The **university-level course** offers a more specialized, academic focus, while *Advanced Writing* targets higher-level skills. The **grammar course** is more niche but essential for refining technical writing. The **lack of provider diversity** (0 unique providers) suggests a single institution or platform offering these courses, which could ensure consistency in teaching quality but may limit exposure to varied pedagogical approaches.  \n\n**📌 Practical Selection Insights**  \nFor learners, the **top-rated courses** (4.8/5.0) are ideal for those seeking high-quality, task-driven learning. The **university-level course** is best for academic writing, while *Grammar and Punctuation* is a must for refining technical skills. The **20-week duration** is a key factor for long-term skill development, but learners should check if the courses include **interactive tasks** (e.g., writing assignments, feedback loops) to ensure practical application. Since all courses are from the same provider, consistency in teaching style is guaranteed, but learners may want to explore **specialized tracks** (e.g., creative writing, technical writing) if available.  \n\n**💡 Final Thoughts**  \nThis course landscape offers a **solid foundation** for improving writing skills, with a strong emphasis on practical tasks and high ratings. Learners should prioritize courses with **clear progression paths** and **interactive components** to maximize learning outcomes. The **lack of level diversity** and provider variety may require learners to focus on specific course titles that align with their goals, ensuring they invest time in the most relevant content. 📘✨"
+  },
+  "response_evaluation": {
+    "relevance": 4,
+    "helpfulness": 7,
+    "clarity": 8,
+    "completeness": 6,
+    "professional_tone": 9,
+    "hallucination": 2,
+    "overall_score": 6.0,
+    "reasoning": "The response partially addresses the user's query by providing information on Writing skills courses rated 4.8 or above with practical tasks. It offers insights into the course landscape, quality distribution, skill focus, course approaches, and practical selection. The response lacks alignment with the actual results found, impacting relevance and completeness.",
+    "strengths": [
+      "Clear and structured breakdown of course landscape",
+      "Provides insights into skill focus and learning progression"
+    ],
+    "weaknesses": [
+      "Misalignment with actual search results",
+      "Lack of specific course recommendations based on user criteria"
+    ],
+    "suggestions": [
+      "Ensure alignment with actual search results for accuracy",
+      "Include specific course recommendations meeting user criteria"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['4.8 or above']"
+    ]
+  }
+}

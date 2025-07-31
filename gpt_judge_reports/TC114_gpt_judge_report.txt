@@ -1,0 +1,76 @@
+
+========================================
+ GPT-3.5 TURBO LLM-AS-A-JUDGE EVALUATION
+========================================
+Test ID: TC114
+Query: "Do you have courses on Negotiation skills?"
+Type: skill_only
+Timestamp: 2025-07-22 19:25:36
+Overall Score: 9.77/10
+
+1. INTENT CLASSIFICATION EVALUATION (GPT-3.5 Judge):
+   Detected: course_search (confidence: high)
+   Expected: course_search
+   
+   GPT-3.5 Turbo Scores:
+   - Intent Accuracy: 10/10
+   - Confidence Appropriateness: 10/10  
+   - Overall Intent Quality: 10/10
+   - Is Correct: True
+   
+   GPT Reasoning: The predicted intent 'course_search' is a perfect match for the user query 'Do you have courses on Negotiation skills?' as it directly relates to searching for courses. The confidence score being high is appropriate since the query is clear and unambiguous, leading to a high level of certainty in the prediction.
+
+2. RESPONSE QUALITY EVALUATION (GPT-3.5 Judge):
+   Results Found: 10
+   
+   GPT-3.5 Turbo Scores:
+   - Relevance: 10/10
+   - Helpfulness: 9/10
+   - Clarity: 8/10
+   - Completeness: 9/10
+   - Professional Tone: 10/10
+   - Hallucination Control: 10/10
+   
+   Overall Response Score: 9.3/10
+   
+   GPT Identified Strengths: Relevance to user query, Professional tone
+   GPT Identified Weaknesses: Completeness could be improved by providing more details on course specializations
+   GPT Suggestions: Include more information on course specializations to enhance completeness
+
+3. OUTCOME VALIDATION:
+   Results Count Check: pass
+   Keyword Check: pass
+   Overall Validation: pass
+   Validation Score: 10/10
+   
+   Details: 
+
+4. SYSTEM RESPONSE:
+### 🎓 Course Landscape: Negotiation Skills  
+
+The negotiation skills course landscape is highly concentrated, with **10 courses** available, all rated **4.8/5.0** on average. This near-perfect rating suggests a strong emphasis on quality, with learners likely encountering well-structured, practical content. The **9.2-week average duration** indicates a balanced approach to skill development, allowing time for both theoretical understanding and real-world application. However, the data reveals a **mixed level distribution** (though no distinct levels are listed), which may imply that courses cater to a broad audience, from beginners to advanced practitioners.  
+
+**🔍 Quality Distribution & Learner Impact**  
+The **uniform high rating** of 4.8/5.0 across all courses signals a consistent standard of teaching and content. This is particularly valuable for learners seeking reliable, high-quality education. However, the absence of **level-specific courses** (0 different levels available) means that learners may not find tailored content for their current skill level. While this could be a limitation, it also suggests that the courses are designed to be accessible to a wide audience, potentially serving as a one-size-fits-all solution for negotiation training.  
+
+**🎯 Skill Focus & Learning Progression**  
+The top skills covered in these courses include **negotiation strategies**, **communication techniques**, and **conflict resolution**, with the top-rated course, *Foundations of Purchasing: Principles and Practices*, standing out as a key resource. The skill focus appears to be **practical and application-oriented**, with an emphasis on real-world scenarios. While the data doesn’t specify progression paths, the high ratings and consistent duration suggest that courses are structured to build foundational knowledge before advancing to more complex topics.  
+
+**📊 Course Approaches & Specializations**  
+All courses are from **a single provider** and **institution**, indicating a cohesive curriculum. This lack of diversity in providers (0 unique providers) means learners can expect a unified approach to negotiation training, which may be beneficial for consistency but could limit exposure to varied methodologies. The courses likely focus on **business negotiation**, given the top-rated course’s title, but the dataset doesn’t specify other specializations. This could be a gap in the current offerings.  
+
+**📌 Practical Selection Insights**  
+For learners, the **top-rated course** is a strong starting point, as it combines high quality with a clear focus on practical skills. Since all courses are from the same provider, they may share a similar pedagogical approach, making it easier to compare content. However, the absence of level-specific courses means learners should assess their current skill level and choose a course that aligns with their goals. The **high ratings** and **consistent duration** suggest that these courses are reliable and well-structured, making them a solid choice for anyone seeking to enhance their negotiation skills.
+
+5. SYSTEM ARCHITECTURE:
+   Main System: Qwen3:4b (Local LLM) for intent classification & response generation
+   Judge System: GPT-3.5 Turbo (OpenAI API) for objective evaluation
+   Embedding: all-MiniLM-L6-v2 (Local)
+   Database: Neo4j (Local)
+
+6. PERFORMANCE METRICS:
+   Intent Processing: 2.9569s
+   KB Processing: 5.7577s
+   Response Generation: 9.0101s
+
+========================================

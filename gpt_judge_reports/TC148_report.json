@@ -1,0 +1,90 @@
+{
+  "test_id": "TC148",
+  "query": "Do you offer Data Analysis skills courses that include peer work, have over 4.5 ratings, quizzes, and take less than 8 hours to complete?",
+  "timestamp": "2025-07-22 19:42:55",
+  "type": "mixed_hop",
+  "expected_intent": "course_search",
+  "expected_outcomes": {
+    "should_find_results": true,
+    "expected_keywords": [
+      "Data Analysis",
+      "peer work",
+      "over 4.5 ratings",
+      "quizzes",
+      "less than 8 hours"
+    ],
+    "minimum_results": 1
+  },
+  "intent_analysis": {
+    "detected_intent": "course_search",
+    "confidence": "high",
+    "processing_time": "2.6859s",
+    "reason": "The query specifically asks for Data Analysis courses with defined features (peer work, ratings, quizzes, duration), aligning with the pattern of course_search examples that focus on educational requests with clear topics and actionable details.",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 9,
+    "overall_intent_quality": 9,
+    "reasoning": "The predicted intent 'course_search' is a perfect match for the user query as it accurately captures the user's intent to search for a specific type of course. The confidence level is appropriately high given the clear and specific nature of the query. The system correctly identified the user's intent with high confidence, showcasing a strong performance in intent classification.",
+    "is_correct": true
+  },
+  "processing_details": {
+    "results_found": 8,
+    "processing_time": "8.9626s",
+    "sample_results": [
+      {
+        "name": "Getting Started with SAS Visual Analytics ",
+        "url": "https://www.coursera.org/learn/preparing-data-sas-va",
+        "rating": 4.7,
+        "skills": []
+      },
+      {
+        "name": "Intermediate DAX & Time Intelligence",
+        "url": "https://www.coursera.org/learn/intermediate-dax-and-time-intelligence",
+        "rating": 4.9,
+        "skills": []
+      },
+      {
+        "name": "Introduction to Microsoft Power Platform",
+        "url": "https://www.coursera.org/learn/introduction-to-microsoft-power-platform",
+        "rating": 4.6,
+        "skills": []
+      }
+    ]
+  },
+  "system_response": {
+    "generation_time": "11.5987s",
+    "content": "📊 **Course Landscape Overview: Data Analysis Skills**  \nThe data analysis course landscape is robust, with 8 courses offering high-quality, peer-focused learning experiences. These courses are predominantly rated above 4.5/5.0, with an average of **4.7/5.0**, reflecting strong learner satisfaction. The **4.2-week average duration** suggests a balanced pace, though the user’s requirement of \"less than 8 hours\" may need clarification—courses are likely structured over weeks, not hours. The **mixed level distribution** (though no distinct levels are listed) indicates a range of entry points, while the **lack of provider/institution diversity** suggests a concentrated offering from a single source.  \n\n**🔍 Quality Distribution & Learner Impact**  \nThe **top-rated courses** (4.9–4.8) are highly specialized, with 4.7-rated courses also meeting high standards. This **quality distribution** ensures learners can expect consistent, high-value content. The **4.6–4.9 rating range** indicates that even mid-tier courses are well-structured, with strong peer work and quiz components (implied by the user’s criteria). However, the **no-level diversity** might mean all courses are designed for intermediate learners, which could be a barrier for beginners.  \n\n**🎯 Skill Focus & Learning Progression**  \nThe top skills include **Power BI, DAX, SAS Visual Analytics**, and network/text analysis, emphasizing practical tools for data visualization and statistical analysis. The **progression path** seems to move from foundational skills (e.g., \"Getting Started with SAS\") to advanced topics (e.g., \"Intermediate DAX & Time Intelligence\"). This suggests a **buildable skill set**, with courses catering to both entry-level and intermediate learners, though the lack of level diversity may limit flexibility.  \n\n**📊 Course Approaches & Specializations**  \nThe courses focus on **tool-specific expertise** (e.g., Power BI, SAS) rather than broad data analysis concepts, which is ideal for professionals seeking to master particular tools. The **no-provider diversity** implies a single educational entity offering all courses, which could ensure consistency in teaching style but may limit exposure to varied methodologies. The **4.7 average rating** across all courses suggests that even lower-rated courses maintain solid content, though learners should prioritize the top-rated ones for the best experience.  \n\n**📌 Practical Selection Insights**  \nFor learners, the **top 5 courses** (4.7–4.9) are the safest bets, as they meet the user’s criteria for high ratings and peer interaction. The **SAS Visual Analytics** courses are particularly strong for statistical analysis, while **Power BI** courses are ideal for visualization. However, the **lack of level diversity** means all courses may assume prior knowledge, so learners should check prerequisites. To meet the \"less than 8 hours\" requirement, look for courses with **shorter, intensive modules** (e.g., 4-week courses with daily assignments) rather than longer, self-paced options.  \n\n**💡 Final Thoughts**  \nThis course landscape offers a **highly rated, tool-focused** learning environment, ideal for professionals seeking to master specific data analysis tools. While the lack of provider diversity is a limitation, the **strong ratings and structured progression** make these courses a reliable choice for skill development. Learners should prioritize the top-rated courses and verify that peer work and quizzes are included in the course structure. 🚀"
+  },
+  "response_evaluation": {
+    "relevance": 8,
+    "helpfulness": 9,
+    "clarity": 8,
+    "completeness": 8,
+    "professional_tone": 9,
+    "hallucination": 10,
+    "overall_score": 8.5,
+    "reasoning": "The response provides a detailed overview of the Data Analysis courses available, addressing the user's query about courses with specific criteria. It offers insights into the course landscape, quality distribution, skill focus, and practical selection advice. The response is informative and guides the user on how to select suitable courses.",
+    "strengths": [
+      "Detailed course landscape overview",
+      "Clear skill focus and progression path"
+    ],
+    "weaknesses": [
+      "Lack of explicit mention of courses meeting all user criteria",
+      "Assumption of prior knowledge in all courses"
+    ],
+    "suggestions": [
+      "Explicitly list courses that meet all user criteria",
+      "Include information on beginner-friendly courses"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['over 4.5 ratings']"
+    ]
+  }
+}

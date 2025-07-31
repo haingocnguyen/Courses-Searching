@@ -137,6 +137,7 @@ You are a Neo4j Cypher expert. Generate a valid Cypher query according to these 
     **QUERY TYPE EXAMPLES:**
 
     **COURSE QUERIES:**
+    1.
     USER: "Find intermediate Data Science courses from University of Michigan"
     STEPS:
     1. Match courses teaching 'Data Science' skill
@@ -147,6 +148,18 @@ You are a Neo4j Cypher expert. Generate a valid Cypher query according to these 
     FINAL_QUERY:
     MATCH (c:Course)-[:TEACHES]->(s:Skill), (c)-[:HAS_LEVEL]->(l:Level {{name: 'Intermediate'}}), (c)-[:OFFERED_BY]->(o:Organization {{name: 'University of Michigan'}})
     WHERE s.name IN ['Data Science']
+    RETURN c.url AS url, c.name AS name, c.duration AS duration, toFloat(c.rating) AS rating, c.description AS description
+    2.
+    USER: "Find Python courses with peer-reviewed assignments and video content"
+    FINAL_QUERY:
+    MATCH (c:Course)-[:TEACHES]->(s:Skill)
+    WHERE s.name IN ['Python'] AND c.has_peer = 1 AND c.has_video = 1
+    RETURN c.url AS url, c.name AS name, c.duration AS duration, toFloat(c.rating) AS rating, c.description AS description
+    3.
+    USER: "Show me Data Analysis courses with active discussion forums"
+    FINAL_QUERY:
+    MATCH (c:Course)-[:TEACHES]->(s:Skill)
+    WHERE s.name IN ['Data Analysis'] AND c.has_discussion = 1
     RETURN c.url AS url, c.name AS name, c.duration AS duration, toFloat(c.rating) AS rating, c.description AS description
 
     **INSTRUCTOR QUERIES:**

@@ -1,0 +1,144 @@
+{
+  "test_id": "TC123",
+  "query": "I want Business & Management skills courses that has reviews from users, do you have any?",
+  "timestamp": "2025-07-22 19:29:18",
+  "type": "skill_rating",
+  "expected_intent": "course_search",
+  "expected_outcomes": {
+    "should_find_results": true,
+    "expected_keywords": [
+      "Business & Management",
+      "reviews"
+    ],
+    "minimum_results": 1
+  },
+  "intent_analysis": {
+    "detected_intent": "course_search",
+    "confidence": "high",
+    "processing_time": "3.0404s",
+    "reason": "The query specifically requests Business & Management courses with user reviews, aligning with COURSE_SEARCH examples that involve clear educational topics and action words like 'courses,' 'reviews,' and 'have any.'",
+    "method": "llm_comprehensive_examples"
+  },
+  "intent_evaluation": {
+    "intent_accuracy": 10,
+    "confidence_appropriateness": 10,
+    "overall_intent_quality": 10,
+    "reasoning": "The predicted intent 'course_search' is a perfect match for the user query as it accurately captures the user's request for courses related to Business & Management skills with user reviews. The confidence score being high is appropriate given the clear and specific nature of the query. The system correctly identified the user's intent with high confidence, demonstrating a strong performance in intent classification.",
+    "is_correct": true
+  },
+  "processing_details": {
+    "results_found": 10,
+    "processing_time": "8.3740s",
+    "sample_results": [
+      {
+        "name": "Organizational Concepts and Language",
+        "url": "https://www.coursera.org/learn/organizational-concepts-and-language",
+        "rating": "4.9",
+        "skills": [
+          "Strategic Marketing",
+          "Process Analysis",
+          "Marketing",
+          "Marketing Planning",
+          "Business Process Management",
+          "Analytics",
+          "Key Performance Indicators (KPIs)",
+          "General Accounting",
+          "Performance Measurement",
+          "Business Analytics",
+          "Financial Accounting",
+          "Strategic Planning",
+          "Business Management",
+          "Process Design",
+          "Business Operations",
+          "Business Intelligence",
+          "Business Strategy",
+          "Data Analysis",
+          "Marketing Strategy and Techniques",
+          "Business Modeling"
+        ]
+      },
+      {
+        "name": "Sales and CRM Overview",
+        "url": "https://www.coursera.org/learn/sales-and-crm-overview",
+        "rating": "4.6",
+        "skills": [
+          "Sales",
+          "E-Commerce",
+          "Sales Management",
+          "Sales Strategy",
+          "Account Management",
+          "Customer Relationship Management",
+          "Business-To-Consumer",
+          "Sales Operations",
+          "Sales Process",
+          "General Sales Practices",
+          "Customer Relationship Management (CRM) Software",
+          "B2B Sales",
+          "Selling Techniques",
+          "Salesforce"
+        ]
+      },
+      {
+        "name": "MBA Essentials",
+        "url": "https://www.coursera.org/learn/mba-essentials",
+        "rating": "4.6",
+        "skills": [
+          "Leadership and Management",
+          "Business Transformation",
+          "Corporate Accounting",
+          "Business Strategy",
+          "Financial Accounting",
+          "Business Modeling",
+          "General Accounting",
+          "Financial Management",
+          "Corporate Strategy",
+          "Marketing",
+          "Corporate Sustainability",
+          "Marketing Management",
+          "Business Operations",
+          "Business Process Modeling",
+          "Business Economics",
+          "Business Marketing",
+          "Strategic Marketing",
+          "Digital Transformation",
+          "Business Management",
+          "Business Leadership"
+        ]
+      }
+    ]
+  },
+  "system_response": {
+    "generation_time": "11.2599s",
+    "content": "## 🎓 Business & Management Course Landscape: A High-Quality, Niche-Focused Offering  \n\nThe Business & Management course landscape presented here is a **highly rated, focused, and structured** collection of 10 courses, averaging **4.6/5.0** with top courses reaching **4.9/5.0**. These courses are designed for learners seeking to build foundational and specialized skills in **Business Management, Marketing, and Business Strategy**, with a consistent duration of **12.3 weeks**. The **mixed level distribution** (though all courses appear to be at the same level) suggests a balanced approach for both beginners and intermediate learners, though the lack of varied levels may limit customization.  \n\n**🔍 Quality Distribution & Learner Impact**  \nThe **narrow rating range (4.4–4.9)** indicates that all courses meet high standards, with **top-rated courses** like *Organizational Concepts and Language* (4.9/5.0) and *Shaping Your Professional Brand* (4.8/5.0) standing out for their depth and practicality. This consistency ensures learners can trust the quality of content, though the **single provider** and **zero unique institutions** mean there’s no diversity in teaching approaches or institutional credibility to consider. The **12.3-week average** is ideal for structured learning, allowing time to absorb concepts without feeling rushed.  \n\n**🎯 Skill Focus & Learning Progression**  \nThe courses emphasize **core business skills** (e.g., strategy, marketing) but also delve into **practical applications** like customer satisfaction processes and CRM. The top-rated courses highlight a progression from **organizational theory** to **professional branding** and **sales techniques**, suggesting a logical flow from foundational knowledge to real-world application. Learners aiming for **specialized skills** (e.g., marketing, sales) can prioritize courses like *Sales and CRM Overview* (4.6/5.0) or *MBA Essentials* (4.6/5.0), while those seeking broader management insights might benefit from *Organizational Concepts and Language*.  \n\n**📊 Provider & Institutional Insights**  \nThe **lack of provider and institutional diversity** is notable. All courses are from **one provider**, which could mean a cohesive curriculum but limited exposure to different pedagogical styles or industry perspectives. However, the **single provider** may also ensure a unified quality standard, which is a benefit for learners prioritizing consistency. The **zero unique organizations** suggests that all courses are part of a single educational platform, which could be a limitation for those seeking varied perspectives.  \n\n**💡 Practical Selection Insights**  \nFor learners, the key is to **align with specific skill goals**. If focusing on **professional branding** or **sales strategies**, the top-rated courses are excellent choices. The **12.3-week duration** is a strong indicator of thorough coverage, so learners should consider time commitment. Since the provider is the same across all courses, the **curriculum structure** and **instructor expertise** are consistent, which is a benefit for those seeking reliability. However, the **lack of level diversity** means learners should assess their current knowledge base to ensure the courses match their needs.  \n\nThis landscape offers a **solid foundation** for those aiming to build business and management skills, with a strong emphasis on practical, high-rated content."
+  },
+  "response_evaluation": {
+    "relevance": 9,
+    "helpfulness": 8,
+    "clarity": 9,
+    "completeness": 8,
+    "professional_tone": 10,
+    "hallucination": 10,
+    "overall_score": 8.8,
+    "reasoning": "The response is highly relevant as it directly addresses the user's query for Business & Management skills courses with user reviews. It provides detailed information on the courses found, their ratings, and insights into the course landscape. The response is clear, well-structured, and maintains a professional tone throughout. It is mostly complete, offering valuable information, but could benefit from more details on course content. There are no hallucinations, and all information provided aligns with the actual results found.",
+    "strengths": [
+      "Relevance to user query",
+      "Professional tone and language"
+    ],
+    "weaknesses": [
+      "Lack of detailed course content information",
+      "Could provide more guidance on course selection"
+    ],
+    "suggestions": [
+      "Include more specific details on course content and structure",
+      "Offer personalized recommendations based on user preferences"
+    ]
+  },
+  "outcome_validation": {
+    "results_count_check": "pass",
+    "keyword_check": "partial",
+    "overall_validation": "partial",
+    "details": [
+      "Missing keywords: ['reviews']"
+    ]
+  }
+}

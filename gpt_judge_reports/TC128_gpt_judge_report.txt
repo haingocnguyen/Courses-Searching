@@ -1,0 +1,75 @@
+
+========================================
+ GPT-3.5 TURBO LLM-AS-A-JUDGE EVALUATION
+========================================
+Test ID: TC128
+Query: "Do you have Leadership skills courses with rating between 4 and 4.8?"
+Type: skill_rating
+Timestamp: 2025-07-22 19:31:55
+Overall Score: 7.93/10
+
+1. INTENT CLASSIFICATION EVALUATION (GPT-3.5 Judge):
+   Detected: course_search (confidence: high)
+   Expected: course_search
+   
+   GPT-3.5 Turbo Scores:
+   - Intent Accuracy: 10/10
+   - Confidence Appropriateness: 9/10  
+   - Overall Intent Quality: 9/10
+   - Is Correct: True
+   
+   GPT Reasoning: The predicted intent 'course_search' is a perfect match for the user query as it accurately captures the user's intention to search for Leadership skills courses with a specific rating range. The confidence level is appropriately high given the clear and specific nature of the query. The overall intent quality is high due to the accurate intent prediction and suitable confidence level.
+
+2. RESPONSE QUALITY EVALUATION (GPT-3.5 Judge):
+   Results Found: 10
+   
+   GPT-3.5 Turbo Scores:
+   - Relevance: 9/10
+   - Helpfulness: 8/10
+   - Clarity: 8/10
+   - Completeness: 9/10
+   - Professional Tone: 10/10
+   - Hallucination Control: 10/10
+   
+   Overall Response Score: 8.8/10
+   
+   GPT Identified Strengths: Relevance to user query, Comprehensive information provided
+   GPT Identified Weaknesses: 
+   GPT Suggestions: Include more specific details about each course such as course outlines or key topics covered for better decision-making.
+
+3. OUTCOME VALIDATION:
+   Results Count Check: pass
+   Keyword Check: partial
+   Overall Validation: partial
+   Validation Score: 6/10
+   
+   Details: Missing keywords: ['rating between 4 and 4.8']
+
+4. SYSTEM RESPONSE:
+🚀 **Course Landscape Overview: Leadership Skills**  
+The leadership skills course landscape is highly competitive, with a **4.8/5.0 average rating** across 10 courses, all clustered between **4.7 and 4.9**. This indicates a strong emphasis on high-quality, well-structured programs that cater to both foundational and advanced learning needs. The **22.5-week average duration** suggests a balanced approach to skill development, allowing learners to engage deeply with content without overwhelming them. While the **mixed level distribution** (though no distinct levels are available) implies a broad audience, the consistent provider and institutional offerings suggest a cohesive curriculum tailored to diverse learner goals.  
+
+**Quality Distribution & Learning Value**  
+The **4.7–4.9 rating range** reflects a high standard of course quality, with the top-rated courses (e.g., *Stepping Up* at 4.9) standing out for their comprehensive frameworks. These courses are likely designed to build **emotional intelligence** and **leadership development** alongside technical skills, ensuring learners gain both theoretical knowledge and practical application. The **4.8/5.0 average** means most courses are excellent, but the slight variation in ratings (e.g., *Personal Leadership Development* at 4.7) may indicate differences in depth or specialization. Learners should prioritize courses with higher ratings, as they often offer more refined insights and better alignment with industry standards.  
+
+**Skill Focus & Learning Progression**  
+The top skills covered—**leadership**, **emotional intelligence**, and **leadership development**—highlight a curriculum that balances **soft skills** with **strategic thinking**. Courses like *The Discipline of Leadership* and *Developing a Leadership Framework* suggest a progression from self-awareness to actionable strategies, while *Leadership Skills* may focus on practical application. This structure allows learners to build from personal development to team management, ensuring a **holistic learning path**. The **mixed level distribution** (though no distinct levels are available) implies that courses may cater to both beginners and experienced professionals, though the lack of explicit level indicators requires careful review of course descriptions.  
+
+**Provider & Institutional Insights**  
+The **0 unique providers** and **0 unique institutions** indicate that all courses are from a single entity, likely ensuring consistency in teaching style and content. This could be a strength for learners seeking a unified curriculum but may limit exposure to diverse perspectives. However, the **top-rated courses** (e.g., *Stepping Up* and *Leadership Skills*) suggest that the provider has a strong reputation for delivering high-quality, actionable leadership training. Learners should consider this consistency as a benefit, but also look for courses that emphasize **real-world applications** or **industry-specific insights** if they seek broader perspectives.  
+
+**Practical Selection Insights**  
+For learners, the **4.8–4.9 rated courses** are the safest bets, as they represent the highest quality in this niche. Courses like *The Discipline of Leadership* and *Personal Leadership Development* offer a mix of theory and practice, making them ideal for those aiming to **develop a leadership framework**. The **22.5-week duration** is a key factor, as it allows time for reflection and application. To maximize value, prioritize courses that explicitly mention **emotional intelligence** or **team leadership** in their descriptions, as these often align with real-world challenges. Finally, while the provider is consistent, the **mixed level distribution** suggests that some courses may be more advanced, so learners should review course outlines to ensure they match their current skill level. 🌟
+
+5. SYSTEM ARCHITECTURE:
+   Main System: Qwen3:4b (Local LLM) for intent classification & response generation
+   Judge System: GPT-3.5 Turbo (OpenAI API) for objective evaluation
+   Embedding: all-MiniLM-L6-v2 (Local)
+   Database: Neo4j (Local)
+
+6. PERFORMANCE METRICS:
+   Intent Processing: 2.6516s
+   KB Processing: 5.5706s
+   Response Generation: 10.7771s
+
+========================================

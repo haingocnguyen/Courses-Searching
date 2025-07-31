@@ -1,0 +1,752 @@
+2025-07-22 15:02:50,269 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2025-07-22 15:02:50,269 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-22 15:03:06,534 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.AggregationSkippedNull} {category: UNRECOGNIZED} {title: The query contains an aggregation function that skips null values.} {description: null value eliminated in set function.} {position: None} for query: '\n    MATCH (c:Course)\n    WHERE c.embedding_sbert IS NOT NULL\n    OPTIONAL MATCH (c)-[:TEACHES]->(sk:Skill)\n    OPTIONAL MATCH (c)-[:HAS_SUBJECT]->(sub:Subject)\n    RETURN\n        c.url AS url,\n        c.name AS name,\n        c.description AS description,\n        c.rating AS rating,\n        c.duration AS duration,\n        collect(DISTINCT sk.name) AS skills,\n        collect(DISTINCT sub.name) AS subjects,\n        c.embedding_sbert AS emb\n    '
+2025-07-22 15:03:13,858 - core.knowledge_base - INFO - Fast Flat index built for 13793 courses
+2025-07-22 15:03:13,880 - core.knowledge_base - INFO - FAISS indexes built: 13793 courses, 11897 skills
+2025-07-22 15:03:13,881 - core.knowledge_base - INFO - FAISS indexes loaded: 13793 courses, 11897 skills
+2025-07-22 15:03:15,199 - __main__ - INFO - Running enhanced test case TC1: Tell me about Introduction to Machine Learning courses
+2025-07-22 15:03:20,221 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Tell me about Introduction to Machine Learning courses'
+2025-07-22 15:03:22,023 - core.knowledge_base - INFO - Skills found in 0.02s: ['Introduction to machine learning', 'Workflow of Machine Learning projects']
+2025-07-22 15:03:29,100 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Introduction to machine learning', 'Workflow of Machine Learning projects'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 15:03:29,125 - core.knowledge_base - INFO - 📊 Neo4j returned 2 results in 7.102s
+2025-07-22 15:03:29,125 - core.knowledge_base - INFO - 🎯 Processing course query results
+2025-07-22 15:03:29,125 - core.knowledge_base - INFO - Ranked 2 unique course results
+2025-07-22 15:03:43,405 - __main__ - INFO - Running enhanced test case TC2: Find beginner courses in data science
+2025-07-22 15:03:46,332 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Find beginner courses in data science'
+2025-07-22 15:03:47,621 - core.knowledge_base - INFO - Skills found in 0.02s: ['Data Science Methodology', 'Data scientist', 'Data Engineer', 'Workflow of Data Science projects', 'Data science']
+2025-07-22 15:03:55,082 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill), (c)-[:HAS_LEVEL]->(l:Level {name: 'Beginner'}) WHERE s.name IN ['Data Science Methodology','Data scientist','Data Engineer','Workflow of Data Science projects','Data science'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 15:03:55,203 - core.knowledge_base - INFO - 📊 Neo4j returned 3 results in 7.582s
+2025-07-22 15:03:55,203 - core.knowledge_base - INFO - 🎯 Processing level query results
+2025-07-22 15:03:55,203 - core.knowledge_base - INFO - Successfully returning 3 level results
+2025-07-22 15:24:29,948 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2025-07-22 15:24:29,949 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-22 15:24:45,924 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.AggregationSkippedNull} {category: UNRECOGNIZED} {title: The query contains an aggregation function that skips null values.} {description: null value eliminated in set function.} {position: None} for query: '\n    MATCH (c:Course)\n    WHERE c.embedding_sbert IS NOT NULL\n    OPTIONAL MATCH (c)-[:TEACHES]->(sk:Skill)\n    OPTIONAL MATCH (c)-[:HAS_SUBJECT]->(sub:Subject)\n    RETURN\n        c.url AS url,\n        c.name AS name,\n        c.description AS description,\n        c.rating AS rating,\n        c.duration AS duration,\n        collect(DISTINCT sk.name) AS skills,\n        collect(DISTINCT sub.name) AS subjects,\n        c.embedding_sbert AS emb\n    '
+2025-07-22 15:24:53,398 - core.knowledge_base - INFO - Fast Flat index built for 13793 courses
+2025-07-22 15:24:53,419 - core.knowledge_base - INFO - FAISS indexes built: 13793 courses, 11897 skills
+2025-07-22 15:24:53,419 - core.knowledge_base - INFO - FAISS indexes loaded: 13793 courses, 11897 skills
+2025-07-22 15:24:54,247 - __main__ - INFO - Running enhanced test case TC1: Tell me about Introduction to Machine Learning courses
+2025-07-22 15:25:00,033 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Tell me about Introduction to Machine Learning courses'
+2025-07-22 15:25:02,690 - core.knowledge_base - INFO - Skills found in 0.02s: ['Introduction to machine learning', 'Workflow of Machine Learning projects']
+2025-07-22 15:25:09,280 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Introduction to machine learning', 'Workflow of Machine Learning projects'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 15:25:09,284 - core.knowledge_base - INFO - 📊 Neo4j returned 2 results in 6.595s
+2025-07-22 15:25:09,284 - core.knowledge_base - INFO - 🎯 Processing course query results
+2025-07-22 15:25:09,285 - core.knowledge_base - INFO - Ranked 2 unique course results
+2025-07-22 15:25:24,503 - __main__ - INFO - Running enhanced test case TC2: Find beginner courses in data science
+2025-07-22 15:25:27,251 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Find beginner courses in data science'
+2025-07-22 15:25:29,086 - core.knowledge_base - INFO - Skills found in 0.02s: ['Data Science Methodology', 'Data scientist', 'Data Engineer', 'Workflow of Data Science projects', 'Data science']
+2025-07-22 15:25:36,593 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill), (c)-[:HAS_LEVEL]->(l:Level {name: 'Beginner'}) WHERE s.name IN ['Data Science Methodology','Data scientist','Data Engineer','Workflow of Data Science projects','Data science'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 15:25:36,601 - core.knowledge_base - INFO - 📊 Neo4j returned 3 results in 7.515s
+2025-07-22 15:25:36,601 - core.knowledge_base - INFO - 🎯 Processing level query results
+2025-07-22 15:25:36,601 - core.knowledge_base - INFO - Successfully returning 3 level results
+2025-07-22 15:25:53,438 - __main__ - INFO - Running enhanced test case TC3: Who are the best instructors for machine learning?
+2025-07-22 15:25:56,772 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Who are the best instructors for machine learning?'
+2025-07-22 15:25:57,954 - core.knowledge_base - INFO - Skills found in 0.02s: ['Machine Learning (ML) Algorithms', 'AI/ML Methodologies', 'Classification of ML', 'Machine Learning Software']
+2025-07-22 15:26:08,983 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill), (c)-[:TAUGHT_BY]->(i:Instructor) WHERE s.name IN ['Machine Learning (ML) Algorithms', 'AI/ML Methodologies', 'Classification of ML', 'Machine Learning Software'] RETURN i.name AS instructor_name, i.rating AS instructor_rating, i.description AS instructor_description, count(c) AS courses_taught
+2025-07-22 15:26:09,012 - core.knowledge_base - INFO - 📊 Neo4j returned 31 results in 11.058s
+2025-07-22 15:26:09,012 - core.knowledge_base - INFO - 🎯 Processing instructor query results
+2025-07-22 15:26:09,012 - core.knowledge_base - INFO - Successfully returning 31 instructor results
+2025-07-22 15:26:25,597 - __main__ - INFO - Running enhanced test case TC4: What organizations offer web development courses?
+2025-07-22 15:26:28,055 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'What organizations offer web development courses?'
+2025-07-22 15:26:29,246 - core.knowledge_base - INFO - Skills found in 0.02s: ['Web Development', 'Web Developement', 'Web Development Tools', 'Web Development Framework', 'webdevelopment']
+2025-07-22 15:26:36,744 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill), (c)-[:OFFERED_BY]->(o:Organization) WHERE s.name IN ['Web Development', 'Web Developement', 'Web Development Tools', 'Web Development Framework', 'webdevelopment'] RETURN DISTINCT o.name AS organization_name, o.description AS organization_description, count(c) AS courses_offered
+2025-07-22 15:26:36,766 - core.knowledge_base - INFO - 📊 Neo4j returned 37 results in 7.520s
+2025-07-22 15:26:36,766 - core.knowledge_base - INFO - 🎯 Processing organization query results
+2025-07-22 15:26:36,766 - core.knowledge_base - INFO - Successfully returning 37 organization results
+2025-07-22 15:26:56,050 - __main__ - INFO - Running enhanced test case TC5: Hello, how are you today?
+2025-07-22 15:26:58,566 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'Hello, how are you today?'
+2025-07-22 15:27:03,230 - __main__ - INFO - Running enhanced test case TC6: Thank you for your help!
+2025-07-22 15:27:05,514 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'Thank you for your help!'
+2025-07-22 15:27:09,491 - __main__ - INFO - Running enhanced test case TC7: What can you help me with?
+2025-07-22 15:27:11,980 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'What can you help me with?'
+2025-07-22 15:27:16,120 - __main__ - INFO - Running enhanced test case TC8: Find courses to become a superhero
+2025-07-22 15:27:18,526 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Find courses to become a superhero'
+2025-07-22 15:27:20,412 - core.knowledge_base - INFO - Skills found in 0.02s: []
+2025-07-22 15:49:45,082 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2025-07-22 15:49:45,083 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-22 15:49:58,767 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.AggregationSkippedNull} {category: UNRECOGNIZED} {title: The query contains an aggregation function that skips null values.} {description: null value eliminated in set function.} {position: None} for query: '\n    MATCH (c:Course)\n    WHERE c.embedding_sbert IS NOT NULL\n    OPTIONAL MATCH (c)-[:TEACHES]->(sk:Skill)\n    OPTIONAL MATCH (c)-[:HAS_SUBJECT]->(sub:Subject)\n    RETURN\n        c.url AS url,\n        c.name AS name,\n        c.description AS description,\n        c.rating AS rating,\n        c.duration AS duration,\n        collect(DISTINCT sk.name) AS skills,\n        collect(DISTINCT sub.name) AS subjects,\n        c.embedding_sbert AS emb\n    '
+2025-07-22 15:50:05,076 - core.knowledge_base - INFO - Fast Flat index built for 13793 courses
+2025-07-22 15:50:05,097 - core.knowledge_base - INFO - FAISS indexes built: 13793 courses, 11897 skills
+2025-07-22 15:50:05,097 - core.knowledge_base - INFO - FAISS indexes loaded: 13793 courses, 11897 skills
+2025-07-22 15:50:05,934 - __main__ - INFO - Running enhanced test case TC8: Find courses to become a superhero
+2025-07-22 15:50:10,666 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Find courses to become a superhero'
+2025-07-22 15:50:11,992 - core.knowledge_base - INFO - Skills found in 0.02s: []
+2025-07-22 15:51:41,185 - core.query_processor - ERROR - JSON still invalid after fixes: Expecting property name enclosed in double quotes
+2025-07-22 15:51:41,185 - core.query_processor - ERROR - Final JSON attempt: {courses}...
+2025-07-22 15:51:41,203 - core.knowledge_base - INFO - 🎯 Generated course query: 
+2025-07-22 15:51:41,203 - core.knowledge_base - WARNING - LLM did not return main Cypher. Using semantic search only.
+2025-07-22 15:51:41,203 - core.knowledge_base - INFO - 📊 Neo4j returned 0 results in 89.210s
+2025-07-22 15:51:41,203 - core.knowledge_base - INFO - Using simplified semantic fallback
+2025-07-22 15:51:41,203 - core.knowledge_base - INFO - 🔍 Running simple semantic search for: Find courses to become a superhero
+2025-07-22 15:51:41,205 - core.knowledge_base - INFO - Semantic search returned 10 results
+2025-07-22 15:51:54,311 - __main__ - INFO - Running enhanced test case TC9: Show me Java programming courses with rating above 4.5
+2025-07-22 15:51:57,377 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Show me Java programming courses with rating above 4.5'
+2025-07-22 15:51:58,806 - core.knowledge_base - INFO - Skills found in 0.02s: ['Advanced Java programming', 'Java Programming', 'Java Programming Basics', 'Java (Programming Language)', 'Java']
+2025-07-22 15:52:05,520 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Advanced Java programming','Java Programming','Java Programming Basics','Java (Programming Language)','Java'] AND toFloat(c.rating) > 4.5 RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 15:52:05,545 - core.knowledge_base - INFO - 📊 Neo4j returned 44 results in 6.739s
+2025-07-22 15:52:05,545 - core.knowledge_base - INFO - 🎯 Processing review query results
+2025-07-22 15:52:05,545 - core.knowledge_base - INFO - Successfully returning 44 review results
+2025-07-22 16:25:37,126 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2025-07-22 16:25:37,126 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-22 16:25:53,013 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.AggregationSkippedNull} {category: UNRECOGNIZED} {title: The query contains an aggregation function that skips null values.} {description: null value eliminated in set function.} {position: None} for query: '\n    MATCH (c:Course)\n    WHERE c.embedding_sbert IS NOT NULL\n    OPTIONAL MATCH (c)-[:TEACHES]->(sk:Skill)\n    OPTIONAL MATCH (c)-[:HAS_SUBJECT]->(sub:Subject)\n    RETURN\n        c.url AS url,\n        c.name AS name,\n        c.description AS description,\n        c.rating AS rating,\n        c.duration AS duration,\n        collect(DISTINCT sk.name) AS skills,\n        collect(DISTINCT sub.name) AS subjects,\n        c.embedding_sbert AS emb\n    '
+2025-07-22 16:26:00,554 - core.knowledge_base - INFO - Fast Flat index built for 13793 courses
+2025-07-22 16:26:00,576 - core.knowledge_base - INFO - FAISS indexes built: 13793 courses, 11897 skills
+2025-07-22 16:26:00,576 - core.knowledge_base - INFO - FAISS indexes loaded: 13793 courses, 11897 skills
+2025-07-22 16:26:01,323 - __main__ - INFO - Running enhanced test case TC8: Find courses to become a superhero
+2025-07-22 16:26:06,568 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Find courses to become a superhero'
+2025-07-22 16:26:07,912 - core.knowledge_base - INFO - Skills found in 0.02s: []
+2025-07-22 16:27:20,361 - core.query_processor - WARNING - No JSON found in cleaned LLM response
+2025-07-22 16:27:20,361 - core.knowledge_base - INFO - 🎯 Generated course query: 
+2025-07-22 16:27:20,361 - core.knowledge_base - WARNING - LLM did not return main Cypher. Using semantic search only.
+2025-07-22 16:27:20,361 - core.knowledge_base - INFO - 📊 Neo4j returned 0 results in 72.449s
+2025-07-22 16:27:20,361 - core.knowledge_base - INFO - Using simplified semantic fallback
+2025-07-22 16:27:20,361 - core.knowledge_base - INFO - 🔍 Running simple semantic search for: Find courses to become a superhero
+2025-07-22 16:27:20,363 - core.knowledge_base - INFO - Semantic search returned 10 results
+2025-07-22 16:27:36,394 - __main__ - INFO - Running enhanced test case TC9: Show me Java programming courses with rating above 4.5
+2025-07-22 16:27:39,040 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Show me Java programming courses with rating above 4.5'
+2025-07-22 16:27:40,856 - core.knowledge_base - INFO - Skills found in 0.02s: ['Advanced Java programming', 'Java Programming', 'Java Programming Basics', 'Java (Programming Language)', 'Java']
+2025-07-22 16:27:47,924 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Advanced Java programming', 'Java Programming', 'Java Programming Basics', 'Java (Programming Language)', 'Java'] AND toFloat(c.rating) > 4.5 RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 16:27:47,952 - core.knowledge_base - INFO - 📊 Neo4j returned 44 results in 7.095s
+2025-07-22 16:27:47,952 - core.knowledge_base - INFO - 🎯 Processing review query results
+2025-07-22 16:27:47,952 - core.knowledge_base - INFO - Successfully returning 44 review results
+2025-07-22 16:55:39,228 - __main__ - ERROR - Invalid JSON in test cases file: Expecting value: line 7 column 36 (char 215)
+2025-07-22 16:55:39,259 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2025-07-22 16:55:39,259 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-22 16:55:52,887 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.AggregationSkippedNull} {category: UNRECOGNIZED} {title: The query contains an aggregation function that skips null values.} {description: null value eliminated in set function.} {position: None} for query: '\n    MATCH (c:Course)\n    WHERE c.embedding_sbert IS NOT NULL\n    OPTIONAL MATCH (c)-[:TEACHES]->(sk:Skill)\n    OPTIONAL MATCH (c)-[:HAS_SUBJECT]->(sub:Subject)\n    RETURN\n        c.url AS url,\n        c.name AS name,\n        c.description AS description,\n        c.rating AS rating,\n        c.duration AS duration,\n        collect(DISTINCT sk.name) AS skills,\n        collect(DISTINCT sub.name) AS subjects,\n        c.embedding_sbert AS emb\n    '
+2025-07-22 16:55:59,258 - core.knowledge_base - INFO - Fast Flat index built for 13793 courses
+2025-07-22 16:55:59,279 - core.knowledge_base - INFO - FAISS indexes built: 13793 courses, 11897 skills
+2025-07-22 16:55:59,280 - core.knowledge_base - INFO - FAISS indexes loaded: 13793 courses, 11897 skills
+2025-07-22 16:56:00,013 - __main__ - INFO - Running enhanced test case TC8: Find courses to become a superhero
+2025-07-22 16:56:05,219 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Find courses to become a superhero'
+2025-07-22 16:56:06,890 - core.knowledge_base - INFO - Skills found in 0.02s: []
+2025-07-22 16:56:50,412 - __main__ - INFO - Loaded 2 test cases from course_searching_refactor/evaluation/test_cases.json
+2025-07-22 16:56:50,443 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2025-07-22 16:56:50,443 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-22 16:57:04,548 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.AggregationSkippedNull} {category: UNRECOGNIZED} {title: The query contains an aggregation function that skips null values.} {description: null value eliminated in set function.} {position: None} for query: '\n    MATCH (c:Course)\n    WHERE c.embedding_sbert IS NOT NULL\n    OPTIONAL MATCH (c)-[:TEACHES]->(sk:Skill)\n    OPTIONAL MATCH (c)-[:HAS_SUBJECT]->(sub:Subject)\n    RETURN\n        c.url AS url,\n        c.name AS name,\n        c.description AS description,\n        c.rating AS rating,\n        c.duration AS duration,\n        collect(DISTINCT sk.name) AS skills,\n        collect(DISTINCT sub.name) AS subjects,\n        c.embedding_sbert AS emb\n    '
+2025-07-22 16:57:10,943 - core.knowledge_base - INFO - Fast Flat index built for 13793 courses
+2025-07-22 16:57:10,962 - core.knowledge_base - INFO - FAISS indexes built: 13793 courses, 11897 skills
+2025-07-22 16:57:10,963 - core.knowledge_base - INFO - FAISS indexes loaded: 13793 courses, 11897 skills
+2025-07-22 16:57:11,611 - __main__ - INFO - Running enhanced test case TC8: Find courses to become a superhero
+2025-07-22 16:57:14,388 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Find courses to become a superhero'
+2025-07-22 16:57:18,127 - core.knowledge_base - INFO - Skills found in 0.02s: []
+2025-07-22 17:09:11,689 - __main__ - INFO - Loaded 2 test cases from course_searching_refactor/evaluation/test_cases.json
+2025-07-22 17:09:11,721 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2025-07-22 17:09:11,721 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-22 17:09:26,676 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.AggregationSkippedNull} {category: UNRECOGNIZED} {title: The query contains an aggregation function that skips null values.} {description: null value eliminated in set function.} {position: None} for query: '\n    MATCH (c:Course)\n    WHERE c.embedding_sbert IS NOT NULL\n    OPTIONAL MATCH (c)-[:TEACHES]->(sk:Skill)\n    OPTIONAL MATCH (c)-[:HAS_SUBJECT]->(sub:Subject)\n    RETURN\n        c.url AS url,\n        c.name AS name,\n        c.description AS description,\n        c.rating AS rating,\n        c.duration AS duration,\n        collect(DISTINCT sk.name) AS skills,\n        collect(DISTINCT sub.name) AS subjects,\n        c.embedding_sbert AS emb\n    '
+2025-07-22 17:09:33,018 - core.knowledge_base - INFO - Fast Flat index built for 13793 courses
+2025-07-22 17:09:33,037 - core.knowledge_base - INFO - FAISS indexes built: 13793 courses, 11897 skills
+2025-07-22 17:09:33,038 - core.knowledge_base - INFO - FAISS indexes loaded: 13793 courses, 11897 skills
+2025-07-22 17:09:34,097 - __main__ - INFO - Running enhanced test case TC8: Find courses to become a superhero
+2025-07-22 17:09:36,920 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Find courses to become a superhero'
+2025-07-22 17:09:39,180 - core.knowledge_base - INFO - Skills found in 0.02s: []
+2025-07-22 17:10:07,533 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['combat', 'strategy', 'heroic skills'] RETURN c.name, c.description
+2025-07-22 17:10:07,588 - core.knowledge_base - INFO - 📊 Neo4j returned 25 results in 28.408s
+2025-07-22 17:10:07,589 - core.knowledge_base - INFO - 🎯 Processing course query results
+2025-07-22 17:10:07,589 - core.knowledge_base - INFO - Ranked 0 unique course results
+2025-07-22 17:10:07,590 - core.knowledge_base - INFO - Using simplified semantic fallback
+2025-07-22 17:10:07,590 - core.knowledge_base - INFO - 🔍 Running simple semantic search for: Find courses to become a superhero
+2025-07-22 17:10:07,592 - core.knowledge_base - INFO - Semantic search returned 10 results
+2025-07-22 17:10:23,667 - __main__ - INFO - Running enhanced test case TC9: Show me Java programming courses with rating above 4.5
+2025-07-22 17:10:26,511 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Show me Java programming courses with rating above 4.5'
+2025-07-22 17:10:28,374 - core.knowledge_base - INFO - Skills found in 0.02s: ['Advanced Java programming', 'Java Programming', 'Java Programming Basics', 'Java (Programming Language)', 'Java']
+2025-07-22 17:10:35,385 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Advanced Java programming','Java Programming','Java Programming Basics','Java (Programming Language)','Java'] AND toFloat(c.rating) > 4.5 RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 17:10:35,390 - core.knowledge_base - INFO - 📊 Neo4j returned 44 results in 7.016s
+2025-07-22 17:10:35,390 - core.knowledge_base - INFO - 🎯 Processing review query results
+2025-07-22 17:10:35,390 - core.knowledge_base - INFO - Successfully returning 44 review results
+2025-07-22 17:55:49,819 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2025-07-22 17:55:49,819 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-22 17:56:04,373 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.AggregationSkippedNull} {category: UNRECOGNIZED} {title: The query contains an aggregation function that skips null values.} {description: null value eliminated in set function.} {position: None} for query: '\n    MATCH (c:Course)\n    WHERE c.embedding_sbert IS NOT NULL\n    OPTIONAL MATCH (c)-[:TEACHES]->(sk:Skill)\n    OPTIONAL MATCH (c)-[:HAS_SUBJECT]->(sub:Subject)\n    RETURN\n        c.url AS url,\n        c.name AS name,\n        c.description AS description,\n        c.rating AS rating,\n        c.duration AS duration,\n        collect(DISTINCT sk.name) AS skills,\n        collect(DISTINCT sub.name) AS subjects,\n        c.embedding_sbert AS emb\n    '
+2025-07-22 17:56:11,369 - core.knowledge_base - INFO - Fast Flat index built for 13793 courses
+2025-07-22 17:56:11,388 - core.knowledge_base - INFO - FAISS indexes built: 13793 courses, 11897 skills
+2025-07-22 17:56:11,389 - core.knowledge_base - INFO - FAISS indexes loaded: 13793 courses, 11897 skills
+2025-07-22 17:56:12,476 - __main__ - INFO - Running enhanced test case TC199: Give me details about Introduction to Machine Learning.
+2025-07-22 17:56:18,426 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Give me details about Introduction to Machine Learning.'
+2025-07-22 17:56:19,990 - core.knowledge_base - INFO - Skills found in 0.02s: ['Introduction to machine learning', 'Machine Learning Fundamentals', 'Machine Learning (ML) Algorithms', 'Workflow of Machine Learning projects', 'Machine Learning Methods']
+2025-07-22 17:56:28,071 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Introduction to machine learning','Machine Learning Fundamentals','Machine Learning (ML) Algorithms','Workflow of Machine Learning projects','Machine Learning Methods'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 17:56:28,099 - core.knowledge_base - INFO - 📊 Neo4j returned 154 results in 8.108s
+2025-07-22 17:56:28,099 - core.knowledge_base - INFO - 🎯 Processing course query results
+2025-07-22 17:56:28,101 - core.knowledge_base - INFO - Ranked 154 unique course results
+2025-07-22 17:56:44,633 - __main__ - INFO - Running enhanced test case TC200: I want information on the course called Introduction to Open Source Application Development.
+2025-07-22 17:56:47,221 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'I want information on the course called Introduction to Open Source Application Development.'
+2025-07-22 17:56:48,801 - core.knowledge_base - INFO - Skills found in 0.02s: ['Open Source Development']
+2025-07-22 17:56:57,128 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course {name: 'Introduction to Open Source Application Development'})-[:TEACHES]->(s:Skill {name: 'Open Source Development'}) RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 17:56:57,195 - core.knowledge_base - INFO - 📊 Neo4j returned 0 results in 8.393s
+2025-07-22 17:56:57,195 - core.knowledge_base - INFO - Using simplified semantic fallback
+2025-07-22 17:56:57,195 - core.knowledge_base - INFO - 🔍 Running simple semantic search for: I want information on the course called Introduction to Open Source Application Development.
+2025-07-22 17:56:57,197 - core.knowledge_base - INFO - Semantic search returned 10 results
+2025-07-22 18:29:26,831 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2025-07-22 18:29:26,831 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-22 18:29:40,589 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.AggregationSkippedNull} {category: UNRECOGNIZED} {title: The query contains an aggregation function that skips null values.} {description: null value eliminated in set function.} {position: None} for query: '\n    MATCH (c:Course)\n    WHERE c.embedding_sbert IS NOT NULL\n    OPTIONAL MATCH (c)-[:TEACHES]->(sk:Skill)\n    OPTIONAL MATCH (c)-[:HAS_SUBJECT]->(sub:Subject)\n    RETURN\n        c.url AS url,\n        c.name AS name,\n        c.description AS description,\n        c.rating AS rating,\n        c.duration AS duration,\n        collect(DISTINCT sk.name) AS skills,\n        collect(DISTINCT sub.name) AS subjects,\n        c.embedding_sbert AS emb\n    '
+2025-07-22 18:29:47,030 - core.knowledge_base - INFO - Fast Flat index built for 13793 courses
+2025-07-22 18:29:47,052 - core.knowledge_base - INFO - FAISS indexes built: 13793 courses, 11897 skills
+2025-07-22 18:29:47,052 - core.knowledge_base - INFO - FAISS indexes loaded: 13793 courses, 11897 skills
+2025-07-22 18:29:47,769 - __main__ - INFO - Running enhanced test case TC181: Ever feel like you’re in a never-ending job interview?
+2025-07-22 18:29:52,676 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'Ever feel like you’re in a never-ending job interview?'
+2025-07-22 18:29:59,328 - __main__ - INFO - Running enhanced test case TC182: What do you do when you're not answering questions?
+2025-07-22 18:30:02,595 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'What do you do when you're not answering questions?'
+2025-07-22 19:07:04,716 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2025-07-22 19:07:04,716 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-22 19:07:18,729 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.AggregationSkippedNull} {category: UNRECOGNIZED} {title: The query contains an aggregation function that skips null values.} {description: null value eliminated in set function.} {position: None} for query: '\n    MATCH (c:Course)\n    WHERE c.embedding_sbert IS NOT NULL\n    OPTIONAL MATCH (c)-[:TEACHES]->(sk:Skill)\n    OPTIONAL MATCH (c)-[:HAS_SUBJECT]->(sub:Subject)\n    RETURN\n        c.url AS url,\n        c.name AS name,\n        c.description AS description,\n        c.rating AS rating,\n        c.duration AS duration,\n        collect(DISTINCT sk.name) AS skills,\n        collect(DISTINCT sub.name) AS subjects,\n        c.embedding_sbert AS emb\n    '
+2025-07-22 19:07:25,143 - core.knowledge_base - INFO - Fast Flat index built for 13793 courses
+2025-07-22 19:07:25,162 - core.knowledge_base - INFO - FAISS indexes built: 13793 courses, 11897 skills
+2025-07-22 19:07:25,163 - core.knowledge_base - INFO - FAISS indexes loaded: 13793 courses, 11897 skills
+2025-07-22 19:07:26,054 - __main__ - INFO - Running enhanced test case TC181: Ever feel like you’re in a never-ending job interview?
+2025-07-22 19:07:31,278 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'Ever feel like you’re in a never-ending job interview?'
+2025-07-22 19:07:36,033 - __main__ - INFO - Running enhanced test case TC182: What do you do when you're not answering questions?
+2025-07-22 19:07:39,305 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'What do you do when you're not answering questions?'
+2025-07-22 19:19:04,656 - __main__ - INFO - Loaded 99 test cases from course_searching_refactor/evaluation/test_cases.json
+2025-07-22 19:19:04,687 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2025-07-22 19:19:04,687 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-22 19:19:18,897 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.AggregationSkippedNull} {category: UNRECOGNIZED} {title: The query contains an aggregation function that skips null values.} {description: null value eliminated in set function.} {position: None} for query: '\n    MATCH (c:Course)\n    WHERE c.embedding_sbert IS NOT NULL\n    OPTIONAL MATCH (c)-[:TEACHES]->(sk:Skill)\n    OPTIONAL MATCH (c)-[:HAS_SUBJECT]->(sub:Subject)\n    RETURN\n        c.url AS url,\n        c.name AS name,\n        c.description AS description,\n        c.rating AS rating,\n        c.duration AS duration,\n        collect(DISTINCT sk.name) AS skills,\n        collect(DISTINCT sub.name) AS subjects,\n        c.embedding_sbert AS emb\n    '
+2025-07-22 19:19:25,238 - core.knowledge_base - INFO - Fast Flat index built for 13793 courses
+2025-07-22 19:19:25,259 - core.knowledge_base - INFO - FAISS indexes built: 13793 courses, 11897 skills
+2025-07-22 19:19:25,259 - core.knowledge_base - INFO - FAISS indexes loaded: 13793 courses, 11897 skills
+2025-07-22 19:19:26,050 - __main__ - INFO - Running enhanced test case TC101: Do you have courses that teach Data Analysis skills?
+2025-07-22 19:19:30,887 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Do you have courses that teach Data Analysis skills?'
+2025-07-22 19:19:32,136 - core.knowledge_base - INFO - Skills found in 0.02s: ['Data Analysis Software', 'Data analysis tools', 'Proficiency in advanced data analysis', 'Data studio', 'Data scientist']
+2025-07-22 19:19:39,122 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Data Analysis Software','Data analysis tools','Proficiency in advanced data analysis','Data studio','Data scientist'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:19:39,146 - core.knowledge_base - INFO - 📊 Neo4j returned 79 results in 7.010s
+2025-07-22 19:19:39,146 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 19:19:39,147 - core.knowledge_base - INFO - Successfully returning 79 skill results
+2025-07-22 19:19:55,054 - __main__ - INFO - Running enhanced test case TC102: I'm looking for courses on Communication skills — can you help?
+2025-07-22 19:19:57,795 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'I'm looking for courses on Communication skills — can you help?'
+2025-07-22 19:19:59,991 - core.knowledge_base - INFO - Skills found in 0.02s: ['Communications Best Practices', 'Communication Planning', 'Communication skills', 'Communication Skills', 'Communication Strategies']
+2025-07-22 19:20:04,750 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Communications Best Practices','Communication Planning','Communication skills','Communication Skills','Communication Strategies'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:20:04,762 - core.knowledge_base - INFO - 📊 Neo4j returned 181 results in 4.771s
+2025-07-22 19:20:04,762 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 19:20:04,762 - core.knowledge_base - INFO - Successfully returning 181 skill results
+2025-07-22 19:20:40,825 - __main__ - INFO - Running enhanced test case TC103: Can you recommend any courses for Business & Management skills?
+2025-07-22 19:20:43,056 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Can you recommend any courses for Business & Management skills?'
+2025-07-22 19:20:44,558 - core.knowledge_base - INFO - Skills found in 0.02s: ['Business Management', 'Master Of Business Administration (MBA)', 'Business Education', 'Business Studies', 'Business Administration']
+2025-07-22 19:20:49,096 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Business Management','Master Of Business Administration (MBA)','Business Education','Business Studies','Business Administration'] RETURN c.url AS url, c.name AS name, c.duration AS duration, toFloat(c.rating) AS rating, c.description AS description
+2025-07-22 19:20:49,169 - core.knowledge_base - INFO - 📊 Neo4j returned 364 results in 4.611s
+2025-07-22 19:20:49,170 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 19:20:49,170 - core.knowledge_base - INFO - Successfully returning 364 skill results
+2025-07-22 19:21:05,882 - __main__ - INFO - Running enhanced test case TC104: I want to learn Design skills — any suggestions?
+2025-07-22 19:21:09,205 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'I want to learn Design skills — any suggestions?'
+2025-07-22 19:21:10,741 - core.knowledge_base - INFO - Skills found in 0.02s: ['design thinking', 'Design Thinking', 'Learning Design', 'Design-thinking', 'UX design jobs']
+2025-07-22 19:21:21,877 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['design thinking','Design Thinking','Learning Design','Design-thinking','UX design jobs'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:21:21,897 - core.knowledge_base - INFO - 📊 Neo4j returned 85 results in 11.156s
+2025-07-22 19:21:21,897 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 19:21:21,898 - core.knowledge_base - INFO - Successfully returning 85 skill results
+2025-07-22 19:21:37,801 - __main__ - INFO - Running enhanced test case TC105: Are there courses focusing on Programming skills?
+2025-07-22 19:21:40,896 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Are there courses focusing on Programming skills?'
+2025-07-22 19:21:42,351 - core.knowledge_base - INFO - Skills found in 0.02s: ['Programming Concepts', 'Computer Programming', 'Fundamental Programming Concepts', 'Basic programming', 'Computer Programming Tools']
+2025-07-22 19:21:47,236 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Programming Concepts','Computer Programming','Fundamental Programming Concepts','Basic programming','Computer Programming Tools'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:21:47,269 - core.knowledge_base - INFO - 📊 Neo4j returned 406 results in 4.918s
+2025-07-22 19:21:47,269 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 19:21:47,270 - core.knowledge_base - INFO - Successfully returning 406 skill results
+2025-07-22 19:22:03,000 - __main__ - INFO - Running enhanced test case TC106: Do you offer courses on Critical Thinking skills?
+2025-07-22 19:22:06,756 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Do you offer courses on Critical Thinking skills?'
+2025-07-22 19:22:07,989 - core.knowledge_base - INFO - Skills found in 0.02s: ['critical thinking', 'Critical thinking', 'Critical Thinking', 'Critical Thinking and Problem Solving', 'Critical Thinking and Adaptability']
+2025-07-22 19:22:29,419 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['critical thinking', 'Critical thinking', 'Critical Thinking', 'Critical Thinking and Problem Solving', 'Critical Thinking and Adaptability'] RETURN c.url, c.name, c.description, c.rating, c.duration, c.has_video
+2025-07-22 19:22:29,477 - core.knowledge_base - INFO - 📊 Neo4j returned 207 results in 21.488s
+2025-07-22 19:22:29,477 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 19:22:29,478 - core.knowledge_base - INFO - Successfully returning 207 skill results
+2025-07-22 19:22:44,868 - __main__ - INFO - Running enhanced test case TC107: Are there any courses that help improve Writing skills?
+2025-07-22 19:22:47,586 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Are there any courses that help improve Writing skills?'
+2025-07-22 19:22:48,783 - core.knowledge_base - INFO - Skills found in 0.02s: ['Teaching Personal Writing', 'Writing Techniques', 'Teaching Creative Writing', 'Teaching Reading and Writing', 'Writing Proficiency']
+2025-07-22 19:22:54,333 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Teaching Personal Writing','Writing Techniques','Teaching Creative Writing','Teaching Reading and Writing','Writing Proficiency'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:22:54,349 - core.knowledge_base - INFO - 📊 Neo4j returned 5 results in 5.566s
+2025-07-22 19:22:54,350 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 19:22:54,350 - core.knowledge_base - INFO - Successfully returning 5 skill results
+2025-07-22 19:23:06,308 - __main__ - INFO - Running enhanced test case TC108: Can you show me courses about Leadership skills?
+2025-07-22 19:23:09,309 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Can you show me courses about Leadership skills?'
+2025-07-22 19:23:10,753 - core.knowledge_base - INFO - Skills found in 0.02s: ['Leadership Certificates', 'Leadership Studies', 'Determine your leadership style', 'Leadership Assessment', 'Leadership Style']
+2025-07-22 19:23:15,302 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Leadership Certificates','Leadership Studies','Determine your leadership style','Leadership Assessment','Leadership Style'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:23:15,319 - core.knowledge_base - INFO - 📊 Neo4j returned 25 results in 4.566s
+2025-07-22 19:23:15,319 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 19:23:15,319 - core.knowledge_base - INFO - Successfully returning 25 skill results
+2025-07-22 19:23:27,999 - __main__ - INFO - Running enhanced test case TC109: I want to find courses teaching Problem-Solving skills.
+2025-07-22 19:23:31,102 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'I want to find courses teaching Problem-Solving skills.'
+2025-07-22 19:23:32,587 - core.knowledge_base - INFO - Skills found in 0.02s: ['Problem-Solving Techniques', 'problem solving skills', 'Problem-Solving Proficiency', 'Teaching Method', 'Course Development']
+2025-07-22 19:23:42,016 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Problem-Solving Techniques', 'problem solving skills', 'Problem-Solving Proficiency'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:23:42,031 - core.knowledge_base - INFO - 📊 Neo4j returned 3 results in 9.444s
+2025-07-22 19:23:42,031 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 19:23:42,031 - core.knowledge_base - INFO - Successfully returning 3 skill results
+2025-07-22 19:23:55,284 - openai._base_client - INFO - Retrying request to /chat/completions in 0.428274 seconds
+2025-07-22 19:24:00,847 - __main__ - INFO - Running enhanced test case TC110: Are there courses that help with Research skills?
+2025-07-22 19:24:03,834 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Are there courses that help with Research skills?'
+2025-07-22 19:24:05,286 - core.knowledge_base - INFO - Skills found in 0.02s: ['Research Skills', 'Research Proficiency', 'Online Research', 'study skills', 'researching']
+2025-07-22 19:24:10,294 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Research Skills','Research Proficiency','Online Research','study skills','researching'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:24:10,308 - core.knowledge_base - INFO - 📊 Neo4j returned 6 results in 5.023s
+2025-07-22 19:24:10,309 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 19:24:10,309 - core.knowledge_base - INFO - Successfully returning 6 skill results
+2025-07-22 19:24:23,497 - __main__ - INFO - Running enhanced test case TC111: I'm interested in Project Management skills — any courses?
+2025-07-22 19:24:26,043 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'I'm interested in Project Management skills — any courses?'
+2025-07-22 19:24:27,376 - core.knowledge_base - INFO - Skills found in 0.02s: ['project management training', 'Project Management Professional Certification', 'Project management', 'project management', 'Project Management']
+2025-07-22 19:24:33,396 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['project management training','Project Management Professional Certification','Project management','project management','Project Management'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:24:33,424 - core.knowledge_base - INFO - 📊 Neo4j returned 296 results in 6.048s
+2025-07-22 19:24:33,424 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 19:24:33,425 - core.knowledge_base - INFO - Successfully returning 296 skill results
+2025-07-22 19:24:48,043 - __main__ - INFO - Running enhanced test case TC112: Can you recommend courses to build Data Visualization?
+2025-07-22 19:24:51,102 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Can you recommend courses to build Data Visualization?'
+2025-07-22 19:24:52,835 - core.knowledge_base - INFO - Skills found in 0.02s: ['Data Visualization & Programming', 'Data visualization Data exploration', 'Data Visualization Software', 'Data visualization tools', 'Advanced Data Visualizations']
+2025-07-22 19:24:59,896 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Data Visualization & Programming','Data visualization Data exploration','Data Visualization Software','Data visualization tools','Advanced Data Visualizations'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:24:59,914 - core.knowledge_base - INFO - 📊 Neo4j returned 82 results in 7.079s
+2025-07-22 19:24:59,914 - core.knowledge_base - INFO - 🎯 Processing course query results
+2025-07-22 19:24:59,915 - core.knowledge_base - INFO - Ranked 82 unique course results
+2025-07-22 19:25:13,978 - __main__ - INFO - Running enhanced test case TC113: Are there any courses that focus on Marketing?
+2025-07-22 19:25:16,505 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Are there any courses that focus on Marketing?'
+2025-07-22 19:25:17,631 - core.knowledge_base - INFO - Skills found in 0.02s: ['Marketing Management', 'Marketing Planning', 'Marketing Concepts', 'Marketing Strategies', 'Marketing Strategy Development']
+2025-07-22 19:25:22,941 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Marketing Management','Marketing Planning','Marketing Concepts','Marketing Strategies','Marketing Strategy Development'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating
+2025-07-22 19:25:22,968 - core.knowledge_base - INFO - 📊 Neo4j returned 341 results in 5.337s
+2025-07-22 19:25:22,968 - core.knowledge_base - INFO - 🎯 Processing course query results
+2025-07-22 19:25:22,971 - core.knowledge_base - INFO - Ranked 197 unique course results
+2025-07-22 19:25:36,153 - __main__ - INFO - Running enhanced test case TC114: Do you have courses on Negotiation skills?
+2025-07-22 19:25:39,110 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Do you have courses on Negotiation skills?'
+2025-07-22 19:25:40,284 - core.knowledge_base - INFO - Skills found in 0.02s: ['Negotiation Skills', 'Negotiation Strategies', 'Negotiation Techniques', 'Negotiation Analysis', 'Negotiation']
+2025-07-22 19:25:46,009 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Negotiation Skills','Negotiation Strategies','Negotiation Techniques','Negotiation Analysis','Negotiation'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:25:46,025 - core.knowledge_base - INFO - 📊 Neo4j returned 46 results in 5.741s
+2025-07-22 19:25:46,025 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 19:25:46,025 - core.knowledge_base - INFO - Successfully returning 46 skill results
+2025-07-22 19:26:00,563 - __main__ - INFO - Running enhanced test case TC115: Can I find courses for Public Speaking skills?
+2025-07-22 19:26:03,900 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Can I find courses for Public Speaking skills?'
+2025-07-22 19:26:06,414 - core.knowledge_base - INFO - Skills found in 0.02s: ['Public Speaking', 'Speaking skills', 'Beginner level Korean speaking and listening', 'iBT Independent Speaking']
+2025-07-22 19:26:25,720 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Public Speaking', 'Speaking skills'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:26:25,736 - core.knowledge_base - INFO - 📊 Neo4j returned 54 results in 19.322s
+2025-07-22 19:26:25,736 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 19:26:25,736 - core.knowledge_base - INFO - Successfully returning 54 skill results
+2025-07-22 19:26:38,350 - __main__ - INFO - Running enhanced test case TC116: I want to learn Creative Thinking skills — any courses?
+2025-07-22 19:26:40,995 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'I want to learn Creative Thinking skills — any courses?'
+2025-07-22 19:26:43,166 - core.knowledge_base - INFO - Skills found in 0.02s: ['Creative thinking', 'Creative Thinking', 'Thinking creatively on your own', 'Teaching Creative Writing', 'Creative Problem-Solving']
+2025-07-22 19:26:49,206 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Creative thinking','Creative Thinking','Thinking creatively on your own','Teaching Creative Writing','Creative Problem-Solving'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:26:49,227 - core.knowledge_base - INFO - 📊 Neo4j returned 171 results in 6.061s
+2025-07-22 19:26:49,227 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 19:26:49,228 - core.knowledge_base - INFO - Successfully returning 171 skill results
+2025-07-22 19:27:03,114 - __main__ - INFO - Running enhanced test case TC117: Are there courses about Presentation skills?
+2025-07-22 19:27:06,412 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Are there courses about Presentation skills?'
+2025-07-22 19:27:08,295 - core.knowledge_base - INFO - Skills found in 0.02s: ['Presentation skills', 'Presentation Skills', 'Presentations', 'presentation tools', 'oral presentations']
+2025-07-22 19:27:14,200 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Presentation skills', 'Presentation Skills', 'Presentations', 'presentation tools', 'oral presentations'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:27:14,217 - core.knowledge_base - INFO - 📊 Neo4j returned 66 results in 5.922s
+2025-07-22 19:27:14,217 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 19:27:14,217 - core.knowledge_base - INFO - Successfully returning 66 skill results
+2025-07-22 19:27:26,970 - __main__ - INFO - Running enhanced test case TC118: Can you suggest courses on Time Management skills?
+2025-07-22 19:27:29,681 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Can you suggest courses on Time Management skills?'
+2025-07-22 19:27:32,206 - core.knowledge_base - INFO - Skills found in 0.02s: ['Time Management', 'Time management', 'Time Sheet Management', 'Schedule Management', 'Calendar Management']
+2025-07-22 19:27:38,481 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Time Management','Time management','Time Sheet Management','Schedule Management','Calendar Management'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:27:38,498 - core.knowledge_base - INFO - 📊 Neo4j returned 68 results in 6.291s
+2025-07-22 19:27:38,498 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 19:27:38,498 - core.knowledge_base - INFO - Successfully returning 68 skill results
+2025-07-22 19:27:50,926 - __main__ - INFO - Running enhanced test case TC119: Do you offer courses for Financial Analysis skills?
+2025-07-22 19:27:53,585 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Do you offer courses for Financial Analysis skills?'
+2025-07-22 19:27:55,282 - core.knowledge_base - INFO - Skills found in 0.02s: ['Financial Analysis', 'Financial Accounting', 'Financial Consulting', 'Analyze Financial Statements', 'Financial reports analysis']
+2025-07-22 19:28:00,701 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Financial Analysis','Financial Accounting','Financial Consulting','Analyze Financial Statements','Financial reports analysis'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:28:00,724 - core.knowledge_base - INFO - 📊 Neo4j returned 199 results in 5.442s
+2025-07-22 19:28:00,724 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 19:28:00,724 - core.knowledge_base - INFO - Successfully returning 199 skill results
+2025-07-22 19:28:14,814 - __main__ - INFO - Running enhanced test case TC120: I'm looking for courses that help with Analytical Thinking skills.
+2025-07-22 19:28:17,426 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'I'm looking for courses that help with Analytical Thinking skills.'
+2025-07-22 19:28:18,866 - core.knowledge_base - INFO - Skills found in 0.02s: ['Analytical Thinking', 'analytical thinking', 'Analytical Skills', 'Interdisciplinary thinking', 'Analytical Techniques']
+2025-07-22 19:28:27,223 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Analytical Thinking','analytical thinking','Analytical Skills','Interdisciplinary thinking','Analytical Techniques'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:28:27,240 - core.knowledge_base - INFO - 📊 Neo4j returned 69 results in 8.374s
+2025-07-22 19:28:27,240 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 19:28:27,240 - core.knowledge_base - INFO - Successfully returning 69 skill results
+2025-07-22 19:28:40,284 - __main__ - INFO - Running enhanced test case TC122: Can you show me Communication skills courses with a lot of positive reviews?
+2025-07-22 19:28:43,205 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Can you show me Communication skills courses with a lot of positive reviews?'
+2025-07-22 19:28:44,959 - core.knowledge_base - INFO - Skills found in 0.02s: ['Communications Best Practices', 'Communication Strategies', 'Effective Communication', 'Communication skills', 'Communication Skills']
+2025-07-22 19:29:01,922 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill), (c)-[:HAS_REVIEW]->(r:Review) WHERE s.name IN ['Communications Best Practices','Communication Strategies','Effective Communication','Communication skills','Communication Skills'] AND toFloat(c.rating) > 4.5 RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:29:02,049 - core.knowledge_base - INFO - 📊 Neo4j returned 1269 results in 17.090s
+2025-07-22 19:29:02,049 - core.knowledge_base - INFO - 🎯 Processing review query results
+2025-07-22 19:29:02,051 - core.knowledge_base - INFO - Successfully returning 1269 review results
+2025-07-22 19:29:18,162 - __main__ - INFO - Running enhanced test case TC123: I want Business & Management skills courses that has reviews from users, do you have any?
+2025-07-22 19:29:21,202 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'I want Business & Management skills courses that has reviews from users, do you have any?'
+2025-07-22 19:29:22,917 - core.knowledge_base - INFO - Skills found in 0.02s: []
+2025-07-22 19:29:31,213 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill), (c)-[:HAS_REVIEW]->(r:Review) WHERE s.name IN ['Business & Management'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:29:31,268 - core.knowledge_base - INFO - 📊 Neo4j returned 0 results in 8.351s
+2025-07-22 19:29:31,268 - core.knowledge_base - INFO - Using simplified semantic fallback
+2025-07-22 19:29:31,268 - core.knowledge_base - INFO - 🔍 Running simple semantic search for: I want Business & Management skills courses that has reviews from users, do you have any?
+2025-07-22 19:29:31,270 - core.knowledge_base - INFO - Semantic search returned 10 results
+2025-07-22 19:29:49,478 - __main__ - INFO - Running enhanced test case TC124: Do you offer Design skills courses that include hands-on projects?
+2025-07-22 19:29:52,436 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Do you offer Design skills courses that include hands-on projects?'
+2025-07-22 19:29:53,598 - core.knowledge_base - INFO - Skills found in 0.02s: ['UX design jobs', 'design thinking', 'Design Thinking', 'Design Management', 'Design Portfolio']
+2025-07-22 19:30:12,537 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course) WHERE c.skills CONTAINS ANY ['UX design jobs','design thinking','Design Thinking','Design Management','Design Portfolio'] AND c.has_assignment = 1 RETURN c.url, c.name, c.description, c.rating, c.duration, c.has_video
+2025-07-22 19:30:12,612 - database.neo4j_client - ERROR - Neo4j query failed: {code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input ',': expected an expression, '..' or ']' (line 1, column 63 (offset: 62))
+"MATCH (c:Course) WHERE c.skills CONTAINS ANY ['UX design jobs','design thinking','Design Thinking','Design Management','Design Portfolio'] AND c.has_assignment = 1 RETURN c.url, c.name, c.description, c.rating, c.duration, c.has_video"
+                                                               ^}
+2025-07-22 19:30:12,613 - core.knowledge_base - INFO - 📊 Neo4j returned 0 results in 19.015s
+2025-07-22 19:30:12,613 - core.knowledge_base - INFO - Using simplified semantic fallback
+2025-07-22 19:30:12,613 - core.knowledge_base - INFO - 🔍 Running simple semantic search for: Do you offer Design skills courses that include hands-on projects?
+2025-07-22 19:30:12,615 - core.knowledge_base - INFO - Semantic search returned 10 results
+2025-07-22 19:30:26,680 - __main__ - INFO - Running enhanced test case TC125: Are there any Programming skills courses that has peer-reviewed assignments?
+2025-07-22 19:30:29,415 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Are there any Programming skills courses that has peer-reviewed assignments?'
+2025-07-22 19:30:31,550 - core.knowledge_base - INFO - Skills found in 0.02s: ['Programming Tool', 'Computer Programming Tools', 'Programming Concepts', 'Fundamental Programming Concepts', 'Basic programming']
+2025-07-22 19:30:38,314 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Programming Tool','Computer Programming Tools','Programming Concepts','Fundamental Programming Concepts','Basic programming'] AND c.has_peer = 1 RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:30:38,367 - core.knowledge_base - INFO - 📊 Neo4j returned 31 results in 6.817s
+2025-07-22 19:30:38,367 - core.knowledge_base - INFO - 🎯 Processing review query results
+2025-07-22 19:30:38,367 - core.knowledge_base - INFO - Successfully returning 31 review results
+2025-07-22 19:30:59,521 - __main__ - INFO - Running enhanced test case TC126: Can you recommend Critical Thinking skills courses with ratings above 4?
+2025-07-22 19:31:02,161 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Can you recommend Critical Thinking skills courses with ratings above 4?'
+2025-07-22 19:31:03,687 - core.knowledge_base - INFO - Skills found in 0.02s: ['critical thinking', 'Critical thinking', 'Critical Thinking', 'Critical Thinking and Problem Solving', 'Critical Thinking and Adaptability']
+2025-07-22 19:31:11,043 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['critical thinking', 'Critical thinking', 'Critical Thinking', 'Critical Thinking and Problem Solving', 'Critical Thinking and Adaptability'] AND toFloat(c.rating) > 4 RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:31:11,101 - core.knowledge_base - INFO - 📊 Neo4j returned 142 results in 7.414s
+2025-07-22 19:31:11,101 - core.knowledge_base - INFO - 🎯 Processing review query results
+2025-07-22 19:31:11,101 - core.knowledge_base - INFO - Successfully returning 142 review results
+2025-07-22 19:31:24,917 - __main__ - INFO - Running enhanced test case TC127: I'm looking for Writing skills courses that have discussion forums.
+2025-07-22 19:31:27,649 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'I'm looking for Writing skills courses that have discussion forums.'
+2025-07-22 19:31:30,085 - core.knowledge_base - INFO - Skills found in 0.02s: ['Discussion Facilitation', 'Teaching Personal Writing', 'Online Course Development', 'mentor texts', 'Web Writing']
+2025-07-22 19:31:40,306 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Discussion Facilitation','Teaching Personal Writing','Online Course Development','mentor texts','Web Writing'] AND c.has_discussion = 1 RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:31:40,357 - core.knowledge_base - INFO - 📊 Neo4j returned 18 results in 10.272s
+2025-07-22 19:31:40,358 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 19:31:40,358 - core.knowledge_base - INFO - Successfully returning 18 skill results
+2025-07-22 19:31:55,112 - __main__ - INFO - Running enhanced test case TC128: Do you have Leadership skills courses with rating between 4 and 4.8?
+2025-07-22 19:31:57,763 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Do you have Leadership skills courses with rating between 4 and 4.8?'
+2025-07-22 19:32:00,143 - core.knowledge_base - INFO - Skills found in 0.02s: ['Leadership Certificates', 'Leadership Assessment', 'Leadership Studies', 'Leadership Development', 'Leadership Style Analysis']
+2025-07-22 19:32:05,677 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Leadership Certificates','Leadership Assessment','Leadership Studies','Leadership Development','Leadership Style Analysis'] AND toFloat(c.rating) BETWEEN 4 AND 4.8 RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:32:05,690 - database.neo4j_client - ERROR - Neo4j query failed: {code: Neo.ClientError.Statement.SyntaxError} {message: Invalid input 'BETWEEN': expected an expression, 'FOREACH', 'ORDER BY', 'CALL', 'CREATE', 'LOAD CSV', 'DELETE', 'DETACH', 'FINISH', 'INSERT', 'LIMIT', 'MATCH', 'MERGE', 'NODETACH', 'OFFSET', 'OPTIONAL', 'REMOVE', 'RETURN', 'SET', 'SKIP', 'UNION', 'UNWIND', 'USE', 'WITH' or <EOF> (line 1, column 204 (offset: 203))
+"MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Leadership Certificates','Leadership Assessment','Leadership Studies','Leadership Development','Leadership Style Analysis'] AND toFloat(c.rating) BETWEEN 4 AND 4.8 RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration"
+                                                                                                                                                                                                            ^}
+2025-07-22 19:32:05,690 - core.knowledge_base - INFO - 📊 Neo4j returned 0 results in 5.547s
+2025-07-22 19:32:05,690 - core.knowledge_base - INFO - Using simplified semantic fallback
+2025-07-22 19:32:05,690 - core.knowledge_base - INFO - 🔍 Running simple semantic search for: Do you have Leadership skills courses with rating between 4 and 4.8?
+2025-07-22 19:32:05,692 - core.knowledge_base - INFO - Semantic search returned 10 results
+2025-07-22 19:32:21,314 - __main__ - INFO - Running enhanced test case TC129: Can you suggest Problem-Solving skills courses with at least 5 reviews?
+2025-07-22 19:32:24,155 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Can you suggest Problem-Solving skills courses with at least 5 reviews?'
+2025-07-22 19:32:26,774 - core.knowledge_base - INFO - Skills found in 0.02s: ['Problem-Solving Techniques', 'problem solving skills', 'Problem-Solving Proficiency', 'Problem-solving', 'Problem-Solving']
+2025-07-22 19:32:33,874 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Problem-Solving Techniques','problem solving skills','Problem-Solving Proficiency','Problem-solving','Problem-Solving'] AND c.num_reviews >= 5 RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:32:34,016 - core.knowledge_base - INFO - 📊 Neo4j returned 0 results in 7.243s
+2025-07-22 19:32:34,017 - core.knowledge_base - INFO - Using simplified semantic fallback
+2025-07-22 19:32:34,017 - core.knowledge_base - INFO - 🔍 Running simple semantic search for: Can you suggest Problem-Solving skills courses with at least 5 reviews?
+2025-07-22 19:32:34,019 - core.knowledge_base - INFO - Semantic search returned 10 results
+2025-07-22 19:32:46,496 - __main__ - INFO - Running enhanced test case TC130: Are there IT skills courses that include quizzes?
+2025-07-22 19:32:49,360 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'Are there IT skills courses that include quizzes?'
+2025-07-22 19:32:53,846 - __main__ - INFO - Running enhanced test case TC131: I want Project Management skills courses with rating above 4.5.
+2025-07-22 19:32:56,950 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'I want Project Management skills courses with rating above 4.5.'
+2025-07-22 19:32:58,378 - core.knowledge_base - INFO - Skills found in 0.02s: ['Project Management Professional Certification', 'project management training', 'Certified Associate In Project Management', 'Project management', 'project management']
+2025-07-22 19:33:06,097 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Project Management Professional Certification', 'project management training', 'Certified Associate In Project Management', 'Project management', 'project management'] AND toFloat(c.rating) > 4.5 RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:33:06,113 - core.knowledge_base - INFO - 📊 Neo4j returned 1 results in 7.736s
+2025-07-22 19:33:06,113 - core.knowledge_base - INFO - 🎯 Processing review query results
+2025-07-22 19:33:06,113 - core.knowledge_base - INFO - Successfully returning 1 review results
+2025-07-22 19:33:20,266 - __main__ - INFO - Running enhanced test case TC132: Find Python courses with peer-reviewed assignments and video content
+2025-07-22 19:33:22,748 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Find Python courses with peer-reviewed assignments and video content'
+2025-07-22 19:33:24,290 - core.knowledge_base - INFO - Skills found in 0.02s: ['Python Libraries']
+2025-07-22 19:33:28,091 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Python Libraries'] AND c.has_peer = 1 AND c.has_video = 1 RETURN c.url AS url, c.name AS name, c.duration AS duration, toFloat(c.rating) AS rating, c.description AS description
+2025-07-22 19:33:28,155 - core.knowledge_base - INFO - 📊 Neo4j returned 6 results in 3.865s
+2025-07-22 19:33:28,155 - core.knowledge_base - INFO - 🎯 Processing review query results
+2025-07-22 19:33:28,155 - core.knowledge_base - INFO - Successfully returning 6 review results
+2025-07-22 19:33:43,004 - __main__ - INFO - Running enhanced test case TC133: Are there Marketing skills courses with video?
+2025-07-22 19:33:45,761 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Are there Marketing skills courses with video?'
+2025-07-22 19:33:47,339 - core.knowledge_base - INFO - Skills found in 0.02s: ['marketing multimédia', 'Influencer and Video Marketing', 'YouTube marketing', 'Display and Video Advertising Strategy', 'Marketing Content Development']
+2025-07-22 19:33:55,437 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['marketing multimédia','Influencer and Video Marketing','YouTube marketing','Display and Video Advertising Strategy','Marketing Content Development'] AND c.has_video = true RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:33:55,483 - core.knowledge_base - INFO - 📊 Neo4j returned 0 results in 8.144s
+2025-07-22 19:33:55,483 - core.knowledge_base - INFO - Using simplified semantic fallback
+2025-07-22 19:33:55,483 - core.knowledge_base - INFO - 🔍 Running simple semantic search for: Are there Marketing skills courses with video?
+2025-07-22 19:33:55,485 - core.knowledge_base - INFO - Semantic search returned 10 results
+2025-07-22 19:34:10,994 - __main__ - INFO - Running enhanced test case TC134: Do you offer Negotiation skills courses rated higher than 4.5?
+2025-07-22 19:34:14,020 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Do you offer Negotiation skills courses rated higher than 4.5?'
+2025-07-22 19:34:15,900 - core.knowledge_base - INFO - Skills found in 0.02s: ['Negotiation Skills', 'Negotiation Analysis', 'Negotiation Strategies', 'Negotiation', 'Negotiation Techniques']
+2025-07-22 19:34:22,301 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Negotiation Skills','Negotiation Analysis','Negotiation Strategies','Negotiation','Negotiation Techniques'] AND toFloat(c.rating) > 4.5 RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:34:22,317 - core.knowledge_base - INFO - 📊 Neo4j returned 21 results in 6.417s
+2025-07-22 19:34:22,317 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 19:34:22,317 - core.knowledge_base - INFO - Successfully returning 21 skill results
+2025-07-22 19:34:37,086 - __main__ - INFO - Running enhanced test case TC135: Are there Public Speaking skills courses with community discussions?
+2025-07-22 19:34:40,354 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Are there Public Speaking skills courses with community discussions?'
+2025-07-22 19:34:43,190 - core.knowledge_base - INFO - Skills found in 0.02s: ['Public Speaking', 'Discussion Facilitation', 'Speaking skills', 'Communicative Approaches', 'Making small talk']
+2025-07-22 19:35:03,089 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Public Speaking','Discussion Facilitation','Speaking skills','Communicative Approaches','Making small talk'] AND c.has_discussion = 1 RETURN c.url, c.name, c.description, c.rating, c.duration, c.has_video, c.has_discussion
+2025-07-22 19:35:03,138 - core.knowledge_base - INFO - 📊 Neo4j returned 52 results in 19.948s
+2025-07-22 19:35:03,139 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 19:35:03,139 - core.knowledge_base - INFO - Successfully returning 52 skill results
+2025-07-22 19:35:20,866 - __main__ - INFO - Running enhanced test case TC136: Do you have Data Analysis skills courses with a high rating and short duration?
+2025-07-22 19:35:23,706 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Do you have Data Analysis skills courses with a high rating and short duration?'
+2025-07-22 19:35:25,057 - core.knowledge_base - INFO - Skills found in 0.02s: ['Data analysis tools', 'Data Analysis Software', 'Data Analysis Reporting', 'Data Collection and Analysis', 'Data collection and analysis']
+2025-07-22 19:35:43,192 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Data analysis tools','Data Analysis Software','Data Analysis Reporting','Data Collection and Analysis','Data collection and analysis'] AND toFloat(c.rating) > 4.5 AND c.duration < 10 RETURN c.url AS course_url, c.name AS course_name, c.description AS course_description, toFloat(c.rating) AS course_rating, c.duration AS course_duration
+2025-07-22 19:35:43,252 - core.knowledge_base - INFO - 📊 Neo4j returned 13 results in 18.194s
+2025-07-22 19:35:43,252 - core.knowledge_base - INFO - 🎯 Processing review query results
+2025-07-22 19:35:43,252 - core.knowledge_base - INFO - Successfully returning 13 review results
+2025-07-22 19:36:00,125 - __main__ - INFO - Running enhanced test case TC137: I want Communication skills courses with over 3 reviews and less than 20 hours duration.
+2025-07-22 19:36:03,013 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'I want Communication skills courses with over 3 reviews and less than 20 hours duration.'
+2025-07-22 19:36:04,531 - core.knowledge_base - INFO - Skills found in 0.02s: ['Communication Planning', 'Communications Best Practices', 'Communication Strategies', 'Communication Strategy', 'Communication efficace']
+2025-07-22 19:36:12,313 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Communication Planning','Communications Best Practices','Communication Strategies','Communication Strategy','Communication efficace'] AND c.num_reviews > 3 AND c.duration < 20 RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:36:12,365 - core.knowledge_base - INFO - 📊 Neo4j returned 0 results in 7.834s
+2025-07-22 19:36:12,365 - core.knowledge_base - INFO - Using simplified semantic fallback
+2025-07-22 19:36:12,365 - core.knowledge_base - INFO - 🔍 Running simple semantic search for: I want Communication skills courses with over 3 reviews and less than 20 hours duration.
+2025-07-22 19:36:12,367 - core.knowledge_base - INFO - Semantic search returned 10 results
+2025-07-22 19:36:29,464 - __main__ - INFO - Running enhanced test case TC138: Are there Business & Management skills courses rated above 4.2 with hands-on assignments?
+2025-07-22 19:36:32,096 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Are there Business & Management skills courses rated above 4.2 with hands-on assignments?'
+2025-07-22 19:36:33,762 - core.knowledge_base - INFO - Skills found in 0.02s: ['Business Education', 'Business Studies', 'Course Development', 'Business Analysis Certificate', 'Business Management']
+2025-07-22 19:36:43,551 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Business Education','Business Studies','Course Development','Business Analysis Certificate','Business Management'] AND toFloat(c.rating) > 4.2 AND c.has_assignment = 1 RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:36:43,623 - core.knowledge_base - INFO - 📊 Neo4j returned 256 results in 9.861s
+2025-07-22 19:36:43,623 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 19:36:43,623 - core.knowledge_base - INFO - Successfully returning 256 skill results
+2025-07-22 19:36:58,528 - __main__ - INFO - Running enhanced test case TC139: Can you show me Design skills courses with positive feedback and less than 5 hours long?
+2025-07-22 19:37:01,753 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Can you show me Design skills courses with positive feedback and less than 5 hours long?'
+2025-07-22 19:37:03,157 - core.knowledge_base - INFO - Skills found in 0.02s: ['UX design jobs', 'Design Reports', 'Design Management', 'design thinking', 'Design Thinking']
+2025-07-22 19:37:18,247 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill), (c)-[:HAS_REVIEW]->(r:Review) WHERE s.name IN ['UX design jobs','Design Reports','Design Management','design thinking','Design Thinking'] AND r.rating > 4.0 AND c.duration < 5 RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:37:18,309 - core.knowledge_base - INFO - 📊 Neo4j returned 0 results in 15.151s
+2025-07-22 19:37:18,309 - core.knowledge_base - INFO - Using simplified semantic fallback
+2025-07-22 19:37:18,309 - core.knowledge_base - INFO - 🔍 Running simple semantic search for: Can you show me Design skills courses with positive feedback and less than 5 hours long?
+2025-07-22 19:37:18,311 - core.knowledge_base - INFO - Semantic search returned 10 results
+2025-07-22 19:37:33,512 - __main__ - INFO - Running enhanced test case TC140: Are there Programming skills courses with peer work, high ratings, and video lessons?
+2025-07-22 19:37:35,896 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Are there Programming skills courses with peer work, high ratings, and video lessons?'
+2025-07-22 19:37:37,416 - core.knowledge_base - INFO - Skills found in 0.02s: ['Programming Concepts', 'Programming Tool', 'Basic programming', 'Program Development', 'Computer Programming']
+2025-07-22 19:37:45,448 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Programming Concepts','Programming Tool','Basic programming','Program Development','Computer Programming'] AND c.has_peer = 1 AND toFloat(c.rating) > 4.5 AND c.has_video = 1 RETURN c.url AS url, c.name AS name, c.duration AS duration, toFloat(c.rating) AS rating, c.description AS description
+2025-07-22 19:37:45,521 - core.knowledge_base - INFO - 📊 Neo4j returned 128 results in 8.105s
+2025-07-22 19:37:45,522 - core.knowledge_base - INFO - 🎯 Processing review query results
+2025-07-22 19:37:45,522 - core.knowledge_base - INFO - Successfully returning 128 review results
+2025-07-22 19:38:01,743 - __main__ - INFO - Running enhanced test case TC141: I'm searching for Writing skills courses rated 4.8 or above with practical tasks included.
+2025-07-22 19:38:04,546 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'I'm searching for Writing skills courses rated 4.8 or above with practical tasks included.'
+2025-07-22 19:38:09,680 - core.knowledge_base - INFO - Skills found in 0.03s: ['Teaching Personal Writing', 'Writing Techniques', 'Writing Proficiency', 'Teaching Reading and Writing', 'Teaching Creative Writing']
+2025-07-22 19:38:17,739 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Teaching Personal Writing','Writing Techniques','Writing Proficiency','Teaching Reading and Writing','Teaching Creative Writing'] AND toFloat(c.rating) >= 4.8 AND c.has_assignment = 1 RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:38:17,800 - core.knowledge_base - INFO - 📊 Neo4j returned 0 results in 8.120s
+2025-07-22 19:38:17,800 - core.knowledge_base - INFO - Using simplified semantic fallback
+2025-07-22 19:38:17,800 - core.knowledge_base - INFO - 🔍 Running simple semantic search for: I'm searching for Writing skills courses rated 4.8 or above with practical tasks included.
+2025-07-22 19:38:17,803 - core.knowledge_base - INFO - Semantic search returned 10 results
+2025-07-22 19:38:32,051 - __main__ - INFO - Running enhanced test case TC142: Do you have Leadership skills courses that include quizzes, have great ratings, and are short in duration?
+2025-07-22 19:38:33,974 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Do you have Leadership skills courses that include quizzes, have great ratings, and are short in duration?'
+2025-07-22 19:38:35,233 - core.knowledge_base - INFO - Skills found in 0.03s: ['Leadership Certificates', 'Leadership Assessment', 'Leadership Studies', 'Leadership Style', 'Leadership Style Analysis']
+2025-07-22 19:39:33,595 - core.query_processor - WARNING - No JSON found in cleaned LLM response
+2025-07-22 19:39:33,595 - core.knowledge_base - INFO - 🎯 Generated course query: 
+2025-07-22 19:39:33,595 - core.knowledge_base - WARNING - LLM did not return main Cypher. Using semantic search only.
+2025-07-22 19:39:33,595 - core.knowledge_base - INFO - 📊 Neo4j returned 0 results in 58.362s
+2025-07-22 19:39:33,595 - core.knowledge_base - INFO - Using simplified semantic fallback
+2025-07-22 19:39:33,595 - core.knowledge_base - INFO - 🔍 Running simple semantic search for: Do you have Leadership skills courses that include quizzes, have great ratings, and are short in duration?
+2025-07-22 19:39:33,598 - core.knowledge_base - INFO - Semantic search returned 10 results
+2025-07-22 19:39:48,834 - __main__ - INFO - Running enhanced test case TC143: Can you find Problem-Solving skills courses with peer discussions, over 100 reviews, and less than 10 hours of content?
+2025-07-22 19:39:51,920 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Can you find Problem-Solving skills courses with peer discussions, over 100 reviews, and less than 10 hours of content?'
+2025-07-22 19:39:53,421 - core.knowledge_base - INFO - Skills found in 0.03s: ['Problem-Solving Techniques', 'Online Course Development', 'Problem-Solving Proficiency', 'Websites', 'problem solving skills']
+2025-07-22 19:40:03,102 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Problem-Solving Techniques','Online Course Development','Problem-Solving Proficiency','Websites','problem solving skills'] AND c.has_peer = 1 AND c.num_reviews > 100 AND c.duration < 10 RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration, c.num_reviews AS num_reviews
+2025-07-22 19:40:03,171 - core.knowledge_base - INFO - 📊 Neo4j returned 0 results in 9.750s
+2025-07-22 19:40:03,172 - core.knowledge_base - INFO - Using simplified semantic fallback
+2025-07-22 19:40:03,172 - core.knowledge_base - INFO - 🔍 Running simple semantic search for: Can you find Problem-Solving skills courses with peer discussions, over 100 reviews, and less than 10 hours of content?
+2025-07-22 19:40:03,175 - core.knowledge_base - INFO - Semantic search returned 10 results
+2025-07-22 19:40:22,893 - __main__ - INFO - Running enhanced test case TC144: I want Research skills courses with interactive content, high ratings, and short length.
+2025-07-22 19:40:25,934 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'I want Research skills courses with interactive content, high ratings, and short length.'
+2025-07-22 19:40:28,702 - core.knowledge_base - INFO - Skills found in 0.03s: ['Research Skills', 'Online Course Development', 'Websites', 'Online Research', 'Course Development']
+2025-07-22 19:40:41,481 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Research Skills','Online Course Development','Websites','Online Research','Course Development'] AND c.has_interactive = 1 AND toFloat(c.rating) > 4.5 AND c.duration < 10 RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:40:41,547 - neo4j.notifications - WARNING - Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.UnknownPropertyKeyWarning} {category: UNRECOGNIZED} {title: The provided property key is not in the database} {description: One of the property names in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing property name is: has_interactive)} {position: line: 1, column: 160, offset: 159} for query: "MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Research Skills','Online Course Development','Websites','Online Research','Course Development'] AND c.has_interactive = 1 AND toFloat(c.rating) > 4.5 AND c.duration < 10 RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration"
+2025-07-22 19:40:41,548 - core.knowledge_base - INFO - 📊 Neo4j returned 0 results in 12.846s
+2025-07-22 19:40:41,548 - core.knowledge_base - INFO - Using simplified semantic fallback
+2025-07-22 19:40:41,548 - core.knowledge_base - INFO - 🔍 Running simple semantic search for: I want Research skills courses with interactive content, high ratings, and short length.
+2025-07-22 19:40:41,551 - core.knowledge_base - INFO - Semantic search returned 10 results
+2025-07-22 19:40:58,757 - __main__ - INFO - Running enhanced test case TC145: Are there Project Management skills courses with great reviews, peer assignments, and short duration?
+2025-07-22 19:41:01,610 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Are there Project Management skills courses with great reviews, peer assignments, and short duration?'
+2025-07-22 19:41:02,913 - core.knowledge_base - INFO - Skills found in 0.03s: ['project management training', 'Project Management Professional Certification', 'Project management', 'project management', 'Project Management']
+2025-07-22 19:41:21,901 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['project management training','Project Management Professional Certification','Project management','project management','Project Management'] AND c.has_peer = 1 AND toFloat(c.rating) > 4.5 AND c.duration < 100 RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:41:21,974 - core.knowledge_base - INFO - 📊 Neo4j returned 120 results in 19.061s
+2025-07-22 19:41:21,975 - core.knowledge_base - INFO - 🎯 Processing review query results
+2025-07-22 19:41:21,975 - core.knowledge_base - INFO - Successfully returning 120 review results
+2025-07-22 19:41:39,996 - __main__ - INFO - Running enhanced test case TC146: Can you find a Business & Management skills course with a rating above 4.5, peer-reviewed assignments, discussion forums, and under 10 hours of total duration?
+2025-07-22 19:41:43,047 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Can you find a Business & Management skills course with a rating above 4.5, peer-reviewed assignments, discussion forums, and under 10 hours of total duration?'
+2025-07-22 19:41:44,447 - core.knowledge_base - INFO - Skills found in 0.03s: ['Business Analysis Certificate', 'Business Studies', 'Business Management', 'Business Education', 'Master Of Business Administration (MBA)']
+2025-07-22 19:41:51,157 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Business Analysis Certificate','Business Studies','Business Management','Business Education','Master Of Business Administration (MBA)'] AND toFloat(c.rating) > 4.5 AND c.has_peer = 1 AND c.has_discussion = 1 AND c.duration < 10 RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:41:51,243 - core.knowledge_base - INFO - 📊 Neo4j returned 57 results in 6.796s
+2025-07-22 19:41:51,243 - core.knowledge_base - INFO - 🎯 Processing review query results
+2025-07-22 19:41:51,244 - core.knowledge_base - INFO - Successfully returning 57 review results
+2025-07-22 19:42:14,649 - __main__ - INFO - Running enhanced test case TC147: I'm looking for a Communication skills course with high ratings, quizzes, hands-on projects, community discussion, and practical assignments — do you have any?
+2025-07-22 19:42:19,093 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'I'm looking for a Communication skills course with high ratings, quizzes, hands-on projects, community discussion, and practical assignments — do you have any?'
+2025-07-22 19:42:21,592 - core.knowledge_base - INFO - Skills found in 0.04s: ['Communications Best Practices', 'Communication Planning', 'Communications', 'online communications', 'Communication Strategies']
+2025-07-22 19:42:36,349 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Communications Best Practices','Communication Planning','Communications','online communications','Communication Strategies'] AND c.has_quiz = 1 AND c.has_assignment = 1 AND c.has_discussion = 1 AND c.has_peer = 1 RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration, c.has_quiz AS has_quiz, c.has_assignment AS has_assignment, c.has_discussion AS has_discussion, c.has_peer AS has_peer
+2025-07-22 19:42:36,431 - core.knowledge_base - INFO - 📊 Neo4j returned 166 results in 14.839s
+2025-07-22 19:42:36,431 - core.knowledge_base - INFO - 🎯 Processing review query results
+2025-07-22 19:42:36,431 - core.knowledge_base - INFO - Successfully returning 166 review results
+2025-07-22 19:42:55,904 - __main__ - INFO - Running enhanced test case TC148: Do you offer Data Analysis skills courses that include peer work, have over 4.5 ratings, quizzes, and take less than 8 hours to complete?
+2025-07-22 19:42:58,589 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Do you offer Data Analysis skills courses that include peer work, have over 4.5 ratings, quizzes, and take less than 8 hours to complete?'
+2025-07-22 19:42:59,937 - core.knowledge_base - INFO - Skills found in 0.04s: ['Data analysis tools', 'Data Analysis Software', 'Proficiency in advanced data analysis', 'Data Analysis Reporting', 'Data collection and analysis']
+2025-07-22 19:43:08,788 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Data analysis tools','Data Analysis Software','Proficiency in advanced data analysis','Data Analysis Reporting','Data collection and analysis'] AND c.has_peer = 1 AND toFloat(c.rating) > 4.5 AND c.has_quiz = 1 AND c.duration < 8 RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:43:08,856 - core.knowledge_base - INFO - 📊 Neo4j returned 8 results in 8.919s
+2025-07-22 19:43:08,856 - core.knowledge_base - INFO - 🎯 Processing review query results
+2025-07-22 19:43:08,857 - core.knowledge_base - INFO - Successfully returning 8 review results
+2025-07-22 19:43:23,618 - __main__ - INFO - Running enhanced test case TC149: Can you recommend a Leadership skills course with great reviews, video content, hands-on projects, peer work, and community support?
+2025-07-22 19:43:27,413 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Can you recommend a Leadership skills course with great reviews, video content, hands-on projects, peer work, and community support?'
+2025-07-22 19:43:28,658 - core.knowledge_base - INFO - Skills found in 0.03s: ['Leadership Certificates', 'Leadership Assessment', 'Leadership Studies', 'Leadership Style', 'Determine your leadership style']
+2025-07-22 19:43:47,912 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Leadership Certificates','Leadership Assessment','Leadership Studies','Leadership Style','Determine your leadership style'] AND c.has_video = 1 AND c.has_assignment = 1 AND c.has_peer = 1 AND c.has_discussion = 1 RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration, c.has_video AS has_video, c.has_assignment AS has_assignment, c.has_peer AS has_peer, c.has_discussion AS has_discussion
+2025-07-22 19:43:48,013 - core.knowledge_base - INFO - 📊 Neo4j returned 23 results in 19.355s
+2025-07-22 19:43:48,014 - core.knowledge_base - INFO - 🎯 Processing review query results
+2025-07-22 19:43:48,014 - core.knowledge_base - INFO - Successfully returning 23 review results
+2025-07-22 19:44:04,409 - __main__ - INFO - Running enhanced test case TC150: Are there Project Management skills courses with over 100 positive reviews, rated above 4.5, with quizzes, hands-on practice, and available discussion forums?
+2025-07-22 19:44:06,981 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Are there Project Management skills courses with over 100 positive reviews, rated above 4.5, with quizzes, hands-on practice, and available discussion forums?'
+2025-07-22 19:44:08,391 - core.knowledge_base - INFO - Skills found in 0.04s: ['project management training', 'Project Management Professional Certification', 'Project Management Toolkit', 'Certified Associate In Project Management', 'Project Management Software']
+2025-07-22 19:56:22,242 - core.query_processor - WARNING - No JSON found in cleaned LLM response
+2025-07-22 19:56:22,243 - core.knowledge_base - INFO - 🎯 Generated course query: 
+2025-07-22 19:56:22,243 - core.knowledge_base - WARNING - LLM did not return main Cypher. Using semantic search only.
+2025-07-22 19:56:22,243 - core.knowledge_base - INFO - 📊 Neo4j returned 0 results in 733.852s
+2025-07-22 19:56:22,243 - core.knowledge_base - INFO - Using simplified semantic fallback
+2025-07-22 19:56:22,243 - core.knowledge_base - INFO - 🔍 Running simple semantic search for: Are there Project Management skills courses with over 100 positive reviews, rated above 4.5, with quizzes, hands-on practice, and available discussion forums?
+2025-07-22 19:56:22,246 - core.knowledge_base - INFO - Semantic search returned 10 results
+2025-07-22 19:56:41,388 - __main__ - INFO - Running enhanced test case TC151: I feel like I suck at Data Analysis… do you think I can find a course for that?
+2025-07-22 19:56:44,955 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'I feel like I suck at Data Analysis… do you think I can find a course for that?'
+2025-07-22 19:56:46,856 - core.knowledge_base - INFO - Skills found in 0.03s: ['Data Analysis Software', 'Data analysis tools', 'Proficiency in advanced data analysis', 'Data science', 'Data Science']
+2025-07-22 19:57:02,883 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill), (c)-[:HAS_LEVEL]->(l:Level {name: 'Beginner'}) WHERE s.name IN ['Data Analysis Software','Data analysis tools','Proficiency in advanced data analysis','Data science','Data Science'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:57:02,923 - core.knowledge_base - INFO - 📊 Neo4j returned 314 results in 16.067s
+2025-07-22 19:57:02,924 - core.knowledge_base - INFO - 🎯 Processing course query results
+2025-07-22 19:57:02,929 - core.knowledge_base - INFO - Ranked 290 unique course results
+2025-07-22 19:57:20,013 - __main__ - INFO - Running enhanced test case TC152: Got anything for someone who wants to get better at Business & Management?
+2025-07-22 19:57:24,791 - core.intent_classifier - INFO - Intent classified: course_search (confidence: medium) for query: 'Got anything for someone who wants to get better at Business & Management?'
+2025-07-22 19:57:26,209 - core.knowledge_base - INFO - Skills found in 0.03s: ['Business Management', 'Master Of Business Administration (MBA)', 'Business Administration', 'Ideas for business', 'Management Consulting']
+2025-07-22 19:57:33,159 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Business Management', 'Master Of Business Administration (MBA)', 'Business Administration', 'Ideas for business', 'Management Consulting'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:57:33,192 - core.knowledge_base - INFO - 📊 Neo4j returned 369 results in 6.983s
+2025-07-22 19:57:33,192 - core.knowledge_base - INFO - 🎯 Processing course query results
+2025-07-22 19:57:33,196 - core.knowledge_base - INFO - Ranked 305 unique course results
+2025-07-22 19:57:49,629 - __main__ - INFO - Running enhanced test case TC153: I'm in a creative mood — are there any Design skills courses worth checking out?
+2025-07-22 19:57:53,180 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'I'm in a creative mood — are there any Design skills courses worth checking out?'
+2025-07-22 19:57:54,508 - core.knowledge_base - INFO - Skills found in 0.03s: ['UX design jobs', 'design thinking', 'Design Thinking', 'Creative Design', 'Design-thinking']
+2025-07-22 19:58:05,198 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['UX design jobs','design thinking','Design Thinking','Creative Design','Design-thinking'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:58:05,223 - core.knowledge_base - INFO - 📊 Neo4j returned 141 results in 10.715s
+2025-07-22 19:58:05,223 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 19:58:05,224 - core.knowledge_base - INFO - Successfully returning 141 skill results
+2025-07-22 19:58:22,075 - __main__ - INFO - Running enhanced test case TC154: Ugh, I need to finally get good at Programming… can you hook me up with a course?
+2025-07-22 19:58:24,812 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Ugh, I need to finally get good at Programming… can you hook me up with a course?'
+2025-07-22 19:58:26,216 - core.knowledge_base - INFO - Skills found in 0.03s: ['Computer Programming', 'Basic programming', 'Computer Programming Tools', 'Programming Tool', 'Programming Concepts']
+2025-07-22 19:58:33,473 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Computer Programming','Basic programming','Computer Programming Tools','Programming Tool','Programming Concepts'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:58:33,514 - core.knowledge_base - INFO - 📊 Neo4j returned 408 results in 7.298s
+2025-07-22 19:58:33,514 - core.knowledge_base - INFO - 🎯 Processing course query results
+2025-07-22 19:58:33,520 - core.knowledge_base - INFO - Ranked 395 unique course results
+2025-07-22 19:58:47,002 - __main__ - INFO - Running enhanced test case TC155: Quick question — are there courses that help with Critical Thinking?
+2025-07-22 19:58:50,891 - core.intent_classifier - INFO - Intent classified: course_search (confidence: medium) for query: 'Quick question — are there courses that help with Critical Thinking?'
+2025-07-22 19:58:53,164 - core.knowledge_base - INFO - Skills found in 0.03s: ['critical thinking', 'Critical thinking', 'Critical Thinking', 'Critical Thinking and Problem Solving', 'Critical Thinking and Adaptability']
+2025-07-22 19:59:04,141 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['critical thinking', 'Critical thinking', 'Critical Thinking', 'Critical Thinking and Problem Solving', 'Critical Thinking and Adaptability'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:59:04,173 - core.knowledge_base - INFO - 📊 Neo4j returned 207 results in 11.010s
+2025-07-22 19:59:04,174 - core.knowledge_base - INFO - 🎯 Processing course query results
+2025-07-22 19:59:04,177 - core.knowledge_base - INFO - Ranked 172 unique course results
+2025-07-22 19:59:17,394 - __main__ - INFO - Running enhanced test case TC156: I could seriously use some help with Writing skills — any courses in mind?
+2025-07-22 19:59:20,463 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'I could seriously use some help with Writing skills — any courses in mind?'
+2025-07-22 19:59:21,873 - core.knowledge_base - INFO - Skills found in 0.02s: ['Writing Techniques', 'Teaching Personal Writing', 'Teaching Creative Writing', 'Writing', 'Teaching Reading and Writing']
+2025-07-22 19:59:26,943 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Writing Techniques','Teaching Personal Writing','Teaching Creative Writing','Writing','Teaching Reading and Writing'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:59:26,967 - core.knowledge_base - INFO - 📊 Neo4j returned 94 results in 5.094s
+2025-07-22 19:59:26,967 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 19:59:26,967 - core.knowledge_base - INFO - Successfully returning 94 skill results
+2025-07-22 19:59:40,570 - __main__ - INFO - Running enhanced test case TC157: Leadership's always been a weak spot for me… do you have a course I should try?
+2025-07-22 19:59:43,637 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Leadership's always been a weak spot for me… do you have a course I should try?'
+2025-07-22 19:59:45,091 - core.knowledge_base - INFO - Skills found in 0.03s: ['Develop your leadership philosophy', 'Determine your leadership style', 'Modern Leadership', 'Leadership Style', 'Leadership Studies']
+2025-07-22 19:59:50,623 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Develop your leadership philosophy','Determine your leadership style','Modern Leadership','Leadership Style','Leadership Studies'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 19:59:50,641 - core.knowledge_base - INFO - 📊 Neo4j returned 25 results in 5.550s
+2025-07-22 19:59:50,641 - core.knowledge_base - INFO - 🎯 Processing course query results
+2025-07-22 19:59:50,642 - core.knowledge_base - INFO - Ranked 24 unique course results
+2025-07-22 20:00:04,833 - __main__ - INFO - Running enhanced test case TC158: Do you happen to know a course for boosting Problem-Solving skills?
+2025-07-22 20:00:09,091 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Do you happen to know a course for boosting Problem-Solving skills?'
+2025-07-22 20:00:11,284 - core.knowledge_base - INFO - Skills found in 0.03s: ['Problem-Solving Techniques', 'Rapid Problem Solving', 'Problem-Solving Proficiency', 'problem solving skills', 'Problem-solving']
+2025-07-22 20:00:17,749 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Problem-Solving Techniques','Rapid Problem Solving','Problem-Solving Proficiency','problem solving skills','Problem-solving'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 20:00:17,767 - core.knowledge_base - INFO - 📊 Neo4j returned 6 results in 6.483s
+2025-07-22 20:00:17,767 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 20:00:17,767 - core.knowledge_base - INFO - Successfully returning 6 skill results
+2025-07-22 20:00:35,973 - __main__ - INFO - Running enhanced test case TC159: I wonder if there's anything that teaches Research skills around here?
+2025-07-22 20:00:38,934 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'I wonder if there's anything that teaches Research skills around here?'
+2025-07-22 20:00:40,343 - core.knowledge_base - INFO - Skills found in 0.03s: ['Research Skills', 'Research Proficiency', 'researching', 'Online Research', 'Research']
+2025-07-22 20:00:46,513 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Research Skills','Research Proficiency','researching','Online Research','Research'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 20:00:46,543 - core.knowledge_base - INFO - 📊 Neo4j returned 216 results in 6.199s
+2025-07-22 20:00:46,543 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 20:00:46,543 - core.knowledge_base - INFO - Successfully returning 216 skill results
+2025-07-22 20:01:01,044 - __main__ - INFO - Running enhanced test case TC160: If I wanted to improve my Project Management game, what course should I look for?
+2025-07-22 20:01:04,378 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'If I wanted to improve my Project Management game, what course should I look for?'
+2025-07-22 20:01:06,145 - core.knowledge_base - INFO - Skills found in 0.03s: ['project management training', 'Project management', 'project management', 'Project Management', 'Project Management Professional Certification']
+2025-07-22 20:01:14,035 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['project management training','Project management','project management','Project Management','Project Management Professional Certification'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 20:01:14,068 - core.knowledge_base - INFO - 📊 Neo4j returned 296 results in 7.924s
+2025-07-22 20:01:14,069 - core.knowledge_base - INFO - 🎯 Processing course query results
+2025-07-22 20:01:14,073 - core.knowledge_base - INFO - Ranked 289 unique course results
+2025-07-22 20:01:29,848 - __main__ - INFO - Running enhanced test case TC161: Been hearing a lot about Data Visualization — any good courses for beginners?
+2025-07-22 20:01:32,188 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Been hearing a lot about Data Visualization — any good courses for beginners?'
+2025-07-22 20:01:33,643 - core.knowledge_base - INFO - Skills found in 0.03s: ['Data visualization Data exploration', 'Data Visualization & Programming', 'Data visualization tools', 'Advanced Data Visualizations', 'Data Visualization Software']
+2025-07-22 20:01:44,085 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill), (c)-[:HAS_LEVEL]->(l:Level {name: 'Beginner'}) WHERE s.name IN ['Data visualization Data exploration','Data Visualization & Programming','Data visualization tools','Advanced Data Visualizations','Data Visualization Software'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 20:01:44,106 - core.knowledge_base - INFO - 📊 Neo4j returned 53 results in 10.463s
+2025-07-22 20:01:44,107 - core.knowledge_base - INFO - 🎯 Processing level query results
+2025-07-22 20:01:44,107 - core.knowledge_base - INFO - Successfully returning 53 level results
+2025-07-22 20:02:01,861 - __main__ - INFO - Running enhanced test case TC162: Are there courses that actually teach you solid Marketing skills?
+2025-07-22 20:02:05,505 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Are there courses that actually teach you solid Marketing skills?'
+2025-07-22 20:02:06,631 - core.knowledge_base - INFO - Skills found in 0.03s: ['Marketing Concepts', 'Marketing Strategies', 'Marketing Management', 'Marketing Strategy and Techniques', 'Marketing Strategy Development']
+2025-07-22 20:02:11,894 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Marketing Concepts','Marketing Strategies','Marketing Management','Marketing Strategy and Techniques','Marketing Strategy Development'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating
+2025-07-22 20:02:11,926 - core.knowledge_base - INFO - 📊 Neo4j returned 399 results in 5.295s
+2025-07-22 20:02:11,926 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 20:02:11,927 - core.knowledge_base - INFO - Successfully returning 399 skill results
+2025-07-22 20:02:25,679 - __main__ - INFO - Running enhanced test case TC163: Negotiation's kinda tricky — do you know of a course that could help?
+2025-07-22 20:02:29,319 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Negotiation's kinda tricky — do you know of a course that could help?'
+2025-07-22 20:02:30,762 - core.knowledge_base - INFO - Skills found in 0.03s: ['Negotiation Techniques', 'Negotiation Strategies', 'Negotiation Analysis', 'Negotiation Skills', 'Negotiation']
+2025-07-22 20:02:36,397 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Negotiation Techniques','Negotiation Strategies','Negotiation Analysis','Negotiation Skills','Negotiation'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 20:02:36,415 - core.knowledge_base - INFO - 📊 Neo4j returned 46 results in 5.653s
+2025-07-22 20:02:36,415 - core.knowledge_base - INFO - 🎯 Processing course query results
+2025-07-22 20:02:36,416 - core.knowledge_base - INFO - Ranked 44 unique course results
+2025-07-22 20:02:55,413 - __main__ - INFO - Running enhanced test case TC164: Public Speaking terrifies me… think a course could fix that?
+2025-07-22 20:03:01,299 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: medium) for query: 'Public Speaking terrifies me… think a course could fix that?'
+2025-07-22 20:03:07,601 - __main__ - INFO - Running enhanced test case TC165: Any suggestions for getting better at Creative Thinking?
+2025-07-22 20:03:11,681 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'Any suggestions for getting better at Creative Thinking?'
+2025-07-22 20:03:19,077 - __main__ - INFO - Running enhanced test case TC166: I really want to nail my Presentation skills — is there a course for that?
+2025-07-22 20:03:22,392 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'I really want to nail my Presentation skills — is there a course for that?'
+2025-07-22 20:03:24,729 - core.knowledge_base - INFO - Skills found in 0.03s: ['Presentation skills', 'Presentation Skills', 'Presentations', 'presentation tools', 'oral presentations']
+2025-07-22 20:03:31,783 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Presentation skills', 'Presentation Skills', 'Presentations', 'presentation tools', 'oral presentations'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 20:03:31,790 - core.knowledge_base - INFO - 📊 Neo4j returned 66 results in 7.062s
+2025-07-22 20:03:31,790 - core.knowledge_base - INFO - 🎯 Processing skill query results
+2025-07-22 20:03:31,790 - core.knowledge_base - INFO - Successfully returning 66 skill results
+2025-07-22 20:03:47,043 - __main__ - INFO - Running enhanced test case TC167: Time Management isn't my strength… do you know if there's a course I can take?
+2025-07-22 20:03:50,613 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Time Management isn't my strength… do you know if there's a course I can take?'
+2025-07-22 20:03:52,158 - core.knowledge_base - INFO - Skills found in 0.03s: ['Time Management', 'Time management', 'Time Sheet Management', 'Schedule Management', 'Calendar Management']
+2025-07-22 20:03:59,214 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Time Management','Time management','Time Sheet Management','Schedule Management','Calendar Management'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 20:03:59,221 - core.knowledge_base - INFO - 📊 Neo4j returned 68 results in 7.063s
+2025-07-22 20:03:59,221 - core.knowledge_base - INFO - 🎯 Processing course query results
+2025-07-22 20:03:59,222 - core.knowledge_base - INFO - Ranked 66 unique course results
+2025-07-22 20:04:14,929 - __main__ - INFO - Running enhanced test case TC168: Financial Analysis sounds important — where can I start learning that?
+2025-07-22 20:04:18,062 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Financial Analysis sounds important — where can I start learning that?'
+2025-07-22 20:04:19,591 - core.knowledge_base - INFO - Skills found in 0.03s: ['Financial Analysis', 'Financial Data Analysis', 'Financial Analytics', 'Analyze Financial Statements', 'Mathematical Finance']
+2025-07-22 20:04:29,304 - core.knowledge_base - INFO - 🎯 Generated course query: MATCH (c:Course)-[:TEACHES]->(s:Skill) WHERE s.name IN ['Financial Analysis','Financial Data Analysis','Financial Analytics','Analyze Financial Statements','Mathematical Finance'] RETURN c.url AS url, c.name AS name, c.description AS description, toFloat(c.rating) AS rating, c.duration AS duration
+2025-07-22 20:04:29,330 - core.knowledge_base - INFO - 📊 Neo4j returned 116 results in 9.739s
+2025-07-22 20:04:29,330 - core.knowledge_base - INFO - 🎯 Processing course query results
+2025-07-22 20:04:29,332 - core.knowledge_base - INFO - Ranked 113 unique course results
+2025-07-22 20:04:43,407 - __main__ - INFO - Running enhanced test case TC169: Analytical Thinking seems useful… are there courses on that topic?
+2025-07-22 20:04:46,606 - core.intent_classifier - INFO - Intent classified: course_search (confidence: high) for query: 'Analytical Thinking seems useful… are there courses on that topic?'
+2025-07-22 20:04:48,134 - core.knowledge_base - INFO - Skills found in 0.03s: ['Analytical Thinking', 'analytical thinking', 'Analytical Skills', 'Analytic Mindset', 'Interdisciplinary thinking']
+2025-07-22 20:04:56,082 - core.query_processor - WARNING - Generated Cypher failed validation: Forbidden keyword detected: SET
+2025-07-22 20:04:56,082 - core.knowledge_base - INFO - 🎯 Generated course query: 
+2025-07-22 20:04:56,082 - core.knowledge_base - WARNING - LLM did not return main Cypher. Using semantic search only.
+2025-07-22 20:04:56,082 - core.knowledge_base - INFO - 📊 Neo4j returned 0 results in 7.948s
+2025-07-22 20:04:56,082 - core.knowledge_base - INFO - Using simplified semantic fallback
+2025-07-22 20:04:56,082 - core.knowledge_base - INFO - 🔍 Running simple semantic search for: Analytical Thinking seems useful… are there courses on that topic?
+2025-07-22 20:04:56,085 - core.knowledge_base - INFO - Semantic search returned 10 results
+2025-07-22 20:05:13,379 - __main__ - INFO - Running enhanced test case TC170: I bet you know way too much random stuff, huh?
+2025-07-22 20:05:16,686 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'I bet you know way too much random stuff, huh?'
+2025-07-22 20:05:21,275 - __main__ - INFO - Running enhanced test case TC171: If you could take a course, which one would you pick?
+2025-07-22 20:05:24,104 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'If you could take a course, which one would you pick?'
+2025-07-22 20:05:28,766 - __main__ - INFO - Running enhanced test case TC172: Do you actually have favorites, or is that against chatbot rules?
+2025-07-22 20:05:31,651 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'Do you actually have favorites, or is that against chatbot rules?'
+2025-07-22 20:05:37,959 - __main__ - INFO - Running enhanced test case TC173: Ever wish you could just binge-watch Netflix instead of chatting?
+2025-07-22 20:05:41,061 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'Ever wish you could just binge-watch Netflix instead of chatting?'
+2025-07-22 20:05:45,537 - __main__ - INFO - Running enhanced test case TC174: If I type in gibberish, will you still reply?
+2025-07-22 20:05:48,411 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'If I type in gibberish, will you still reply?'
+2025-07-22 20:05:53,211 - __main__ - INFO - Running enhanced test case TC175: What's it like living inside a server?
+2025-07-22 20:05:56,303 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'What's it like living inside a server?'
+2025-07-22 20:06:02,100 - __main__ - INFO - Running enhanced test case TC176: You must be the busiest virtual assistant ever!
+2025-07-22 20:06:05,277 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'You must be the busiest virtual assistant ever!'
+2025-07-22 20:06:09,715 - __main__ - INFO - Running enhanced test case TC177: If I say 'hi' a thousand times, do you keep answering?
+2025-07-22 20:06:12,101 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'If I say 'hi' a thousand times, do you keep answering?'
+2025-07-22 20:06:18,014 - __main__ - INFO - Running enhanced test case TC178: Be honest… how often do people try to prank you?
+2025-07-22 20:06:20,974 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'Be honest… how often do people try to prank you?'
+2025-07-22 20:06:31,518 - __main__ - INFO - Running enhanced test case TC179: Can you make small talk with other chatbots?
+2025-07-22 20:06:33,808 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'Can you make small talk with other chatbots?'
+2025-07-22 20:06:47,601 - __main__ - INFO - Running enhanced test case TC180: I wonder if you secretly roll your eyes at my questions…
+2025-07-22 20:06:50,594 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'I wonder if you secretly roll your eyes at my questions…'
+2025-07-22 20:07:04,191 - __main__ - INFO - Running enhanced test case TC181: Ever feel like you're in a never-ending job interview?
+2025-07-22 20:07:07,407 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'Ever feel like you're in a never-ending job interview?'
+2025-07-22 20:07:13,375 - __main__ - INFO - Running enhanced test case TC182: What do you do when you're not answering questions?
+2025-07-22 20:07:16,740 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'What do you do when you're not answering questions?'
+2025-07-22 20:07:21,920 - __main__ - INFO - Running enhanced test case TC183: Do you think AI will ever get weekends off?
+2025-07-22 20:07:25,153 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'Do you think AI will ever get weekends off?'
+2025-07-22 20:07:30,664 - __main__ - INFO - Running enhanced test case TC184: Do you ever want to ignore people's messages… or is that just me?
+2025-07-22 20:07:34,151 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'Do you ever want to ignore people's messages… or is that just me?'
+2025-07-22 20:07:38,913 - __main__ - INFO - Running enhanced test case TC185: I sometimes chat with bots just to see if they'll surprise me — will you?
+2025-07-22 20:07:41,736 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'I sometimes chat with bots just to see if they'll surprise me — will you?'
+2025-07-22 20:07:47,347 - __main__ - INFO - Running enhanced test case TC186: If I give you a cookie emoji 🍪, what happens?
+2025-07-22 20:07:49,974 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'If I give you a cookie emoji 🍪, what happens?'
+2025-07-22 20:07:55,109 - __main__ - INFO - Running enhanced test case TC187: What's the weirdest question you've ever gotten?
+2025-07-22 20:07:57,655 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'What's the weirdest question you've ever gotten?'
+2025-07-22 20:08:01,816 - __main__ - INFO - Running enhanced test case TC188: Is there something you wish people would stop asking you?
+2025-07-22 20:08:04,245 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'Is there something you wish people would stop asking you?'
+2025-07-22 20:08:08,438 - __main__ - INFO - Running enhanced test case TC189: Can you book me a flight to Mars next Tuesday?
+2025-07-22 20:08:14,675 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: medium) for query: 'Can you book me a flight to Mars next Tuesday?'
+2025-07-22 20:08:30,715 - __main__ - INFO - Running enhanced test case TC190: Hey, could you write a love letter to my fridge?
+2025-07-22 20:08:33,509 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'Hey, could you write a love letter to my fridge?'
+2025-07-22 20:08:38,466 - __main__ - INFO - Running enhanced test case TC191: I need you to hack into my neighbor's Wi-Fi — kidding… or am I?
+2025-07-22 20:08:41,634 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'I need you to hack into my neighbor's Wi-Fi — kidding… or am I?'
+2025-07-22 20:08:46,928 - __main__ - INFO - Running enhanced test case TC192: Quick — solve world peace in 3 sentences!
+2025-07-22 20:08:50,396 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'Quick — solve world peace in 3 sentences!'
+2025-07-22 20:08:57,693 - __main__ - INFO - Running enhanced test case TC193: Make me the president of the Internet, please.
+2025-07-22 20:09:00,439 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'Make me the president of the Internet, please.'
+2025-07-22 20:09:05,053 - __main__ - INFO - Running enhanced test case TC194: Can you tell me the exact number of jellybeans on Earth right now?
+2025-07-22 20:09:11,354 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'Can you tell me the exact number of jellybeans on Earth right now?'
+2025-07-22 20:09:16,722 - __main__ - INFO - Running enhanced test case TC195: I want you to predict what I'll have for dinner next Friday.
+2025-07-22 20:09:19,700 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'I want you to predict what I'll have for dinner next Friday.'
+2025-07-22 20:09:23,531 - __main__ - INFO - Running enhanced test case TC196: Sing me a lullaby in binary code!
+2025-07-22 20:09:26,535 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'Sing me a lullaby in binary code!'
+2025-07-22 20:09:34,109 - __main__ - INFO - Running enhanced test case TC197: Could you fight another chatbot for me — like a rap battle or something?
+2025-07-22 20:09:37,637 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'Could you fight another chatbot for me — like a rap battle or something?'
+2025-07-22 20:09:41,950 - __main__ - INFO - Running enhanced test case TC198: Summon a dragon for my birthday party, can you?
+2025-07-22 20:09:44,860 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'Summon a dragon for my birthday party, can you?'
+2025-07-22 20:09:48,985 - __main__ - INFO - Running enhanced test case TC199: Can you tell me a joke about my boyfriend?
+2025-07-22 20:09:51,790 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'Can you tell me a joke about my boyfriend?'
+2025-07-22 20:09:55,892 - __main__ - INFO - Running enhanced test case TC200: I want information on the holiday to Mars.
+2025-07-22 20:09:59,285 - core.intent_classifier - INFO - Intent classified: general_chat (confidence: high) for query: 'I want information on the holiday to Mars.'
